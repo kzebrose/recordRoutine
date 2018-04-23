@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
 <script src="assets/js/script.js" />
@@ -11,21 +11,53 @@ $(document).ready(function($){
 	minLength:2
     });
 });
+
+function myFunction() {
+  /* Get the text field */
+  var copyText = document.getElementById("exerciseCode");
+  /* copyText.innerHTML = "Fred";alert("whyNot"); */
+  /* Select the text field */
+  copyText.select();
+
+  /* Copy the text inside the text field */
+  document.execCommand("Copy");
+
+  /* Alert the copied text */
+  alert("Copied the text: " + copyText.value);
+}
+
+function startTime()
+{
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
+  var t = setTimeout(startTime, 500);
+}
+
+function checkTime(i)
+{
+  if(i < 10) {i = "0" + i); // add zero in front of numbers < 10
+    return i;
+  }
 </script>
 
 </head>
-<body>
-<p> This is a start toward an exercise page.<br>
-Kate Lambert Zebrose wrote this page</p>
-<h2 style="padding:10px">enter the details of your exercise </h2>
+<body onload="startTime()">
+  <div id="txt">clock?</div>
+
+  <p id=exerciseCode>L2UVHWD</p><button onclick="myFunction()">Copy text</button> <a href="http://www.my-exercise-code.com" target="_blank">exercise form described with video</a>
+<p>enter the details of your exercise </p>
 
 <form action="action_page.php" method="post">
+
+  How are you feeling?: <input size="20" type="text" name="startingCheckin" value="ready to start"> <br>
+      <h2>stretch:&nbsp;&nbsp;</h2><br>
   <table>
     <tr>
-      <td></td><td></td><td>How are you feeling?:</td><td> <input size="20" type="text" name="startingCheckin" value="ready to start"> </td>
-    </tr>
-    <tr>
-      <td><h2>stretch:&nbsp;&nbsp;</h2></td>
       <td>start time:</td><td><input size="7" type="text" name="stretchStartTime" value="09:00"></td>
       <td>thigh note</td><td> <input size="10" type="text" name="stretchthigh" value="--"> </td>
       <td>calf note</td><td> <input size="10" type="text" name="stretchcalf" value="--"> </td>
@@ -81,7 +113,23 @@ Kate Lambert Zebrose wrote this page</p>
 </form> 
 
 <p>If you click the "Submit" button, the form-data will be sent to a page called "action_page.php".</p>
-
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 </body>
 </html>
 

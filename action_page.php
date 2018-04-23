@@ -1,5 +1,5 @@
 <?php
-global $logh;
+  global $logh;
 
   function getLogHandle($name,$ver)
   {
@@ -22,16 +22,38 @@ global $logh;
     return;
   }
 
+  function summary($data)
+  {
+    return;
+  }
+
+
 ?>
 <html>
 <body>
 
-You appear to be <?php echo $_POST["startingCheckin"]; ?><br>
-start time is: <?php echo $_POST["startTime"]; ?>
 <?php 
-  writeForm($_POST);
-  $show=print_r($_POST,true);
-  echo $show;
+  $data = $_POST;
+  writeForm($data);
+  $show=print_r($data,true);
+  echo "<br> $show <br>";
+  echo "<h1> SUMMARY </h1>";echo "<ol>";
+  foreach ($data as $key => $value)
+  {
+    echo "<li> $key  = $value</li> ";
+  }
+  echo "</ol>";
+
+  $startThought =  $data[startingCheckin];echo "aaaa $startThought;";
+    $startTime =  $data[stretchStartTime];
+    $endTime =  $data[special_set_endTime];
+    $todayStr = $date("D, d M Y");
+    echo "It looks like  $startThought  at $startTime $todayStr<br>";
+    $totalExerciseTime = $endTime - $startTime;
+    echo "total exercise time is $totalExerciseTime";
+  $show=print_r($data,true);
+  echo "<br> $data <br>";
+  echo "<br>$totalExerciseTime";
 ?>
 </body>
 </html>
