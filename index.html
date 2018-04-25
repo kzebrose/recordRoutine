@@ -32,8 +32,9 @@ function startTime()
   var h = today.getHours();
   var m = today.getMinutes();
   var s = today.getSeconds();
-  document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
-  document.getElementById('txt').innerHTML = today;
+  document.getElementById('clock1').innerHTML = today;
+  document.getElementById('clock2').innerHTML = ":" + m + ":" + s;
+  document.getElementById('clock3').innerHTML = h + ":" + m + ":" + s;
   var t = setTimeout(startTime, 6000);
 }
 
@@ -41,7 +42,6 @@ function startTime()
 
 </head>
 <body onload="startTime()">
-  <div id="txt">clock?</div>
 
   <p id="exerciseCode">L2UVHWD</p><button onclick="myFunction()">Copy text</button> <a href="http://www.my-exercise-code.com" target="_blank">exercise form described with video</a>
 <p>enter the details of your exercise </p>
@@ -49,7 +49,7 @@ function startTime()
 <form action="action_page.php" method="post">
 
   How are you feeling?: <input size="20" type="text" name="startingCheckin" value="ready to start"> <br>
-      <h2>stretch:&nbsp;&nbsp;</h2><br>
+      <h2>stretch:&nbsp;&nbsp;</h2> <div id="clock1">clock1</div><br>
   <table>
     <tr>
       <td>start time:</td><td><input size="7" type="text" name="stretchStartTime" value="09:00"></td>
@@ -80,7 +80,8 @@ function startTime()
       <td>placeholder</td><td> <input size="7" type="text" name="placeholder2" value="Z25-Z20"> </td>
     </tr>
     <tr>
-      <td></td><td></td><td>How are you feeling?:</td><td> <input size="20" type="text" name="lastCheckin" value="ready to start"> </td>
+      <td><h2 style="color:blue">lean</h2></td><td><h2 style="color:blue">back</h2></td><td><h2 style="color:blue">timer&nbsp;</h2></td><td><h1 id="clock2">clock2</h1></td>
+      <td></td><td>How are you feeling?:</td><td> <input size="20" type="text" name="lastCheckin" value="ready to start"> </td>
     </tr>
     <tr>
       <td><h2>set 3&nbsp;&nbsp;</h2></td>
@@ -100,6 +101,7 @@ function startTime()
       <td>march (10) note</td><td> <input size="10" type="text" name="march" value="--"> </td>
       <td>2 minute slow walk note</td><td> <input size="10" type="text" name="slowWalk" value="--"> </td>
       <td>end time:</td><td> <input size="7" type="text" name="special_set_endTime" value="09:00"> </td>
+      <td><div id="clock3">clock3</div></td>
     </tr>
   </table>
   <br>
