@@ -14,7 +14,7 @@ $(document).ready(function($){
 
 function myFunction() {
   /* Get the text field */
-  var copyText = document.getElementById("exerciseCode");
+  var copyText = document.getElementById('exerciseCode');
   /* copyText.innerHTML = "Fred";alert("whyNot"); */
   /* Select the text field */
   copyText.select();
@@ -32,24 +32,18 @@ function startTime()
   var h = today.getHours();
   var m = today.getMinutes();
   var s = today.getSeconds();
-  m = checkTime(m);
-  s = checkTime(s);
   document.getElementById('txt').innerHTML = h + ":" + m + ":" + s;
-  var t = setTimeout(startTime, 500);
+  document.getElementById('txt').innerHTML = today;
+  var t = setTimeout(startTime, 6000);
 }
 
-function checkTime(i)
-{
-  if(i < 10) {i = "0" + i); // add zero in front of numbers < 10
-    return i;
-  }
 </script>
 
 </head>
 <body onload="startTime()">
   <div id="txt">clock?</div>
 
-  <p id=exerciseCode>L2UVHWD</p><button onclick="myFunction()">Copy text</button> <a href="http://www.my-exercise-code.com" target="_blank">exercise form described with video</a>
+  <p id="exerciseCode">L2UVHWD</p><button onclick="myFunction()">Copy text</button> <a href="http://www.my-exercise-code.com" target="_blank">exercise form described with video</a>
 <p>enter the details of your exercise </p>
 
 <form action="action_page.php" method="post">
