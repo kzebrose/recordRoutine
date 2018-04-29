@@ -1,49 +1,15 @@
 <!DOCTYPE HTML>
-<html>
+<html lang="en">
 <head>
-<script src="assets/js/script.js" />
-<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"</script>
-
-<script>
-$(document).ready(function($){
-    $('#customerAutocomplte').autocomplete({
-	source:'suggest_name.php', 
-	minLength:2
-    });
-});
-
-function myFunction() {
-  /* Get the text field */
-  var copyText = document.getElementById('exerciseCode');
-  /* copyText.innerHTML = "Fred";alert("whyNot"); */
-  /* Select the text field */
-  copyText.select();
-
-  /* Copy the text inside the text field */
-  document.execCommand("Copy");
-
-  /* Alert the copied text */
-  alert("Copied the text: " + copyText.value);
-}
-
-function startTime()
-{
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  var s = today.getSeconds();
-  document.getElementById('clock1').innerHTML = today;
-  document.getElementById('clock2').innerHTML = ":" + m + ":" + s;
-  document.getElementById('clock3').innerHTML = h + ":" + m + ":" + s;
-  var t = setTimeout(startTime, 6000);
-}
-
-</script>
-
+  <meta charset="utf-8"/>
+  <script type="text/javascript" src="http://exercise.org/assets/js/script.js"></script>
+  <script  type="text/javascript" src="http://exercise.org/assets/js/ex.js"></script>
+  <script  type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
 </head>
+
 <body onload="startTime()">
 
-  <p id="exerciseCode">L2UVHWD</p><button onclick="myFunction()">Copy text</button> <a href="http://www.my-exercise-code.com" target="_blank">exercise form described with video</a>
+  <p id="exerciseCode">L2UVHWD</p><button type="button" onclick="myFunction()">Copy text</button> <a href="http://www.my-exercise-code.com" target="_blank">exercise form described with video</a>
 <p>enter the details of your exercise </p>
 
 <form action="action_page.php" method="post">
@@ -52,13 +18,13 @@ function startTime()
       <h2>stretch:&nbsp;&nbsp;</h2> <div id="clock1">clock1</div><br>
   <table>
     <tr>
-      <td>start time:</td><td><input size="7" type="text" name="stretchStartTime" value="09:00"></td>
+      <td><a onclick="setTimeExercise('stretchStartTime')" href="#">start time:</a></td><td><input  id=stretchStartTime size="7" type="text" name="stretchStartTime" value="09:00"></td>
       <td>thigh note</td><td> <input size="10" type="text" name="stretchthigh" value="--"> </td>
       <td>calf note</td><td> <input size="10" type="text" name="stretchcalf" value="--"> </td>
     </tr>
     <tr>
       <td><h2>set 1&nbsp;&nbsp;</h2></td>
-      <td>start time:</td><td> <input size="7" type="text" name="set1startTime" value="09:00"> </td>
+      <td><a onclick="setTimeExercise('set1startTime')" href="#">start time:</a></td><td> <input  id=set1startTime size="7" type="text" name="set1startTime" value="09:00"> </td>
       <td>eversion note</td><td> <input size="10" type="text" name="set1eversion" value="--"> </td>
       <td>foot raise note</td><td> <input size="10" type="text" name="set1footRaise" value="--"> </td>
       <td>lean back note</td><td> <input size="10" type="text" name="set1leanBack" value="--"> </td>
@@ -71,7 +37,7 @@ function startTime()
     </tr>
     <tr>
       <td><h2>set 2&nbsp;&nbsp;</h2></td>
-      <td>start time:</td><td> <input size="7" type="text" name="set2startTime" value="09:00"> </td>
+      <td><a onclick="setTimeExercise('set2startTime')" href="#">start time:</a></td><td> <input  id=set2startTime size="7" type="text" name="set2startTime" value="09:00"> </td>
       <td>eversion note</td><td> <input size="10" type="text" name="set2eversion" value="--"> </td>
       <td>foot raise note</td><td> <input size="10" type="text" name="set2footRaise" value="--"> </td>
       <td>lean back note</td><td> <input size="10" type="text" name="set2leanBack" value="--"> </td>
