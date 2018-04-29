@@ -18,26 +18,26 @@
       <h2>stretch:&nbsp;&nbsp;</h2> <div id="clock1">clock1</div><br>
   <table>
     <tr>
-      <td><a onclick="setTimeExercise('stretchStartTime')" href="#">start time:</a></td><td><input  id=stretchStartTime size="7" type="text" name="stretchStartTime" value="09:00"></td>
+      <td onclick="setTimeExercise('stretchStartTime')">start time:</td><td><input  id=stretchStartTime size="7" type="text" name="stretchStartTime" value="09:00"></td>
       <td>thigh note</td><td> <input size="10" type="text" name="stretchthigh" value="--"> </td>
       <td>calf note</td><td> <input size="10" type="text" name="stretchcalf" value="--"> </td>
     </tr>
     <tr>
       <td><h2>set 1&nbsp;&nbsp;</h2></td>
-      <td><a onclick="setTimeExercise('set1startTime')" href="#">start time:</a></td><td> <input  id=set1startTime size="7" type="text" name="set1startTime" value="09:00"> </td>
+      <td onclick="setTimeExercise('set1startTime')">start time:</td><td> <input  id=set1startTime size="7" type="text" name="set1startTime" value="09:00"> </td>
       <td>eversion note</td><td> <input size="10" type="text" name="set1eversion" value="--"> </td>
       <td>foot raise note</td><td> <input size="10" type="text" name="set1footRaise" value="--"> </td>
       <td>lean back note</td><td> <input size="10" type="text" name="set1leanBack" value="--"> </td>
       <td>kick back note</td><td> <input size="10" type="text" name="set1kickBack" value="--"> </td>
-      <td>end time:</td><td> <input size="7" type="text" name="set1endTime" value="09:00"> </td>
-      <td>placeholder</td><td> <input size="7" type="text" name="placeholder1" value="Z17-Z12"> </td>
+      <td><a onclick="setEndTimeExercise('set1startTime','set1endTime')" href="#">end time:</a></td><td> <input  id=set1endTime size="7" type="text" name="set1endTime" value="09:00"> </td>
+      <td>placeholder</td><td> <input id=set1endTimeMinusStart size="7" type="text" name="placeholder1" value="Z17-Z12"> </td>
     </tr>
     <tr>
       <td></td><td></td><td>How are you feeling?:</td><td> <input size="20" type="text" name="midCheckin" value="ready to start"> </td>
     </tr>
     <tr>
       <td><h2>set 2&nbsp;&nbsp;</h2></td>
-      <td><a onclick="setTimeExercise('set2startTime')" href="#">start time:</a></td><td> <input  id=set2startTime size="7" type="text" name="set2startTime" value="09:00"> </td>
+      <td onclick="setTimeExercise('set2startTime')" >start time:</td><td> <input  id=set2startTime size="7" type="text" name="set2startTime" value="09:00"> </td>
       <td>eversion note</td><td> <input size="10" type="text" name="set2eversion" value="--"> </td>
       <td>foot raise note</td><td> <input size="10" type="text" name="set2footRaise" value="--"> </td>
       <td>lean back note</td><td> <input size="10" type="text" name="set2leanBack" value="--"> </td>
@@ -51,7 +51,7 @@
     </tr>
     <tr>
       <td><h2>set 3&nbsp;&nbsp;</h2></td>
-      <td>start time:</td><td> <input size="7" type="text" name="set3startTime" value="09:00"> </td>
+      <td onclick="setTimeExercise('set3startTime')" >start time:</td><td> <input  id=set3startTime size="7" type="text" name="set3startTime" value="09:00"> </td>
       <td>eversion note</td><td> <input size="10" type="text" name="set3eversion" value="--"> </td>
       <td>foot raise note</td><td> <input size="10" type="text" name="set3footRaise" value="--"> </td>
       <td>lean back note</td><td> <input size="10" type="text" name="set3leanBack" value="--"> </td>
@@ -61,7 +61,7 @@
     </tr>
     <tr>
       <td><h2>special set&nbsp;&nbsp;</h2></td>
-      <td>start time:</td><td> <input size="7" type="text" name="special_set_startTime" value="09:00"> </td>
+      <td onclick="setTimeExercise('specialSetStartTime')">start time:</td><td> <input  id=specialSetStartTime size="7" type="text" name="specialSetStartTime" value="09:00"> </td>
       <td>band lift note</td><td> <input size="10" type="text" name="bandLift" value="--"> </td>
       <td>half band (5/5) lift note</td><td> <input size="10" type="text" name="halfBand" value="--"> </td>
       <td>march (10) note</td><td> <input size="10" type="text" name="march" value="--"> </td>
