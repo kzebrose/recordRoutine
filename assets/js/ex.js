@@ -54,7 +54,6 @@ function setTimeExercise(timeName)
   var myTime = document.getElementById(timeName);
   myTime.value = h + ":" + m;
   myTime.dataset.myTimeStamp= today.getTime();
-  alert("Fred is waiting" + myTime.dataset.myTimeStamp);
 }
 
 function setEndTimeExercise(startTimeName,endTimeName)
@@ -84,6 +83,32 @@ function setEndTimeExercise(startTimeName,endTimeName)
   diff_msec -= ss * 1000;
   document.getElementById(subLabel).value = mm + ":" + ss;
 }
+
+function setTotalExerciseTime()
+{
+  /* initialize now time variable */
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+
+  /* get saved start time */
+  var startTime = document.getElementById('stretchStartTime');
+  var startStamp = startTime.dataset.myTimeStamp;
+
+  /* set end time variables */
+  var endStamp = today.getTime();
+
+  /* calculate the difference */
+  var diff_msec = (endStamp - startStamp);
+  var hh = Math.floor(diff_msec / 1000 / 60 / 60);
+  diff_msec -= hh * 1000 * 60 * 60;
+  var mm = Math.floor(diff_msec / 1000 / 60);
+  diff_msec -= mm * 1000 * 60;
+  var ss = Math.floor(diff_msec / 1000);
+  diff_msec -= ss * 1000;
+  document.getElementById('totalExerciseTime').value = mm + ":" + ss;
+}
+
 
 
 
