@@ -46,20 +46,43 @@ function startTime()
   var t = setTimeout(startTime, 6000);
 }
 
-function setStretch()
-{
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
-  document.getElementById('stretchStartTime').value = h + ":" + m;
-}
-
 function setTimeExercise(timeName)
 {
   var today = new Date();
   var h = today.getHours();
   var m = today.getMinutes();
-  document.getElementById(timeName).value = h + ":" + m;
+  var myTime = document.getElementById(timeName);
+  myTime.value = h + ":" + m;
+  myTime.dataset.myTimeStamp= today.getTime();
+  alert("Fred is waiting" + myTime.dataset.myTimeStamp);
+}
+
+function setEndTimeExercise(startTimeName,endTimeName)
+{
+  /* initialize now time variable */
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+
+  /* get saved start time */
+  var startTime = document.getElementById(startTimeName);
+  var startStamp = startTime.dataset.myTimeStamp;
+
+  /* set end time variables */
+  var endTime = document.getElementById(endTimeName);
+  endTime.value = h + ":" + m;
+  var endStamp = today.getTime();
+
+  /* calculate the difference */
+  var subLabel = endTimeName + "MinusStart";
+  var diff_msec = (endStamp - startStamp);
+  var hh = Math.floor(diff_msec / 1000 / 60 / 60);
+  diff_msec -= hh * 1000 * 60 * 60;
+  var mm = Math.floor(diff_msec / 1000 / 60);
+  diff_msec -= mm * 1000 * 60;
+  var ss = Math.floor(diff_msec / 1000);
+  diff_msec -= ss * 1000;
+  document.getElementById(subLabel).value = mm + ":" + ss;
 }
 
 
