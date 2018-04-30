@@ -40,7 +40,7 @@ function startTime()
   var h = today.getHours();
   var m = today.getMinutes();
   var s = today.getSeconds();
-  document.getElementById('clock1').innerHTML = today;
+  document.getElementById('clock1').value = today;
   document.getElementById('clock2').innerHTML = ":" + m + ":" + s;
   document.getElementById('clock3').innerHTML = h + ":" + m + ":" + s;
   var t = setTimeout(startTime, 6000);
@@ -81,7 +81,18 @@ function setEndTimeExercise(startTimeName,endTimeName)
   diff_msec -= mm * 1000 * 60;
   var ss = Math.floor(diff_msec / 1000);
   diff_msec -= ss * 1000;
-  document.getElementById(subLabel).value = mm + ":" + ss;
+  var diffTime = document.getElementById(subLabel);
+  diffTime.value = mm + ":" + ss;
+  diffTime.dataset.diffTimeStamp= endStamp - startStamp;
+}
+
+/* returns minutes from millisec time stamp */
+function getMinutes(msec)
+{
+  var hh = Math.floor(msec / 1000 / 60 / 60);
+  msec -= hh * 1000 * 60 * 60;
+  var mm = Math.floor(msec / 1000 / 60);
+  return mm;
 }
 
 function setTotalExerciseTime()
@@ -98,7 +109,7 @@ function setTotalExerciseTime()
   /* set end time variables */
   var endStamp = today.getTime();
 
-  /* calculate the difference */
+  /* calculate the total time difference */
   var diff_msec = (endStamp - startStamp);
   var hh = Math.floor(diff_msec / 1000 / 60 / 60);
   diff_msec -= hh * 1000 * 60 * 60;
@@ -106,6 +117,19 @@ function setTotalExerciseTime()
   diff_msec -= mm * 1000 * 60;
   var ss = Math.floor(diff_msec / 1000);
   diff_msec -= ss * 1000;
+  document.getElementById('totalTime').value = mm + ":" + ss;
+
+  /* calculate just the exercise time */
+  var set1diff = document.getElementById('set1endTimeMinusStart');
+  var set2diff = document.getElementById('set2endTimeMinusStart');
+  var set3diff = document.getElementById('set3endTimeMinusStart');
+  var ssetdiff = document.getElementById('specialsetendTimeMinusStart');
+  var totalExercise = set1diff.dataset.diffTimeStamp + set2diff.dataset.diffTimeStamp + set3diff.dataset.diffTimeStamp + ssetdiff.dataset.diffTimeStamp;
+
+  var mm = Math.floor(totalExercise / 1000 / 60);
+  totalExercise -= mm * 1000 * 60;
+  var ss = Math.floor(totalExercise / 1000);
+  if(totalExercise < 60000) mm= 0 ;
   document.getElementById('totalExerciseTime').value = mm + ":" + ss;
 }
 

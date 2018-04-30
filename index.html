@@ -15,7 +15,7 @@
 <form action="action_page.php" method="post">
 
   How are you feeling?: <input size="20" type="text" name="startingCheckin" value="ready to start"> <br>
-      <h2>stretch:&nbsp;&nbsp;</h2> <div id="clock1">clock1</div><br>
+      <h2>stretch:&nbsp;&nbsp;</h2> <input size=50 id="clock1" type="text" name="clock1" value="clock1"><br>
   <table>
     <tr>
       <td onclick="setTimeExercise('stretchStartTime')">start time:</td><td><input  id=stretchStartTime size="7" type="text" name="stretchStartTime" value="09:00"></td>
@@ -74,6 +74,7 @@
       <td><h2>total exercise</h2></td>
       <td onclick="setTotalExerciseTime()"><h2><input  id=totalExerciseTime  type="text" name="totalExerciseTime" value="09:00"> </h2></td>
       <td><h2>total time</h2></td>
+      <td onclick="setTotalExerciseTime()"><h2><input  id=totalTime  type="text" name="totalTime" value="09:00"> </h2></td>
       <td><h2></h2></td>
     </tr>
   </table>
