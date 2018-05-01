@@ -4,8 +4,9 @@
   function getLogHandle($name,$ver)
   {
     $applicationPath = dirname(__FILE__);
-    //echo "<br>Look for ".$applicationPath."/exercise.log for documentation<br>";
-    $logh = fopen($applicationPath."/".$name.".log", "a") or die("Unable to open $name.log");
+    $dateString = date("D_F_j_Y_ha_");
+    $currentLogName = $applicationPath."/".$dateString.$name.".log";
+    $logh = fopen($currentLogName, "c+") or die("Unable to open $currentLogName");
     $txt=" === v$ver === $name ".date("Y/m/d H:i:s")."\n";
     fwrite($logh, $txt);
     return $logh;
@@ -16,6 +17,7 @@
     $logh = getLogHandle('exercise','0.1');
     foreach($data as $line)
     {
+      //echo $line."\n";
       fwrite($logh,$line."\n");
     }
     fclose($logh);
@@ -34,7 +36,7 @@
 
 <?php 
   $exData = $_POST;
-  writeForm($data);
+  writeForm($exData);
   $show=print_r($exData,true);
   //echo "<br> $show <br>";
   echo "<h1> SUMMARY </h1>\n";echo "<ol>\n";
