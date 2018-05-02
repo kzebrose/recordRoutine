@@ -135,8 +135,14 @@ function setTotalExerciseTime()
 
 function setComment(selectedComment)
 {
-  var comment = document.getElementById("comment");
+  var comment = document.getElementById('comment');
   comment.dataset.currentComment = selectedComment;
+  comment.innerHTML = selectedComment;
 }
 
-
+function fillComment(selectedInput)
+{
+  var comment = document.getElementById('comment');
+  var myInput = document.getElementById(selectedInput);
+  myInput.value = comment.innerHTML;
+}
