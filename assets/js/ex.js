@@ -133,6 +133,10 @@ function setTotalExerciseTime()
   document.getElementById('totalExerciseTime').value = mm + ":" + ss;
 }
 
-
+function setComment(selectedComment)
+{
+  var comment = document.getElementById("comment");
+  comment.dataset.currentComment = selectedComment;
+}
 
 
