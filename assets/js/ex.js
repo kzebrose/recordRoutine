@@ -104,7 +104,7 @@ function setTotalExerciseTime()
 
   /* get saved start time */
   var startTime = document.getElementById('stretchStartTime');
-  var startStamp = startTime.dataset.myTimeStamp;
+  var startStamp = Number(startTime.dataset.myTimeStamp);
 
   /* set end time variables */
   var endStamp = today.getTime();
@@ -145,4 +145,19 @@ function fillComment(selectedInput)
   var comment = document.getElementById('comment');
   var myInput = document.getElementById(selectedInput);
   myInput.value = comment.innerHTML;
+  myInput.blur();
+  comment.focus();
+}
+
+
+function setGoal()
+{
+  var goal = document.getElementById('goal');
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes() + 2;
+  var s = today.getSeconds();
+  goal.innerHTML = h + ":" + m + ":" + s;
+  goal.style.backgroundColor = "lightgreen";
+  goal.style.fontSize = "20px";
 }

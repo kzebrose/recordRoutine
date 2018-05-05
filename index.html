@@ -5,6 +5,12 @@
   <script type="text/javascript" src="http://exercise.org/assets/js/script.js"></script>
   <script  type="text/javascript" src="http://exercise.org/assets/js/ex.js"></script>
   <script  type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+  <style>
+td {
+  border:5px solid green;
+    outline: 5px dotted purple;
+}
+  </style>
 </head>
 
 <body onload="startTime()">
@@ -15,11 +21,11 @@
 <form action="action_page.php" method="post">
 
   How are you feeling?: <input id=startingCheckin onclick="fillComment('startingCheckin')" size="20" type="text" name="startingCheckin" value="ready to start"> <br>
-      <h2>stretch:&nbsp;&nbsp;</h2> <input size=50 id="clock1" type="text" name="clock1" value="clock1"><br>
+  <h2>stretch:&nbsp;&nbsp;</h2> <input size=100 id="clock1" type="text" name="clock1" value="clock1">&nbsp;&nbsp; Try to kick high in kickbacks<br>
   <table>
     <tr>
-      <td onclick="setTimeExercise('stretchStartTime')">start time:</td><td><input  id=stretchStartTime size="7" type="text" name="stretchStartTime" value="09:00"></td>
-      <td>thigh note</td><td> <input id=stretchthigh onclick="fillComment('stretchthigh')" size="10" type="text" name="stretchthigh" value="--"> </td>
+      <td onclick="setTimeExercise('stretchStartTime')">here sets start</td></div><td><input  id=stretchStartTime size="7" type="text" name="stretchStartTime" value="09:00"></td>
+      <td onclick="fillComment('stretchthigh')">here sets thigh note</td><td> <input id=stretchthigh size="10" type="text" name="stretchthigh" value="--"> </td>
       <td>calf note</td><td> <input id=stretchcalf onclick="fillComment('stretchcalf')" size="10" type="text" name="stretchcalf" value="--"> </td>
     </tr>
     <tr>
@@ -33,8 +39,11 @@
       <td>set1 time</td><td> <input id=set1endTimeMinusStart size="7" type="text" name="set1time" value="Z17-Z12"> </td>
     </tr>
     <tr>
-      <h2 style="color:blue"><td id=comment >Frog</td></h2><td>How are you feeling?:</td><td> <input id=midCheckin onclick="fillComment('midCheckin')" size="20" type="text" name="midCheckin" value="ready to start"> </td><td onclick="setComment('OK')">OK</td><td onclick="setComment('having trouble')">having trouble</td>
+      <h2 style="color:blue"><td id=comment >OK</td></h2><td>How are you feeling?:</td><td> <input id=midCheckin onclick="fillComment('midCheckin')" size="20" type="text" name="midCheckin" value="ready to start"> </td>
+      <td onclick="setComment('OK')">OK</td><td onclick="setComment('having trouble')">having trouble</td>
+      <td onclick="setComment('doing well')" >doing well</td><td onclick="setComment('ready for a break')">ready for a break</td>
       <td onclick="setComment('tired')" >tired</td><td onclick="setComment('really great')">really great</td>
+      <td onclick="setComment('Rock Star')" >Rock Star</td><td onclick="setComment('Reduced')">Reduced</td>
     </tr>
     <tr>
       <td><h2>set 2&nbsp;&nbsp;</h2></td>
@@ -67,11 +76,12 @@
       <td>half band (5/5) lift note</td><td> <input id=halfBand onclick="fillComment('halfBand')" size="10" type="text" name="halfBand" value="'"> </td>
       <td>march (10) note</td><td> <input id=march onclick="fillComment('march')" size="10" type="text" name="march" value="'"> </td>
       <td>2 minute slow walk note</td><td> <input id=slowWalk onclick="fillComment('slowWalk')" size="10" type="text" name="slowWalk" value="'"> </td>
-      <td onclick="setEndTimeExercise('specialsetstartTime','specialsetendTime')">end time:</td><td> <input  id=specialsetendTime size="7" type="text" name="specialsetendTime" value="09:00"> </td>
+      <td onclick="setEndTimeExercise('specialsetstartTime','specialsetendTime')">here sets end</td><td> <input  id=specialsetendTime size="7" type="text" name="specialsetendTime" value="09:00"> </td>
       <td>special set time</td><td> <input id=specialsetendTimeMinusStart size="7" type="text" name="specialsettime" value="Z17-Z12"> </td>
       <td><div id="clock3">clock3</div></td>
     </tr>
     <tr>
+      <td id=goal onclick="setGoal()">2 minute goal</td>
       <td><h2>total exercise</h2></td>
       <td onclick="setTotalExerciseTime()"><h2><input  id=totalExerciseTime  type="text" name="totalExerciseTime" value="09:00"> </h2></td>
       <td><h2>total time</h2></td>
