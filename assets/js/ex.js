@@ -1,29 +1,7 @@
-/*document.addEventListener('DOMContentLoaded',function() 
-    {
-      var a = document.getElementById("myLink");
-      a.innerHTML = "kz rules";
-      a.onclick = function()
-      {
-        var today = new Date();
-        var h = today.getHours();
-        var m = today.getMinutes();
-        document.getElementById('stretchStartTime').value = h + ":" + m;
-        return false;
-      }
-    });
-
-/*$(document).ready(function($){
-    $('#customerAutocomplte').autocomplete({
-	source:'suggest_name.php', 
-	minLength:2
-    });
-});
-*/
 
 function myFunction() {
   /* Get the text field */
   var copyText = document.getElementById('exerciseCode');
-  /* copyText.innerHTML = "Fred";alert("whyNot"); */
   /* Select the text field */
   copyText.select();
 
@@ -138,6 +116,8 @@ function setComment(selectedComment)
   var comment = document.getElementById('comment');
   comment.dataset.currentComment = selectedComment;
   comment.innerHTML = selectedComment;
+  comment.style.backgroundColor = "lightgreen";
+  comment.style.fontSize = "20px";
 }
 
 function fillComment(selectedInput)
@@ -145,8 +125,6 @@ function fillComment(selectedInput)
   var comment = document.getElementById('comment');
   var myInput = document.getElementById(selectedInput);
   myInput.value = comment.innerHTML;
-  myInput.blur();
-  comment.focus();
 }
 
 
