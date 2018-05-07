@@ -75,17 +75,14 @@ function getMinutes(msec)
 
 function setTotalExerciseTime()
 {
-  /* initialize now time variable */
-  var today = new Date();
-  var h = today.getHours();
-  var m = today.getMinutes();
 
   /* get saved start time */
   var startTime = document.getElementById('stretchStartTime');
   var startStamp = Number(startTime.dataset.myTimeStamp);
 
-  /* set end time variables */
-  var endStamp = today.getTime();
+  /* get saved end time */
+  var endTime = document.getElementById('specialsetendTime');
+  var endStamp = Number(startTime.dataset.myTimeStamp);
 
   /* calculate the total time difference */
   var diff_msec = (endStamp - startStamp);

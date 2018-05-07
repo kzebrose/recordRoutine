@@ -58,7 +58,7 @@ td {
     </tr>
     <tr>
       <td><h2 style="color:blue">lean</h2></td><td><h2 style="color:blue">back</h2></td><td><h2 style="color:blue">timer&nbsp;</h2></td><td><h1 id="clock2">clock2</h1></td>
-      <td></td><td>How are you feeling?:</td><td> <input id=lastCheckin onclick="fillComment('lastCheckin')" size="20" type="text" name="lastCheckin" value="ready to start"> </td>
+      <td></td><td onclick="fillComment('lastCheckin')"> How are you feeling?:</td><td> <input id=lastCheckin size="20" type="text" name="lastCheckin" value="ready to start"> </td>
     </tr>
     <tr>
       <td><h2>set 3&nbsp;&nbsp;</h2></td>
@@ -83,10 +83,11 @@ td {
     </tr>
     <tr>
       <td id=goal onclick="setGoal()">2 minute goal</td>
+      <td><button type="button" onclick="setTotalExerciseTime()"><h2>calculate totals</h2></button></td>
       <td><h2>total exercise</h2></td>
-      <td onclick="setTotalExerciseTime()"><h2><input  id=totalExerciseTime  type="text" name="totalExerciseTime" value="09:00"> </h2></td>
+      <td><h2><input  id=totalExerciseTime  type="text" name="totalExerciseTime" value="09:00"> </h2></td>
       <td><h2>total time</h2></td>
-      <td onclick="setTotalExerciseTime()"><h2><input  id=totalTime  type="text" name="totalTime" value="09:00"> </h2></td>
+      <td><h2><input  id=totalTime  type="text" name="totalTime" value="09:00"> </h2></td>
       <td><h2></h2></td>
     </tr>
   </table>
