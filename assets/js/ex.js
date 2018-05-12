@@ -49,6 +49,7 @@ function setEndTimeExercise(startTimeName,endTimeName)
   var endTime = document.getElementById(endTimeName);
   endTime.value = h + ":" + m;
   var endStamp = today.getTime();
+  endTime.dataset.myTimeStamp= today.getTime();
 
   /* calculate the difference */
   var subLabel = endTimeName + "MinusStart";
@@ -82,7 +83,7 @@ function setTotalExerciseTime()
 
   /* get saved end time */
   var endTime = document.getElementById('specialsetendTime');
-  var endStamp = Number(startTime.dataset.myTimeStamp);
+  var endStamp = Number(endTime.dataset.myTimeStamp);
 
   /* calculate the total time difference */
   var diff_msec = (endStamp - startStamp);
