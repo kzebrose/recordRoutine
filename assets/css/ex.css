@@ -1,0 +1,11 @@
+td {
+  border:3px solid green;
+  outline: 3px dotted purple;
+}
+.suggestedComment {
+  background-color: aquamarine;
+}
+.addOnComment {
+  background-color: lightblue;
+}
+

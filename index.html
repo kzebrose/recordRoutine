@@ -5,18 +5,12 @@
   <script type="text/javascript" src="http://exercise.org/assets/js/script.js"></script>
   <script  type="text/javascript" src="http://exercise.org/assets/js/ex.js"></script>
   <script  type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
-  <style>
-td {
-  border:3px solid green;
-  outline: 3px dotted purple;
-}
-  </style>
+  <link href="http://exercise.org/assets/css/ex.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body onload="startTime()">
 
 <span id="exerciseCode">L2UVHWD</span><button type="button" onclick="myFunction()">Copy text</button> <a href="http://www.my-exercise-code.com" target="_blank">exercise form described with video</a>
-
 <form action="action_page.php" method="post">
 
   <table>
@@ -40,12 +34,17 @@ td {
       <td>time in minutes</td><td> <input id=set1endTimeMinusStart size="7" type="text" name="set1time" value="Z17-Z12"> </td>
     </tr>
     <tr>
-      <td id=comment >OK</td><td onclick="fillComment('midCheckin')">How are you feeling?:</td><td> <input id=midCheckin size="10" type="text" name="midCheckin" value="ready to start"> </td>
-      <td onclick="setComment('OK')">OK</td><td onclick="setComment('having trouble')">having trouble</td>
-      <td onclick="setComment('doing well')" >doing well</td><td onclick="setComment('ready for a break')">ready for a break</td>
-      <td onclick="setComment('tired')" >tired</td><td onclick="setComment('really great')">really great</td>
-      <td onclick="setComment('Rock Star')" >Rock Star</td><td onclick="setComment('Reduced')">Reduced</td>
-      <td onclick="setComment('Rock Star')" >3lb added</td><td onclick="setComment('Reduced')">8lb addedd</td>
+      <td id=comment >select a comment</td><td onclick="fillComment('midCheckin')">How are you feeling?:</td><td> <input id=midCheckin size="10" type="text" name="midCheckin" value="ready to start"> </td>
+      <td class="suggestedComment" onclick="setComment('OK')">OK</td>
+      <td class="suggestedComment" onclick="setComment('having trouble')">having trouble</td>
+      <td class="suggestedComment" onclick="setComment('doing well')" >doing well</td>
+      <td class="suggestedComment" onclick="setComment('ready for a break')">ready for a break</td>
+      <td class="suggestedComment" onclick="setComment('tired')" >tired</td>
+      <td class="suggestedComment" onclick="setComment('really great')">really great</td>
+      <td class="suggestedComment" onclick="setComment('Rock Star')" >Rock Star</td>
+      <td class="suggestedComment" onclick="setComment('Reduced')">Reduced</td>
+      <td class="addOnComment" onclick="addComment('3lb added')" >3lb added</td>
+      <td class="addOnComment" onclick="addComment('8lb added')">8lb added</td>
     </tr>
     <tr>
       <td><h2>set 2&nbsp;&nbsp;</h2></td>

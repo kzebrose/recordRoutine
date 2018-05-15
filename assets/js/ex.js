@@ -31,7 +31,7 @@ function setTimeExercise(timeName)
   var m = today.getMinutes();
   var myTime = document.getElementById(timeName);
   myTime.value = h + ":" + m;
-  myTime.dataset.myTimeStamp= today.getTime();
+  myTime.dataset.myTimeStamp = today.getTime();
 }
 
 function setEndTimeExercise(startTimeName,endTimeName)
@@ -100,12 +100,13 @@ function setTotalExerciseTime()
   var set2diff = document.getElementById('set2endTimeMinusStart');
   var set3diff = document.getElementById('set3endTimeMinusStart');
   var ssetdiff = document.getElementById('specialsetendTimeMinusStart');
-  var totalExercise = set1diff.dataset.diffTimeStamp + set2diff.dataset.diffTimeStamp + set3diff.dataset.diffTimeStamp + ssetdiff.dataset.diffTimeStamp;
+  var totalExercise = Number(set1diff.dataset.diffTimeStamp) + Number(set2diff.dataset.diffTimeStamp) +
+                      Number(set3diff.dataset.diffTimeStamp) + Number(ssetdiff.dataset.diffTimeStamp);
 
   var mm = Math.floor(totalExercise / 1000 / 60);
+  if(totalExercise < 60000) mm= 0 ;
   totalExercise -= mm * 1000 * 60;
   var ss = Math.floor(totalExercise / 1000);
-  if(totalExercise < 60000) mm= 0 ;
   document.getElementById('totalExerciseTime').value = mm + ":" + ss;
 }
 
@@ -118,18 +119,30 @@ function setComment(selectedComment)
   comment.style.fontSize = "20px";
 }
 
+
+function addComment(selectedComment)
+{
+  var comment = document.getElementById('comment');
+  var currComment = comment.dataset.currentComment;
+  comment.dataset.currentComment = currComment + ' ' + selectedComment;
+  comment.innerHTML =  currComment + '&nbsp;' + selectedComment;
+  comment.style.backgroundColor = "lightgreen";
+  comment.style.fontSize = "20px";
+}
+
 function fillComment(selectedInput)
 {
   var comment = document.getElementById('comment');
   var myInput = document.getElementById(selectedInput);
-  myInput.value = comment.innerHTML;
+  myInput.value = comment.dataset.currentComment;
 }
 
 
 function setGoal()
 {
+  var myClock = document.getElementById('clock1').value;
   var goal = document.getElementById('goal');
-  var today = new Date();
+  var today = new Date(myClock);
   var h = today.getHours();
   var m = today.getMinutes() + 2;
   var s = today.getSeconds();

@@ -22,6 +22,9 @@ body {
 .header {
 	padding: 10px;
 }
+.suggestedComment td {
+  background-color:lightgreen;
+}
 .main_title {
 	background: #cccccc;
 	color: #ffffff;
