@@ -14,11 +14,12 @@ function myFunction() {
 
 function startTime()
 {
+  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
   var today = new Date();
   var h = today.getHours();
   var m = today.getMinutes();
   var s = today.getSeconds();
-  document.getElementById('clock1').value = today;
+  document.getElementById('clock1').value = today.toLocaleDateString("en-US",options);
   document.getElementById('clock2').innerHTML = ":" + m + ":" + s;
   document.getElementById('clock3').innerHTML = h + ":" + m + ":" + s;
   var t = setTimeout(startTime, 6000);
