@@ -40,15 +40,15 @@
   $show=print_r($exData,true);
   //echo "<br> $show <br>";
   echo "<h1> SUMMARY </h1>\n";echo "<ol>\n";
-  $todayArr = explode(" ",$exData[clock1]);
+  $todayArr = explode(" ",$exData['clock1']);
   //print_r($todayArr);
-  $startThought =  $exData[startingCheckin];
-  $totalExerciseTime =  $exData[totalExerciseTime];
-  $startTime =  $exData[stretchStartTime];
-  $endTime =  $exData[special_set_endTime];
+  $startThought =  $exData['startingCheckin'];
+  $totalExerciseTime =  $exData['totalExerciseTime'];
+  $startTime =  $exData['stretchStartTime'];
+  $endTime =  $exData['special_set_endTime'];
   echo "<h2>It looks like you were $startThought  at $startTime $todayArr[0] $todayArr[1] $todayArr[2] $todayArr[3]</h2>\n";
-    $totalTime = $exData[totalTime];
-    $totalExerciseTime = $exData[totalExerciseTime];
+    $totalTime = $exData['totalTime'];
+    $totalExerciseTime = $exData['totalExerciseTime'];
     echo "<h2>total time is $totalTime</h2>";
     echo "<h2>total exercise time is $totalExerciseTime</h2>";
   foreach ($exData as $key => $value)
