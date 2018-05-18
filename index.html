@@ -79,10 +79,12 @@
       <td onclick="fillComment('slowWalk')">2 minute slow walk note</td><td> <input id=slowWalk size="10" type="text" name="slowWalk" value="'"> </td>
       <td onclick="setEndTimeExercise('specialsetstartTime','specialsetendTime')">set end</td><td> <input  id=specialsetendTime size="7" type="text" name="specialsetendTime" value="09:00"> </td>
       <td>time in minutes</td><td> <input id=specialsetendTimeMinusStart size="7" type="text" name="specialsettime" value="Z17-Z12"> </td>
-      <td><div id="clock3">clock3</div></td>
     </tr>
     <tr>
-      <td id=goal onclick="setGoal()">2 minute goal</td>
+      <td>2 minute<br><span id=goal2min onclick="setGoal('2min',2,0)">click for goal</span></td>
+      <td>1 minute<br><span id=goal1min onclick="setGoal('1min',1,0)">click for goal</td>
+      <td>30 seconds<br><span id=goal30sec onclick="setGoal('30sec',0,30)">click for goal</td>
+      <td><h1 id="clock3">clock3</h1></td>
       <td><button type="button" onclick="setTotalExerciseTime()"><h2>calculate totals</h2></button></td>
       <td><h2>total exercise</h2></td>
       <td><h2><input  id=totalExerciseTime  type="text" name="totalExerciseTime" value="09:00"> </h2></td>

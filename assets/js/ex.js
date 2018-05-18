@@ -139,14 +139,17 @@ function fillComment(selectedInput)
 }
 
 
-function setGoal()
+function setGoal(tag,minGoal,secGoal)
 {
-  var myClock = document.getElementById('clock1').value;
-  var goal = document.getElementById('goal');
-  var today = new Date(myClock);
-  var h = today.getHours();
-  var m = today.getMinutes() + 2;
-  var s = today.getSeconds();
+  var myDate = document.getElementById('clock1').value;
+  var myTime = document.getElementById('clock3').innerHTML;
+  var goal = document.getElementById('goal' + tag);
+  var today = new Date(myDate + " " + myTime);
+  var sumSec = today.getSeconds() + Number(secGoal);
+  var sumMin = today.getMinutes() + Number(minGoal) + Math.floor(sumSec/60);
+  var s = sumSec % 60;
+  var m = sumMin % 60;
+  var h = today.getHours() + Math.floor(sumMin/60);
   goal.innerHTML = h + ":" + m + ":" + s;
   goal.style.backgroundColor = "lightgreen";
   goal.style.fontSize = "20px";
