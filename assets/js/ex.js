@@ -151,6 +151,6 @@ function setGoal(tag,minGoal,secGoal)
   var m = sumMin % 60;
   var h = today.getHours() + Math.floor(sumMin/60);
   goal.innerHTML = h + ":" + m + ":" + s;
-  goal.style.backgroundColor = "lightgreen";
-  goal.style.fontSize = "20px";
+  goal.style.backgroundColor = "lightyellow";
+  goal.style.fontSize = "30px";
 }
