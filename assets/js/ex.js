@@ -20,8 +20,8 @@ function startTime()
   var m = today.getMinutes();
   var s = today.getSeconds();
   document.getElementById('clock1').value = today.toLocaleDateString("en-US",options);
-  document.getElementById('clock2').innerHTML = ":" + m + ":" + s;
-  document.getElementById('clock3').innerHTML = h + ":" + m + ":" + s;
+  document.getElementById('clock2').innerHTML = ":" + twoChar(m) + ":" + twoChar(s);
+  document.getElementById('clock3').innerHTML = twoChar(h) + ":" + twoChar(m) + ":" + twoChar(s);
   var t = setTimeout(startTime, 6000);
 }
 
@@ -71,7 +71,7 @@ function getMinutes(msec)
 {
   var hh = Math.floor(msec / 1000 / 60 / 60);
   msec -= hh * 1000 * 60 * 60;
-  var mm = Math.floor(msec / 1000 / 60);
+  var mm = twoChar(Math.floor(msec / 1000 / 60));
   return mm;
 }
 
@@ -108,7 +108,7 @@ function setTotalExerciseTime()
   if(totalExercise < 60000) mm= 0 ;
   totalExercise -= mm * 1000 * 60;
   var ss = Math.floor(totalExercise / 1000);
-  document.getElementById('totalExerciseTime').value = mm + ":" + ss;
+  document.getElementById('totalExerciseTime').value = twoChar(mm) + ":" + twoChar(ss);
 }
 
 function setComment(selectedComment)
@@ -138,6 +138,12 @@ function fillComment(selectedInput)
   myInput.value = comment.dataset.currentComment;
 }
 
+function twoChar(number)
+{
+  var ret = "0" + number;
+  if(number > 9) ret = number;
+  return ret;
+}
 
 function setGoal(tag,minGoal,secGoal)
 {
@@ -150,7 +156,7 @@ function setGoal(tag,minGoal,secGoal)
   var s = sumSec % 60;
   var m = sumMin % 60;
   var h = today.getHours() + Math.floor(sumMin/60);
-  goal.innerHTML = h + ":" + m + ":" + s;
+  goal.innerHTML = twoChar(h) + ":" + twoChar(m) + ":" + twoChar(s);
   goal.style.backgroundColor = "lightyellow";
   goal.style.fontSize = "30px";
 }
