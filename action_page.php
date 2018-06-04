@@ -45,7 +45,6 @@
   $startThought =  $exData['startingCheckin'];
   $totalExerciseTime =  $exData['totalExerciseTime'];
   $startTime =  $exData['stretchStartTime'];
-  $endTime =  $exData['special_set_endTime'];
   echo "<h2>It looks like you were $startThought  at $startTime $todayArr[0] $todayArr[1] $todayArr[2] $todayArr[3]</h2>\n";
     $totalTime = $exData['totalTime'];
     $totalExerciseTime = $exData['totalExerciseTime'];
