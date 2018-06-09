@@ -144,9 +144,20 @@ function twoChar(number)
   if(number > 9) ret = number;
   return ret;
 }
-
+function clearGoal(tag)
+{
+  var goal = document.getElementById('goal' + tag);
+  goal.innerHTML = "_______";
+  goal.style.backgroundColor = "white";
+  goal.style.fontSize = "30px";
+}
 function setGoal(tag,minGoal,secGoal)
 {
+/* first clear all goals */
+  clearGoal('2min');
+  clearGoal('1min');
+  clearGoal('30sec');
+
   var myDate = document.getElementById('clock1').value;
   var myTime = document.getElementById('clock3').innerHTML;
   var goal = document.getElementById('goal' + tag);
