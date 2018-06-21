@@ -1,4 +1,4 @@
-td {
+th,td {
   border:3px solid green;
   outline: 3px dotted purple;
 }
@@ -8,4 +8,11 @@ td {
 .addOnComment {
   background-color: lightblue;
 }
-
+.setOne {
+  background-color: red;
+  color: white;
+}
+.setThree {
+  background-color: blue;
+  color: white;
+}

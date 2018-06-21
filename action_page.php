@@ -8,17 +8,41 @@
     $currentLogName = $applicationPath."/".$dateString.$name.".log";
     $logh = fopen($currentLogName, "c+") or die("Unable to open $currentLogName");
     $txt=" === v$ver === $name ".date("Y/m/d H:i:s")."\n";
-    fwrite($logh, $txt);
+    //fwrite($logh, $txt);
     return $logh;
   }
 
   function writeForm($data)
   {
     $logh = getLogHandle('exercise','0.1');
-    foreach($data as $line)
+    foreach($data as $key => $line)
     {
-      //echo $line."\n";
-      fwrite($logh,$line."\n");
+      $fred = strpos($key,'set1');
+      $wilma = strpos($key,'set2');
+      $barney = strpos($key,'set3');
+      //echo $fred."F".$wilma."W".$barney."B"."(".$key.")".$line."<br>";
+      if(strcmp($key,"totalTime") === 0)
+      {
+        fwrite($logh,"<td>".$line."</td>\n");
+        fwrite($logh,"</tr><tr>");
+      }
+      elseif(strpos($key,"set1") === 0)
+      {
+        fwrite($logh,"<td class='setOne'>".$line."</td>\n");
+      }
+      elseif(strpos($key,"set2") === 0)
+      {
+        fwrite($logh,"<td class='setTwo'>".$line."</td>\n");
+      }
+      elseif(strpos($key,"set3") === 0)
+      {
+        fwrite($logh,"<td class='setThree'>".$line."</td>\n");
+      }
+      elseif(strpos($key,"clock1") === 0)
+      {
+        fwrite($logh,$line."</td>\n");
+      }
+      else fwrite($logh,"<td>".$line."</td>\n");
     }
     fclose($logh);
     return;
@@ -52,7 +76,7 @@
     echo "<h2>total exercise time is $totalExerciseTime</h2>";
   foreach ($exData as $key => $value)
   {
-    /*    echo "<li> $key  = $value</li>\n ";*/
+        //echo "<li> $key  = $value</li>\n ";
   }
   echo "</ol>\n";
 
