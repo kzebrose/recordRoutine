@@ -5,7 +5,7 @@
   {
     $applicationPath = dirname(__FILE__);
     $dateString = date("D_F_j_Y_ha_");
-    $currentLogName = $applicationPath."/".$dateString.$name.".log";
+    $currentLogName = $applicationPath."/".$dateString.$name.".html";
     $logh = fopen($currentLogName, "c+") or die("Unable to open $currentLogName");
     $txt=" === v$ver === $name ".date("Y/m/d H:i:s")."\n";
     //fwrite($logh, $txt);
@@ -24,7 +24,7 @@
       if(strcmp($key,"totalTime") === 0)
       {
         fwrite($logh,"<td>".$line."</td>\n");
-        fwrite($logh,"</tr><tr>");
+        fwrite($logh,"</tr>");
       }
       elseif(strpos($key,"set1") === 0)
       {
@@ -40,7 +40,7 @@
       }
       elseif(strpos($key,"clock1") === 0)
       {
-        fwrite($logh,$line."</td>\n");
+        fwrite($logh,"<tr><td colspan='3'>".$line."</td>\n");
       }
       else fwrite($logh,"<td>".$line."</td>\n");
     }
