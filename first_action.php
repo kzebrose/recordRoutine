@@ -61,25 +61,23 @@
 <?php 
   $exData = $_POST;
   writeForm($exData);
-  $show=print_r($exData,true);
+  //$show=print_r($exData,true);
   //echo "<br> $show <br>";
   echo "<img src='http:../Gretchen-Photo-302x336.jpg'/>";
-  echo "<h1> SUMMARY </h1>\n";echo "<ol>\n";
   $todayArr = explode(" ",$exData['clock1']);
   //print_r($todayArr);
   $startThought =  $exData['startingCheckin'];
-  $totalExerciseTime =  $exData['totalExerciseTime'];
   $startTime =  $exData['stretchStartTime'];
-  echo "<h2>It looks like you were $startThought  at $startTime $todayArr[0] $todayArr[1] $todayArr[2] $todayArr[3]</h2>\n";
-    $totalTime = $exData['totalTime'];
-    $totalExerciseTime = $exData['totalExerciseTime'];
-    echo "<h2>total time is $totalTime</h2>";
-    echo "<h2>total exercise time is $totalExerciseTime</h2>";
-  foreach ($exData as $key => $value)
-  {
-        //echo "<li> $key  = $value</li>\n ";
-  }
-  echo "</ol>\n";
+
+  echo "<h2>I recorded you were $startThought  at $startTime $todayArr[0] $todayArr[1] $todayArr[2] $todayArr[3]</h2>\n";
+  echo "<h2>Now that you have done some cardio and stretched it is time for the main event.</h2>";
+  echo "<a href='http:../worksheet.html' target='_blank' ><h1>Click When Ready to Focus On Form</h1></a></td>" 
+  //echo "<ol>";
+  //foreach ($exData as $key => $value)
+  //{
+   //     echo "<li> $key  = $value</li>\n ";
+  //}
+  //echo "</ol>\n";
 
 ?>
 </body>

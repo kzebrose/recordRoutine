@@ -12,6 +12,18 @@ function myFunction() {
   alert("Copied the text: " + copyText.value);
 }
 
+function startOneClockTime()
+{
+  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  document.getElementById('clock1').value = today.toLocaleDateString("en-US",options);
+  var t = setTimeout(startTime, 6000);
+}
+
+
 function startTime()
 {
   var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
