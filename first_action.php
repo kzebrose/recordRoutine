@@ -14,7 +14,7 @@
 
   function writeForm($data)
   {
-    $logh = getLogHandle('exercise','0.1');
+    $logh = getLogHandle('A_stretch','0.1');
     foreach($data as $key => $line)
     {
       $fred = strpos($key,'set1');
@@ -26,24 +26,31 @@
         fwrite($logh,"<td>".$line."</td>\n");
         fwrite($logh,"</tr>");
       }
-      elseif(strpos($key,"set1") === 0)
+      elseif(strpos($key,"stretchStartTime") === 0)
       {
-        fwrite($logh,"<td class='setOne'>".$line."</td>\n");
+        $beginTime = $line;
+        fwrite($logh,"<tr><td colspan='3'>".$line."</td>\n");
+        echo "<h1>This is begining $beginTime</h1>";
       }
-      elseif(strpos($key,"set2") === 0)
+      elseif(strpos($key,"stretch") === 0)
       {
-        fwrite($logh,"<td class='setTwo'>".$line."</td>\n");
-      }
-      elseif(strpos($key,"set3") === 0)
-      {
-        fwrite($logh,"<td class='setThree'>".$line."</td>\n");
+        fwrite($logh,"<td class='stretch'>".$line."</td>\n");
       }
       elseif(strpos($key,"clock1") === 0)
       {
+        $beginDate = $line;
         fwrite($logh,"<tr><td colspan='3'>".$line."</td>\n");
+        //echo "<h1>This is begining $beginTime</h1>";
       }
       else fwrite($logh,"<td>".$line."</td>\n");
     }
+    //calculate total stretch time
+    $nowObj = new DateTime("now");
+    $thenObj = new DateTime($beginDate.$beginTime);
+    echo "now = ".$nowObj->format('Y-m-d/TH:i:s:u');
+    echo "then = ".$thenObj->format('Y-m-d/TH:i:s:u');
+    $stretchObj = $thenObj->diff($nowObj);
+    fwrite($logh,"<td>stretch time ".$stretchObj->i.":".$stretchObj->s."</td>\n");
     fclose($logh);
     return;
   }
@@ -61,8 +68,8 @@
 <?php 
   $exData = $_POST;
   writeForm($exData);
-  //$show=print_r($exData,true);
-  //echo "<br> $show <br>";
+  $show=print_r($exData,true);
+  echo "<br> $show <br>";
   echo "<img src='http:../Gretchen-Photo-302x336.jpg'/>";
   $todayArr = explode(" ",$exData['clock1']);
   //print_r($todayArr);

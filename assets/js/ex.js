@@ -24,6 +24,12 @@ function startOneClockTime()
 }
 
 
+function onceOnLoad()
+{
+   setTimeExercise("set1startTime");
+   startTime();
+}
+
 function startTime()
 {
   var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
@@ -91,7 +97,7 @@ function setTotalExerciseTime()
 {
 
   /* get saved start time */
-  var startTime = document.getElementById('stretchStartTime');
+  var startTime = document.getElementById('set1startTime');
   var startStamp = Number(startTime.dataset.myTimeStamp);
 
   /* get saved end time */
