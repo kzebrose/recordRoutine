@@ -26,6 +26,7 @@ function startOneClockTime()
 
 function onceOnLoad()
 {
+   setPTimage("Gretchen-Photo-302x336.jpg");
    setTimeExercise("set1startTime");
    startTime();
 }
@@ -188,4 +189,18 @@ function setGoal(tag,minGoal,secGoal)
   goal.innerHTML = twoChar(h) + ":" + twoChar(m) + ":" + twoChar(s);
   goal.style.backgroundColor = "lightyellow";
   goal.style.fontSize = "30px";
+}
+
+function setPTimage(name)
+{
+  siteName = window.location.hostname;
+  var ptImg = document.getElementById('PT');
+  if(siteName == "zebrose.com")
+  {
+     ptImg.src = "/exercise/assets/images/" + name;
+  }
+  else
+  {
+     ptImg.src = "/assets/images/" + name;
+  }
 }

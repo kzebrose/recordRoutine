@@ -30,7 +30,6 @@
       {
         $beginTime = $line;
         fwrite($logh,"<tr><td colspan='3'>".$line."</td>\n");
-        echo "<h1>This is begining $beginTime</h1>";
       }
       elseif(strpos($key,"stretch") === 0)
       {
@@ -62,15 +61,21 @@
 
 
 ?>
-<html>
-<body>
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
 
+  <script  type="text/javascript" src="assets/js/ex.js"></script>
+ <link href="assets/css/ex.css" rel="stylesheet" type="text/css" />
+</head>
+<body onload="setPTimage('Gretchen-Photo-302x336.jpg')">
+<img id="PT" src="">
 <?php 
   $exData = $_POST;
   writeForm($exData);
-  $show=print_r($exData,true);
-  echo "<br> $show <br>";
-  echo "<img src='http:../Gretchen-Photo-302x336.jpg'/>";
+  //$show=print_r($exData,true);
+  //echo "<br> $show <br>";
   $todayArr = explode(" ",$exData['clock1']);
   //print_r($todayArr);
   $startThought =  $exData['startingCheckin'];
