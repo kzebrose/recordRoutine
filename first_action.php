@@ -1,12 +1,10 @@
 <?php
-  global $logh;
+  global $logh,$currentLogName;
 
   function getLogHandle($name,$ver)
   {
-    $applicationPath = dirname(__FILE__);
-    $dateString = date("D_F_j_Y_ha_");
-    $currentLogName = $applicationPath."/".$dateString.$name.".html";
-    $logh = fopen($currentLogName, "c+") or die("Unable to open $currentLogName");
+    global $logh,$currentLogName;
+    $logh = fopen($currentLogName, "a+") or die("Unable to open $currentLogName");
     $txt=" === v$ver === $name ".date("Y/m/d H:i:s")."\n";
     //fwrite($logh, $txt);
     return $logh;
@@ -14,7 +12,7 @@
 
   function writeForm($data)
   {
-    $logh = getLogHandle('A_stretch','0.1');
+    $logh = getLogHandle('exercise','0.1');
     foreach($data as $key => $line)
     {
       $fred = strpos($key,'set1');
@@ -26,11 +24,11 @@
         fwrite($logh,"<td>".$line."</td>\n");
         fwrite($logh,"</tr>");
       }
-      elseif(strpos($key,"stretchStartTime") === 0)
-      {
-        $beginTime = $line;
-        fwrite($logh,"<tr><td colspan='3'>".$line."</td>\n");
-      }
+//      elseif(strpos($key,"stretchStartTime") === 0)
+//      {
+//        $beginTime = $line;
+//        fwrite($logh,"<tr><td colspan='3'>".$line."</td>\n");
+//      }
       elseif(strpos($key,"stretch") === 0)
       {
         fwrite($logh,"<td class='stretch'>".$line."</td>\n");
@@ -72,6 +70,15 @@
 <body onload="setPTimage('Gretchen-Photo-302x336.jpg')">
 <img id="PT" src="">
 <?php 
+  global $logh,$currentLogName;
+  $name = "exercise";
+  $applicationPath = dirname(__FILE__);
+  $dateString = date("D_F_j_Y_ha_");
+  $currentLogName = $applicationPath."/".$dateString.$name.".html";
+  
+//  if (!copy($applicationPath."/header.html", $currentLogName)) {
+//    echo "failed to copy header\n";
+//  }
   $exData = $_POST;
   writeForm($exData);
   //$show=print_r($exData,true);
