@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"/>
-  <script type="text/javascript" src="assets/js/script.js"></script>
-  <script  type="text/javascript" src="assets/js/ex.js"></script>
+  <script type="text/javascript" src="/assets/js/script.js"></script>
+  <script  type="text/javascript" src="/assets/js/ex.js"></script>
   <script  type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
  <link href="assets/css/ex.css" rel="stylesheet" type="text/css" />
 </head>
@@ -14,19 +14,19 @@
 
   <table>
     <tr>
-      <td colspan="3"><input size=50 id="clock1" type="text" name="clock1" value="clock1"></td><td onclick="fillComment('startingCheckin')"> How are you feeling?</td><td><input id=startingCheckin size="20" type="text" name="startingCheckin" value="ready to start"></td>
+      <td colspan="3"><input size=50 id="clock1" type="text" name="clock1" value="clock1"></td><td onclick="fillComment('set1Checkin')"> How are you feeling?</td><td><input id=set1Checkin size="20" type="text" name="startingCheckin" value="ready to start"></td>
     <tr>
       <td><h2>set 1&nbsp;&nbsp;</h2></td>
-      <td onclick="setTimeExercise('set1startTime')">set start</td><td> <input  id=set1startTime size="7" type="text" name="set1startTime" value="09:00"> </td>
+      <td onclick="setTimeExercise('set1startTime')">set start</td><td> <input  id=set1startTime size="7" type="text" name="set1startTime" value="00:00"> </td>
       <td onclick="fillComment('set1eversion')">eversion note</td><td> <input id=set1eversion size="10" type="text" name="set1eversion" value="'"> </td>
       <td onclick="fillComment('set1footRaise')">foot raise note</td><td> <input id=set1footRaise size="10" type="text" name="set1footRaise" value="'"> </td>
       <td onclick="fillComment('set1leanBack')">lean back note</td><td> <input id=set1leanBack size="10" type="text" name="set1leanBack" value="'"> </td>
-      <td onclick="fillComment('set1kickBack')">kick back note</td><td> <input id=set1kickBack size="10" type="text" name="set1kickBack" value="'"> </td>
-      <td onclick="setEndTimeExercise('set1startTime','set1endTime')">set end</td><td> <input  id=set1endTime size="7" type="text" name="set1endTime" value="09:00"> </td>
+      <td onclick="fillEndComment('set1kickBack','set1startTime','set1endTime')">kick back note</td><td> <input id=set1kickBack size="10" type="text" name="set1kickBack" value="'"> </td>
+      <td onclick="setEndTimeExercise('set1startTime','set1endTime')">set end</td><td> <input  id=set1endTime size="7" type="text" name="set1endTime" value="00:00"> </td>
       <td>time in minutes</td><td> <input id=set1endTimeMinusStart size="7" type="text" name="set1time" value="Z17-Z12"> </td>
     </tr>
     <tr>
-      <td id=comment >select a comment</td><td onclick="fillComment('midCheckin')">How are you feeling?:</td><td> <input id=midCheckin size="10" type="text" name="midCheckin" value="ready to start"> </td>
+      <td id=comment >select a comment</td><td onclick="fillComment('set2Checkin')">How are you feeling?:</td><td> <input id=set2Checkin size="10" type="text" name="set2Checkin" value="ready to start"> </td>
       <td class="suggestedComment" onclick="setComment('OK')">OK</td>
       <td class="suggestedComment" onclick="setComment('having trouble')">having trouble</td>
       <td class="suggestedComment" onclick="setComment('doing well')" >doing well</td>
@@ -41,48 +41,48 @@
     </tr>
     <tr>
       <td><h2>set 2&nbsp;&nbsp;</h2></td>
-      <td onclick="setTimeExercise('set2startTime')">start time:</td><td> <input  id=set2startTime size="7" type="text" name="set2startTime" value="09:00"> </td>
+      <td onclick="setTimeExercise('set2startTime')">start time:</td><td> <input  id=set2startTime size="7" type="text" name="set2startTime" value="00:00"> </td>
       <td onclick="fillComment('set2eversion')">eversion note</td><td> <input id=set2eversion size="10" type="text" name="set2eversion" value="'"> </td>
       <td onclick="fillComment('set2footRaise')">foot raise note</td><td> <input id=set2footRaise size="10" type="text" name="set2footRaise" value="'"> </td>
       <td onclick="fillComment('set2leanBack')">lean back note</td><td> <input id=set2leanBack size="10" type="text" name="set2leanBack" value="'"> </td>
-      <td onclick="fillComment('set2kickBack')">kick back note</td><td> <input id=set2kickBack size="10" type="text" name="set2kickBack" value="'"> </td>
-      <td onclick="setEndTimeExercise('set2startTime','set2endTime')">set end</td><td> <input  id=set2endTime size="7" type="text" name="set2endTime" value="09:00"> </td>
+      <td onclick="fillEndComment('set2kickBack','set2startTime','set2endTime')">kick back note</td><td> <input id=set2kickBack size="10" type="text" name="set2kickBack" value="'"> </td>
+      <td onclick="setEndTimeExercise('set2startTime','set2endTime')">set end</td><td> <input  id=set2endTime size="7" type="text" name="set2endTime" value="00:00"> </td>
       <td>time in minutes</td><td> <input id=set2endTimeMinusStart size="7" type="text" name="set2time" value="Z17-Z12"> </td>
     </tr>
     <tr>
       <td><h3 style="color:blue">lean</h3></td><td><h3 style="color:blue">back</h3></td><td><h3 style="color:blue">timer&nbsp;</h3></td><td><h3 id="clock2">clock2</h3></td>
-      <td><img id="PT" width="50%" height="50%" src=""/></td><td colspan="2" onclick="fillComment('lastCheckin')"> How are you feeling?:</td><td> <input id=lastCheckin size="20" type="text" name="lastCheckin" value="ready to start"> </td>
+      <td><img id="PT" width="50%" height="50%" src=""/></td><td colspan="2" onclick="fillComment('set3Checkin')"> How are you feeling?:</td><td> <input id=set3Checkin size="20" type="text" name="set3Checkin" value="ready to start"> </td>
     </tr>
     <tr>
       <td><h2>set 3&nbsp;&nbsp;</h2></td>
-      <td onclick="setTimeExercise('set3startTime')">start time:</td><td> <input  id=set3startTime size="7" type="text" name="set3startTime" value="09:00"> </td>
+      <td onclick="setTimeExercise('set3startTime')">start time:</td><td> <input  id=set3startTime size="7" type="text" name="set3startTime" value="00:00"> </td>
       <td onclick="fillComment('set3eversion')">eversion note</td><td> <input id=set3eversion size="10" type="text" name="set3eversion" value="'"> </td>
       <td onclick="fillComment('set3footRaise')">foot raise note</td><td> <input id=set3footRaise size="10" type="text" name="set3footRaise" value="'"> </td>
       <td onclick="fillComment('set3leanBack')">lean back note</td><td> <input id=set3leanBack size="10" type="text" name="set3leanBack" value="'"> </td>
-      <td onclick="fillComment('set3kickBack')">kick back note</td><td> <input id=set3kickBack size="10" type="text" name="set3kickBack" value="'"> </td>
-      <td onclick="setEndTimeExercise('set3startTime','set3endTime')">set end</td><td> <input  id=set3endTime size="7" type="text" name="set3endTime" value="09:00"> </td>
+      <td onclick="fillEndComment('set3kickBack','set3startTime','set3endTime')">kick back note</td><td> <input id=set3kickBack size="10" type="text" name="set3kickBack" value="'"> </td>
+      <td onclick="setEndTimeExercise('set3startTime','set3endTime')">set end</td><td> <input  id=set3endTime size="7" type="text" name="set3endTime" value="00:00"> </td>
       <td>time in minutes</td><td> <input id=set3endTimeMinusStart size="7" type="text" name="set3time" value="Z17-Z12"> </td>
     </tr>
     <tr>
       <td><h2>special set&nbsp;&nbsp;</h2></td>
-      <td onclick="setTimeExercise('specialsetstartTime')">start time:</td><td> <input  id=specialsetstartTime size="7" type="text" name="specialsetstartTime" value="09:00"> </td>
-      <td onclick="fillComment('bandLift')">band lift note</td><td> <input id=bandLift size="10" type="text" name="bandLift" value="'"> </td>
-      <td onclick="fillComment('halfBand')">half band (5/5) lift note</td><td> <input id=halfBand size="10" type="text" name="halfBand" value="'"> </td>
-      <td onclick="fillComment('march')">march (10) note</td><td> <input id=march size="10" type="text" name="march" value="'"> </td>
-      <td onclick="fillComment('slowWalk')">2 minute slow walk note</td><td> <input id=slowWalk size="10" type="text" name="slowWalk" value="'"> </td>
-      <td onclick="setEndTimeExercise('specialsetstartTime','specialsetendTime')">set end</td><td> <input  id=specialsetendTime size="7" type="text" name="specialsetendTime" value="09:00"> </td>
-      <td>time in minutes</td><td> <input id=specialsetendTimeMinusStart size="7" type="text" name="specialsettime" value="Z17-Z12"> </td>
+      <td onclick="setTimeExercise('set4startTime')">start time:</td><td> <input  id=set4startTime size="7" type="text" name="set4startTime" value="00:00"> </td>
+      <td onclick="fillComment('set4bandLift')">band lift note</td><td> <input id=set4bandLift size="10" type="text" name="bandLift" value="'"> </td>
+      <td onclick="fillComment('set4halfBand')">half band (5/5) lift note</td><td> <input id=set4halfBand size="10" type="text" name="halfBand" value="'"> </td>
+      <td onclick="fillComment('set4march')">march (10) note</td><td> <input id=set4march size="10" type="text" name="march" value="'"> </td>
+      <td onclick="fillEndComment('set4slowWalk','set4startTime','set4endTime')">2 minute slow walk note</td><td> <input id=set4slowWalk size="10" type="text" name="set4slowWalk" value="'"> </td>
+      <td onclick="setEndTimeExercise('set4startTime','set4endTime')">set end</td><td> <input  id=set4endTime size="7" type="text" name="set4endTime" value="00:00"> </td>
+      <td>time in minutes</td><td> <input id=set4endTimeMinusStart size="7" type="text" name="set4time" value="Z17-Z12"> </td>
     </tr>
     <tr>
       <td>2 minute<br><span id=goal2min onclick="setGoal('2min',2,0)">click4_g</span></td>
-      <td>1 minute<br><span id=goal1min onclick="setGoal('1min',1,0)">click4_g</td>
-      <td>30 seconds<br><span id=goal30sec onclick="setGoal('30sec',0,30)">click4_g</td>
+      <td>1 minute<br><span id=goal1min onclick="setGoal('1min',1,0)">click4_g</span></td>
+      <td>30 seconds<br><span id=goal30sec onclick="setGoal('30sec',0,30)">click4_g</span></td>
       <td><h1 id="clock3">clock3</h1></td>
       <td><button type="button" onclick="setTotalExerciseTime()"><h2>calculate totals</h2></button></td>
       <td><h2>total exercise</h2></td>
-      <td><h2><input  id=totalExerciseTime  type="text" name="totalExerciseTime" value="09:00"> </h2></td>
+      <td><h2><input  id=totalExerciseTime  type="text" name="totalExerciseTime" value="00:00"> </h2></td>
       <td><h2>total time</h2></td>
-      <td><h2><input  id=totalTime  type="text" name="totalTime" value="09:00"> </h2></td>
+      <td><h2><input  id=totalTime  type="text" name="totalTime" value="00:00"> </h2></td>
     </tr>
   </table>
   <br>
@@ -90,23 +90,6 @@
 </form> 
 
 <p>If you click the "Submit" button, the form-data will be sent to a page called "action_page.php".</p>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 </body>
 </html>
 

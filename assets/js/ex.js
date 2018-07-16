@@ -102,7 +102,7 @@ function setTotalExerciseTime()
   var startStamp = Number(startTime.dataset.myTimeStamp);
 
   /* get saved end time */
-  var endTime = document.getElementById('specialsetendTime');
+  var endTime = document.getElementById('set4endTime');
   var endStamp = Number(endTime.dataset.myTimeStamp);
 
   /* calculate the total time difference */
@@ -119,7 +119,7 @@ function setTotalExerciseTime()
   var set1diff = document.getElementById('set1endTimeMinusStart');
   var set2diff = document.getElementById('set2endTimeMinusStart');
   var set3diff = document.getElementById('set3endTimeMinusStart');
-  var ssetdiff = document.getElementById('specialsetendTimeMinusStart');
+  var ssetdiff = document.getElementById('set4endTimeMinusStart');
   var totalExercise = Number(set1diff.dataset.diffTimeStamp) + Number(set2diff.dataset.diffTimeStamp) +
                       Number(set3diff.dataset.diffTimeStamp) + Number(ssetdiff.dataset.diffTimeStamp);
 
@@ -150,8 +150,22 @@ function addComment(selectedComment)
   comment.style.fontSize = "20px";
 }
 
+function fillEndComment(selectedInput,startTime,endTime)
+{
+   fillComment(selectedInput);
+   setEndTimeExercise(startTime,endTime);
+}
+
 function fillComment(selectedInput)
 {
+  //check start time was filled in and set if still default
+  var setNumber = selectedInput.slice(0, 4);
+  var IdName = setNumber+'startTime';
+  var startTimeElement = document.getElementById(IdName);
+  if(startTimeElement.value == "00:00")
+  {
+     setTimeExercise(IdName);
+  }
   var comment = document.getElementById('comment');
   var myInput = document.getElementById(selectedInput);
   myInput.value = comment.dataset.currentComment;
