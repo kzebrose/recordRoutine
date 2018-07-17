@@ -23,12 +23,26 @@ function startOneClockTime()
   var t = setTimeout(startTime, 6000);
 }
 
-
+//called by firstPage and mainPage to start clocks
 function onceOnLoad()
 {
-   setPTimage("Gretchen-Photo-302x336.jpg");
+  setPTimage("Gretchen-Photo-302x336.jpg");
+
+  var myTitle = document.title;
+  var arrTitle = myTitle.split(" ");
+  if(arrTitle[0] == "firstPage")
+  {
+    setLinkPath("/metrics.html","metricLink");
+  }
    setTimeExercise("set1startTime");
    startTime();
+}
+
+//called by first_action.php
+function firstOnLoad()
+{
+  setPTimage("Gretchen-Photo-302x336.jpg");
+  setLinkPath("/worksheet.html","worksheetLink");
 }
 
 function startTime()
@@ -203,6 +217,20 @@ function setGoal(tag,minGoal,secGoal)
   goal.innerHTML = twoChar(h) + ":" + twoChar(m) + ":" + twoChar(s);
   goal.style.backgroundColor = "lightyellow";
   goal.style.fontSize = "30px";
+}
+
+function setLinkPath(localPath,idName)
+{
+    siteName = window.location.hostname;
+  var myElement = document.getElementById(idName);
+  if(siteName == "zebrose.com")
+  {
+     myElement.href = "http://zebrose.com/exercise" + localPath;
+  }
+  else
+  {
+     myElement.href = "http://exercise.org" + localPath;
+  }
 }
 
 function setPTimage(name)
