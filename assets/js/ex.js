@@ -176,9 +176,12 @@ function fillComment(selectedInput)
   var setNumber = selectedInput.slice(0, 4);
   var IdName = setNumber+'startTime';
   var startTimeElement = document.getElementById(IdName);
-  if(startTimeElement.value == "00:00")
+  if(typeof startTimeElement.value !== 'undefined' && startTimeElement.value !== null)
   {
-     setTimeExercise(IdName);
+    if(startTimeElement.value == "00:00")
+    {
+      setTimeExercise(IdName);
+    }
   }
   var comment = document.getElementById('comment');
   var myInput = document.getElementById(selectedInput);
