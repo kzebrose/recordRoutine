@@ -7,7 +7,7 @@
 <form action="action_page.php" method="post">
 <div class="container-fluid">
       <div class="row">
-         <div class="col-6">
+         <div class="col-xs-12 col-md-6">
            <input size=50 id="clock1" type="text" name="clock1" value="clock1">
          </div><!-- end col -->
          <div class="col-3" onclick="fillComment('startingCheckin')">
@@ -19,8 +19,12 @@
       </div><!-- end row -->
     <div class="row">&nbsp</div>
     <div class="row">
-      <div class="col-2"><h2>set 1&nbsp;&nbsp;</h2></div><!-- end col -->
-      <div class="col" onclick="setTimeExercise('set1startTime')">set start<input  id=set1startTime  type="text" name="set1startTime" value="09:00"> </div><!-- end col -->
+      <div class="col-xs-12 col-md-4"><h2>set 1&nbsp;&nbsp;</h2></div><!-- end col -->
+      <div class="col-xs-12 col-md-4" onclick="setTimeExercise('set1startTime')">
+           set start<input  id=set1startTime  type="text" name="set1startTime" value="09:00"> 
+      </div><!-- end col -->
+    </div><!-- end row -->
+    <div class="row">
       <div class="col" onclick="fillComment('set1eversion')">eversion note<input id=set1eversion  type="text" name="set1eversion" value="'"> </div><!-- end col -->
       <div class="col" onclick="fillComment('set1footRaise')">foot raise note<input id=set1footRaise  type="text" name="set1footRaise" value="'"> </div><!-- end col -->
       <div class="col" onclick="fillComment('set1leanBack')">lean back note<input id=set1leanBack  type="text" name="set1leanBack" value="'"> </div><!-- end col -->
