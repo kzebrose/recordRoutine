@@ -15,7 +15,7 @@
 
 <body onload="onceOnLoad()">
   <!-- button onclick="onceOnLoad()">Click ME</button --!>
-<form action="first_action.php" method="post">
+<form action="stretch_action.php" method="post">
 
   <table>
     <tr>

@@ -26,13 +26,17 @@ function startOneClockTime()
 //called by firstPage and mainPage to start clocks
 function onceOnLoad()
 {
-  setPTimage("Gretchen-Photo-302x336.jpg");
 
   var myTitle = document.title;
   var arrTitle = myTitle.split(" ");
   if(arrTitle[0] == "firstPage")
   {
     setLinkPath("/metrics.html","metricLink");
+    setPTimage("Gretchen-Photo-302x336.jpg");
+  }
+  if(arrTitle[0] == "mainPage")
+  {
+    setPTimage("Gretchen-Photo-302x336.jpg");
   }
    setTimeExercise("set1startTime");
    startTime();

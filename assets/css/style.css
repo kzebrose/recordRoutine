@@ -3,12 +3,15 @@
 	padding: 0;
 }
 body {
-	padding: 10px;
+	padding-top: 40px;
 	background: #eaeaea;
 	text-align: center;
 	font-family: arial;
 	font-size: 12px;
 	color: #333333;
+}
+button {
+  padding:10px;
 }
 .container {
 	width: 1000px;
