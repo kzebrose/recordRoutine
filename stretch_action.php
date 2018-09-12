@@ -1,18 +1,27 @@
 <?php
   global $logh,$currentLogName;
 
+  function getExerciseTimesHandle()
+  {
+    $ret = fopen("exerciseTimes.dat", "a+") or die("Unable to open exerciseTimes.dat");
+    $txt="<!-- === Exercise Times === ".date("Y/m/d H:i:s")."--> \n";
+    fwrite($logh, $txt);
+    return $logh;
+  }
+
   function getLogHandle($name,$ver)
   {
     global $logh,$currentLogName;
     $logh = fopen($currentLogName, "a+") or die("Unable to open $currentLogName");
-    $txt=" === v$ver === $name ".date("Y/m/d H:i:s")."\n";
-    //fwrite($logh, $txt);
+    $txt="<!-- === v$ver === $name ".date("Y/m/d H:i:s")."--> \n";
+    fwrite($logh, $txt);
     return $logh;
   }
 
   function writeForm($data)
   {
     $logh = getLogHandle('exercise','0.1');
+    $exh = getExerciseTimesHandle();
     foreach($data as $key => $line)
     {
       if(strcmp($key,"totalTime") === 0)
@@ -78,6 +87,13 @@
 
   echo "<h2>I recorded you were $startThought  at $startTime $todayArr[0] $todayArr[1] $todayArr[2] $todayArr[3]</h2>\n";
   echo "<h2>Now that you have done some cardio and stretched it is time for the main event.</h2>";
+  echo "<a id=worksheetLink href='http:../worksheet.html' target='_blank' ><h1>Click When Ready to Focus On Form</h1></a></td>" 
+  //echo "<ol>";
+  //foreach ($exData as $key => $value)
+  //{
+   //     echo "<li> $key  = $value</li>\n ";
+  //}
+  //echo "</ol>\n";
 
 ?>
            <a class="btn btn-primary" href="http://exercise.org/start.php">back</a>

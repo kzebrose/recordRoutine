@@ -61,7 +61,10 @@
       <div class="col" class="addOnComment" onclick="addComment('plus chat')">plus chat</div><!-- end col -->
     </div><!-- end row -->
     <div class="row">
-      <div class="col-xs-12 col-md-6">
+      <div class="col-xs-12 col-md-3">
+         <h2>2 minute <span id="goal2min" onclick="setGoal('2min',2,0)">click for goal</span></h2>
+      </div><!-- end col -->
+      <div class="col-xs-12 col-md-3">
          <h1 id="clock3">clock3</h1>
       </div><!-- end col -->
       <div class="col-xs-12 col-md-6">
@@ -79,6 +82,8 @@
     </div><!-- end row -->
 </div><!-- close container -->
 <input type="hidden" id="SetName" name="SetName" value=<?php echo $name; ?>   >
+<input type="hidden" id="goal1min" name="goal1min" value=0  >
+<input type="hidden" id="goal30sec" name="goal30sec" value=0   >
 <input type="submit" value="Submit" style="height:50px">
 </form> 
 <?php include 'footer.php'; ?>
