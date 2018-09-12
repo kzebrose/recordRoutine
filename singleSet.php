@@ -62,7 +62,7 @@
     </div><!-- end row -->
     <div class="row">
       <div class="col-xs-12 col-md-3">
-         <h2>2 minute <span id="goal2min" onclick="setGoal('2min',2,0)">click for goal</span></h2>
+         <h2>1 minute <span id="goal1min" onclick="setGoal('1min',2,0)">click for goal</span></h2>
       </div><!-- end col -->
       <div class="col-xs-12 col-md-3">
          <h1 id="clock3">clock3</h1>
@@ -82,7 +82,7 @@
     </div><!-- end row -->
 </div><!-- close container -->
 <input type="hidden" id="SetName" name="SetName" value=<?php echo $name; ?>   >
-<input type="hidden" id="goal1min" name="goal1min" value=0  >
+<input type="hidden" id="goal2min" name="goal2min" value=0  >
 <input type="hidden" id="goal30sec" name="goal30sec" value=0   >
 <input type="submit" value="Submit" style="height:50px">
 </form> 
