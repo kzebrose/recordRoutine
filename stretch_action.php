@@ -18,6 +18,15 @@
     return $logh;
   }
 
+  function getTimeHandle($name,$ver)
+  {
+    global $logh,$currentLogName;
+    $logh = fopen($currentLogName, "a+") or die("Unable to open $currentLogName");
+    $txt="<!-- === v$ver === $name ".date("Y/m/d H:i:s")."--> \n";
+    fwrite($logh, $txt);
+    return $logh;
+  }
+
   function writeForm($data)
   {
     $logh = getLogHandle('exercise','0.1');
