@@ -84,6 +84,11 @@
   global $logh,$currentLogName;
   $name = "exercise";
   $applicationPath = dirname(__FILE__);
+  $worksheetURL = "http://zebrose.com/exercise/worksheet.html";
+  if(strcmp($applicationPath,"exercise.org") === 0)
+  {
+     $worksheetURL = "http://exercise.org/worksheet.html";
+  }
   $dateString = date("D_F_j_Y_ha_");
   $currentLogName = $applicationPath."/".$dateString."_stretch_".$name.".html";
   
@@ -96,7 +101,8 @@
 
   echo "<h2>I recorded you were $startThought  at $startTime $todayArr[0] $todayArr[1] $todayArr[2] $todayArr[3]</h2>\n";
   echo "<h2>Now that you have done some cardio and stretched it is time for the main event.</h2>";
-  echo "<a id=worksheetLink href='http:../worksheet.html' target='_blank' ><h1>Click When Ready to Focus On Form</h1></a></td>" 
+  echo "<a id=worksheetLink href=$worksheetURL target='_blank' ><h1>Click When Ready to Focus On Form</h1></a></td>" 
+
   //echo "<ol>";
   //foreach ($exData as $key => $value)
   //{
