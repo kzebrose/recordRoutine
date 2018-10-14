@@ -85,7 +85,7 @@
   $name = "exercise";
   $applicationPath = dirname(__FILE__);
   $worksheetURL = "http://zebrose.com/exercise/worksheet.html";
-  if(strcmp($applicationPath,"exercise.org") === 0)
+  if(strcmp($applicationPath,"/home/kate/exercise") === 0)
   {
      $worksheetURL = "http://exercise.org/worksheet.html";
   }
