@@ -41,7 +41,7 @@
     </div><!-- end row -->
     <div class="row">
       <div class="col" onclick="fillComment('set1eversion')">eversion note<input id=set1eversion  type="text" name="set1eversion" value="'"> </div><!-- end col -->
-      <div class="col" onclick="fillComment('set1footRaise')">foot raise note<input id=set1footRaise  type="text" name="set1footRaise" value="'"> </div><!-- end col -->
+      <div class="col" onclick="fillComment('set1toeRaise')">toe raise note<input id=set1toeRaise  type="text" name="set1toeRaise" value="'"> </div><!-- end col -->
       <div class="col" onclick="fillComment('set1leanBack')">lean back note<input id=set1leanBack  type="text" name="set1leanBack" value="'"> </div><!-- end col -->
       <div class="col" onclick="fillComment('set1kickBack')">kick back note<input id=set1kickBack  type="text" name="set1kickBack" value="'"> </div><!-- end col -->
     </div><!-- end row -->
