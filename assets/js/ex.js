@@ -62,6 +62,17 @@ function startTime()
   var t = setTimeout(startTime, 6000);
 }
 
+function prettyClock()
+{
+  var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+  var s = today.getSeconds();
+  document.getElementById('clock1').value = today.toLocaleDateString("en-US",options);
+  document.getElementById('clock2').value = twoChar(h) + ":" + twoChar(m) + ":" + twoChar(s);
+}
+
 function setTimeExercise(timeName)
 {
   var today = new Date();

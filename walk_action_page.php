@@ -15,39 +15,47 @@
   function writeForm($data)
   {
     $logh = getLogHandle('exercise','0.1');
-    $colspan = '\'1\'';
-    $needDate = FALSE;
-    if($data['set1startTime'] === 'check runkeeper')
-    {
-      $colspan = '\'6\'';
-      $needDate = TRUE;
-    }
     foreach($data as $key => $line)
     {
-      if(strcmp($key,"totalTime") === 0)
+      if(strpos($key,"clock1") === 0)
       {
-        fwrite($logh,"<td>".$line."</td>\n");
-        fwrite($logh,"</tr>");
+        fwrite($logh,"<tr><td colspan='3'>".$line."</td><td>walk day</td>\n");
       }
-      elseif(strpos($key,"colspan2") === 0)
+      elseif(strpos($key,"walkInfo") === 0)
       {
-        fwrite($logh,"<td colspan='2' >".$line."</td>\n");
+        fwrite($logh,"<td colspan='3' >".$line."</td>\n");
       }
-      elseif(strpos($key,"set1") === 0)
+      elseif(strpos($key,"distance") === 0)
       {
-        fwrite($logh,"<td colspan = $colspan class='setOne'>".$line."</td>\n");
+        fwrite($logh,"<td colspan='2'  class='setOne'>distance ".$line." miles</td>\n");
       }
-      elseif(strpos($key,"set2") === 0)
+      elseif(strpos($key,"time") === 0)
       {
-        fwrite($logh,"<td colspan = $colspan class='setTwo'>".$line."</td>\n");
+        fwrite($logh,"<td colspan='2'  class='setOne'>time ".$line." minute</td>\n");
       }
-      elseif(strpos($key,"set3") === 0)
+      elseif(strpos($key,"pace") === 0)
       {
-        fwrite($logh,"<td colspan = $colspan class='setThree'>".$line."</td>\n");
+        fwrite($logh,"<td colspan='5'  class='setOne'>pace ".$line." min/miles</td>\n");
       }
-      elseif(strpos($key,"clock1") === 0)
+      elseif(strpos($key,"footraises") === 0)
       {
-        if($needDate) fwrite($logh,"<tr><td colspan='3'>".$line."</td>\n");
+        fwrite($logh,"<td colspan ='3' class='setTwo'></td><td colspan = '2' class='setTwo'>footraises ".$line."</td>\n");
+      }
+      elseif(strpos($key,"march") === 0)
+      {
+        fwrite($logh,"<td colspan = '2' class='setTwo'>march ".$line."</td>\n");
+      }
+      elseif(strpos($key,"kickback") === 0)
+      {
+        fwrite($logh,"<td colspan = '2' class='setTwo'>kickback ".$line."</td>\n");
+      }
+      elseif(strpos($key,"meInfo") === 0)
+      {
+        fwrite($logh,"<td colspan = '7' class='setThree'>".$line."</td>\n");
+      }
+      elseif(strpos($key,"weather") === 0)
+      {
+        fwrite($logh,"<td colspan = '2' class='setThree'>".$line."</td>\n");
       }
       else fwrite($logh,"<td>".$line."</td>\n");
     }
@@ -76,23 +84,16 @@
   $exData = $_POST;
   writeForm($exData);
   $show=print_r($exData,true);
-  echo "<br> $show <br>";
+  //echo "<br> $show <br>";
   echo "<h1> SUMMARY </h1>\n";echo "<ol>\n";
   $todayArr = explode(" ",$exData['clock1']);
   //print_r($todayArr);
-  $startThought =  $exData['startingCheckin'];
-  $totalExerciseTime =  $exData['totalExerciseTime'];
-  $startTime =  $exData['stretchStartTime'];
-  echo "<h2>It looks like you were $startThought  at $startTime $todayArr[0] $todayArr[1] $todayArr[2] $todayArr[3]</h2>\n";
-    $totalTime = $exData['totalTime'];
-    $totalExerciseTime = $exData['totalExerciseTime'];
-    echo "<h2>total time is $totalTime</h2>";
-    echo "<h2>total exercise time is $totalExerciseTime</h2>";
-  foreach ($exData as $key => $value)
-  {
-        //echo "<li> $key  = $value</li>\n ";
-  }
-  echo "</ol>\n";
+  $clock2 =  $exData['clock2'];
+  $walkInfo =  $exData['walkInfo'];
+  $meInfo =  $exData['meInfo'];
+  echo "<h2>I hope you had a nice walk using your $walkInfo.<br>";
+  echo "It looks like you were $meInfo <br> ";
+  echo "at $clock2 on $todayArr[0] $todayArr[1] $todayArr[2] $todayArr[3]</h2>\n";
 
 ?>
 <a href="/worksheet.html">Back to worksheet</a>

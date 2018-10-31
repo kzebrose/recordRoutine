@@ -9,71 +9,52 @@
  <title> walkPage Kate's Exercise Routine</title>
 </head>
 
-<body onload="startTime()"><!-- references elements with id = clock1, clock2, clock3 -->
+<body onload="prettyClock()"><!-- no timers on walk page -->
 
 <form action="walk_action_page.php" method="post">
 
   <table>
     <tr>
-      <td colspan="3"><input size=50 id="clock1" type="text" name="clock1" value="clock1"></td>
-      <td onclick="fillComment('set1Checkin')"> How were you feeling?</td><td><input id=set1Checkin size="20" type="text" name="startingCheckin" value="ready to start"></td>
-    </tr>
-    <tr>
-      <td id=comment >select a comment</td><td onclick="fillComment('bw12Checkin')">How are you feeling?:</td>
-      <td class="suggestedComment" id=bw12startTime onclick="setComment('OK')">OK</td>
-      <td class="suggestedComment" id=bw23startTime onclick="setComment('having trouble')">having trouble</td>
-      <td class="suggestedComment" onclick="setComment('doing well')" >doing well</td>
-      <td class="suggestedComment" onclick="setComment('ready for a break')">ready for a break</td>
-      <td class="suggestedComment" onclick="setComment('tired')" >tired</td>
-      <td class="suggestedComment" onclick="setComment('really great')">really great</td>
-      <td class="suggestedComment" onclick="setComment('Rock Star')" >Rock Star</td>
-      <td class="suggestedComment" onclick="setComment('Reduced')">Reduced</td>
-    </tr>
-    <tr>
-      <td><h2>walk info&nbsp;&nbsp;</h2></td>
-      <td> <input  id=set1endTime size="17" type="text" name="colspan2" value="Walk with Rollator"> </td>
-      <td><h2>How far did you walk(miles)?</h2></td><td> <input  id=setDistance size="7" type="text" name="setDistance" value="0.20"> </td>
-      <td> <input  id=filler size="7" type="text" name="filler" value="<== distance miles"> </td>
-      <td><h2>What was the pace?(min/mile)</h2></td><td> <input  id=setPace size="7" type="text" name="setPace" value="100"> </td>
-      <td> <input  id=filler size="7" type="text" name="pacefiller" value="<== pace min/mile"> </td>
-    </tr>
-    <tr>
-      <td><h2>set 1&nbsp;&nbsp;</h2></td>
-      <td><h2>How many minutes did you walk(minutes)?</h2></td><td> <input  id=setTime size="7" type="text" name="colspan2Time" value="12"> </td>
-      <td> <input  id=set1filler size="7" type="text" name="colspan2filler" value="<== time"> </td>
-      <td>autofill</td><td> <input  id=set1startTime size="7" type="text" name="set1startTime" value="check runkeeper"> </td><!-- DO NOT REMOVE see action page needDate -->
-      <td colspan="3"><h3 id="clock2">clock2</td>
-      <td colspan="3"><h3 id="clock3">clock3</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><h3>set 2&nbsp;&nbsp;</h3></td>
-      <td >How many foot raises did you do?</td><td> <input  id=set2footraises size="7" type="text" name="set2footraises" value="10"> </td>
-      <td >How many seated or standing marches did you do?</td><td> <input  id=set2march size="7" type="text" name="set2march" value="10"> </td>
-      <td >How many seated or standing kickbacks did you do?</td><td> <input  id=set2kickback size="7" type="text" name="set2kickback" value="10"> </td>
+      <td><input size=40 id="clock1" type="text" name="clock1" value="clock1"></td>
+      <td><input size=20 id="clock2" type="text" name="clock2" value="clock2"></td>
+      <td colspan="2"><h1> Walk Form</h1></td>
     </tr>
     <tr>
     </tr>
     <tr>
-      <td><h2>set 3&nbsp;&nbsp;</h2></td>
-      <td>time in minutes</td><td> <input id=set3endTimeMinusStart size="7" type="text" name="set3time" value="Z17-Z12"> </td>
+      <td><h3>walk assisted by my </h2></td>
+      <td> <input  id=walkInfo size="17" type="text" name="walkInfo" value="rollator"> </td>
+      <td colspan="2"><h3>How far did you walk?</h3></td><td> <input  id=distance size="7" type="text" name="distance" value="0.20"> </td>
+      <td>miles</td>
     </tr>
     <tr>
-      <td><h2>special set&nbsp;&nbsp;</h2></td>
-      <td onclick="setTimeExercise('set4startTime')">start time:</td><td> <input  id=set4startTime size="7" type="text" name="set4startTime" value="00:00"> </td>
-      <td onclick="setEndTimeExercise('set4startTime','set4endTime')">set end</td><td> <input  id=set4endTime size="7" type="text" name="set4endTime" value="00:00"> </td>
-      <td>time in minutes</td><td> <input id=set4endTimeMinusStart size="7" type="text" name="set4time" value="Z17-Z12"> </td>
-      <td>enter total time<h2><input  id=totalTime  type="text" name="totalTime" value="00:00"> </h2></td>
+      <td colspan="2"><h3>How many minutes did you walk?</h3></td><td> <input  id=time size="7" type="text" name="time" value="12"> </td>
+      <td>minutes</td>
     </tr>
     <tr>
-      <td>30 seconds<br><span id=goal30sec onclick="setGoal('30sec',0,30)">click4_g</span></td>
+      <td colspan="2"><h3>What was the pace?</h3></td><td> <input  id=pace size="7" type="text" name="pace" value="100"> </td>
+      <td>min/mile</td>
+    </tr>
+    <tr>
+      <td><h3>exercise</h3></td>
+      <td >How many foot raises?</td><td> <input  id=footraises size="7" type="text" name="footraises" value="10"> </td>
+      <td >How many seated or standing kickbacks?</td><td> <input  id=kickback size="7" type="text" name="kickback" value="10"> </td>
+    </tr>
+    <tr>
+      <td></td><td >How many seated or standing marches?</td><td> <input  id=march size="7" type="text" name="march" value="10"> </td>
+    </tr>
+    <tr>
+      <td><h3>comments</h2></td>
+      <td colspan="2"> <input  id=meInfo size="40" type="text" name="meInfo" value="checking out the neighborhood"> </td>
+      <td><h3>weather</h2></td>
+      <td> <input  id=weather size="17" type="text" name="weather" value="cool 33F"> </td>
     </tr>
   </table>
   <br>
   <input type="submit" value="Submit" style="height:50px">
 </form> 
 
-<p>If you click the "Submit" button, the form-data will be sent to a page called "action_page.php".</p>
+<p>If you click the "Submit" button, the form-data will be sent to a page called "walk_action_page.php".</p>
 </body>
 </html>
 
