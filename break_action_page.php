@@ -19,35 +19,11 @@
     {
       if(strpos($key,"clock1") === 0)
       {
-        fwrite($logh,"<tr><td colspan='3'>".$line."</td><td>walk day</td>\n");
+        fwrite($logh,"<tr><td colspan='3'>".$line."</td><td>break day</td>\n");
       }
-      elseif(strpos($key,"walkInfo") === 0)
+      elseif(strpos($key,"breakInfo") === 0)
       {
         fwrite($logh,"<td colspan='3' >".$line."</td>\n");
-      }
-      elseif(strpos($key,"distance") === 0)
-      {
-        fwrite($logh,"<td colspan='2'  class='setOne'>distance ".$line." miles</td>\n");
-      }
-      elseif(strpos($key,"time") === 0)
-      {
-        fwrite($logh,"<td colspan='2'  class='setOne'>time ".$line." minute</td>\n");
-      }
-      elseif(strpos($key,"pace") === 0)
-      {
-        fwrite($logh,"<td colspan='5'  class='setOne'>pace ".$line." min/miles</td>\n");
-      }
-      elseif(strpos($key,"footraises") === 0)
-      {
-        fwrite($logh,"<td colspan ='3' class='setTwo'></td><td colspan = '2' class='setTwo'>footraises ".$line."</td>\n");
-      }
-      elseif(strpos($key,"march") === 0)
-      {
-        fwrite($logh,"<td colspan = '2' class='setTwo'>march ".$line."</td>\n");
-      }
-      elseif(strpos($key,"kickback") === 0)
-      {
-        fwrite($logh,"<td colspan = '2' class='setTwo'>kickback ".$line."</td>\n");
       }
       elseif(strpos($key,"meInfo") === 0)
       {
@@ -90,13 +66,13 @@
   //print_r($todayArr);
   $clock2 =  $exData['clock2'];
   $weather =  $exData['weather'];
-  $walkInfo =  $exData['walkInfo'];
+  $breakInfo =  $exData['breakInfo'];
   $meInfo =  $exData['meInfo'];
-  echo "<h2>I hope you had a nice walk using your $walkInfo.<br>";
-  echo "It looks like you were $meInfo and the weather was $weather<br> ";
+  echo "<h2>I hope you had a nice break when you $breakInfo.<br>";
+  echo "It looks like you $meInfo and the weather was $weather/<br> ";
   echo "at $clock2 on $todayArr[0] $todayArr[1] $todayArr[2] $todayArr[3]</h2>\n";
 
 ?>
-<a href="/walk.html">Back to walk form</a>
+<a href="/break.html">Back to break form</a>
 </body>
 </html>

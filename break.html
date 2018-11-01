@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <script type="text/javascript" src="assets/js/script.js"></script>
+  <script  type="text/javascript" src="assets/js/ex.js"></script>
+  <script  type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+ <link href="assets/css/ex.css" rel="stylesheet" type="text/css" />
+ <title> breakPage Kate's Exercise Routine</title>
+</head>
+
+<body onload="prettyClock()"><!-- no timers on break page -->
+
+<form action="break_action_page.php" method="post">
+
+  <table>
+    <tr>
+      <td><input size=40 id="clock1" type="text" name="clock1" value="clock1"></td>
+      <td><input size=20 id="clock2" type="text" name="clock2" value="clock2"></td>
+      <td colspan="2"><h1> break Form</h1></td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td><h3>What did you do on your break?</h2></td>
+      <td colspan="3"> <input  id=breakInfo size="60" type="text" name="breakInfo" value="went with Freedom Chair to Davis Square"> </td>
+    </tr>
+    <tr>
+    </tr>
+      <td><h3>comments</h2></td>
+      <td colspan="2"> <input  id=meInfo size="40" type="text" name="meInfo" value="checking out the neighborhood"> </td>
+      <td><h3>weather</h2></td>
+      <td> <input  id=weather size="17" type="text" name="weather" value="cool 33F"> </td>
+    </tr>
+  </table>
+  <br>
+  <input type="submit" value="Submit" style="height:50px">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "break_action_page.php".</p>
+</body>
+</html>
+
