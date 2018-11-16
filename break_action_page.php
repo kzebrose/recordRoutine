@@ -69,7 +69,7 @@
   $breakInfo =  $exData['breakInfo'];
   $meInfo =  $exData['meInfo'];
   echo "<h2>I hope you had a nice break when you $breakInfo.<br>";
-  echo "It looks like you $meInfo and the weather was $weather/<br> ";
+  echo "It looks like $meInfo and the weather was $weather<br> ";
   echo "at $clock2 on $todayArr[0] $todayArr[1] $todayArr[2] $todayArr[3]</h2>\n";
 
 ?>

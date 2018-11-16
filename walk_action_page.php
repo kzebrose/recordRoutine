@@ -94,20 +94,37 @@
   $meInfo =  $exData['meInfo'];
   $meInfoArr = explode(" ",$meInfo);
   $info = "";
-  if($meInfoArr[0] == "I")
+  $index = 0;
+  foreach($meInfoArr as $word)
   {
-    $cnt = $meInfoArr;
-    $info = $info.$meInfo[1];
-  }
+    if(($meInfoArr[$index] == "I") && ($meInfoArr[$index + 1] == "am"))
+    {
+      $info = $info."you were ";
+    }
+    elseif(($meInfoArr[$index-1] == "I") && ($meInfoArr[$index] == "am"))
+    {
+      $info = $info;
+    }
+    if($meInfoArr[$index] == "I"))
+    {
+      $info = $info."you ";
+    }
+    else
+    {
+      $info = $info.$word;
+    }
 
-  $verb = "";
+  }//end foreach
+
+
   //need more examples to finish
   //
   echo "<h2>I hope you had a nice walk using your $walkInfo.<br>";
-  echo "It looks like you $verb $meInfo and the weather was $weather<br> ";
-  echo "at $clock2 on $todayArr[0] $todayArr[1] $todayArr[2] $todayArr[3]</h2>\n";
+  echo "It looks like $info and the weather was $weather<br> ";
+  echo "at $clock2 on $todayArr[0] $todayArr[1] $todayArr[2] $todayArr[3]</h2><br>";
 
 ?>
-<a href="/walk.html">Back to walk form</a>
+<a href="/walk.html">Back to walk form</a><br>
+<p><?php echo $meInfo ?></p>
 </body>
 </html>
