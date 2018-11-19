@@ -94,28 +94,26 @@
   $meInfo =  $exData['meInfo'];
   $meInfoArr = explode(" ",$meInfo);
   $info = "";
+  $lastWord = "";
   $index = 0;
+  $show=print_r($meInfoArr,true);
+  echo "<br> $show <br>";
   foreach($meInfoArr as $word)
   {
-    if(($meInfoArr[$index] == "I") && ($meInfoArr[$index + 1] == "am"))
+    if(($lastWord = "I") && (($word == "was")||($word == "am")))
     {
-      $info = $info."you were ";
+      $info = $info."were ";
     }
-    elseif(($meInfoArr[$index-1] == "I") && ($meInfoArr[$index] == "am"))
-    {
-      $info = $info;
-    }
-    if($meInfoArr[$index] == "I"))
+    elseif($word == "I")
     {
       $info = $info."you ";
     }
     else
     {
-      $info = $info.$word;
+      $info = $info.$word." ";
     }
-
+    $lastWord = $word;
   }//end foreach
-
 
   //need more examples to finish
   //
