@@ -17,14 +17,18 @@
 
   <table>
     <tr>
-      <td colspan="3"><input size=50 id="clock1" type="text" name="clock1" value="clock1"></td><td onclick="fillComment('set1Checkin')"> How are you feeling?</td><td><input id=set1Checkin size="20" type="text" name="startingCheckin" value="ready to start"></td>
+      <td colspan="3"><input size=50 id="clock1" type="text" name="clock1" value="clock1"></td>
+      <td onclick="fillComment('set1Checkin')"> How are you feeling?</td>
+      <td><input id=set1Checkin size="20" type="text" name="startingCheckin" value="ready to start"></td>
+      <td colspan="9"><h3>kickbacks:</h3><ul><li> natural <b>STRIDE</b> length NOT wide/long stride</li>
+          <li>stand up straight with your hips/butt under you (<b>GOOD POSTURE!</b>)</li></ul></td>
     <tr>
       <td><h2>set 1&nbsp;&nbsp;</h2></td>
       <td onclick="setTimeExercise('set1startTime')">set start</td><td> <input  id=set1startTime size="7" type="text" name="set1startTime" value="00:00"> </td>
-      <td onclick="fillComment('set1leanBack')">lean back note</td><td> <input id=set1leanBack size="10" type="text" name="set1leanBack" value="'"> </td>
       <td onclick="fillComment('set1eversion')">eversion note</td><td> <input id=set1eversion size="10" type="text" name="set1eversion" value="'"> </td>
       <td onclick="fillComment('set1toeRaise')">toe raise note</td><td> <input id=set1toeRaise size="10" type="text" name="set1toeRaise" value="'"> </td>
       <td onclick="fillComment('set1balletRaise')">ballet raise note</td><td> <input id=set1balletRaise size="10" type="text" name="set1balletRaise" value="'"> </td>
+      <td onclick="fillComment('set1leanBack')">lean back note</td><td> <input id=set1leanBack size="10" type="text" name="set1leanBack" value="'"> </td>
       <td onclick="fillEndComment('set1kickBack','set1startTime','set1endTime')">kick back note</td><td> <input id=set1kickBack size="10" type="text" name="set1kickBack" value="'"> </td>
       <td onclick="setEndTimeExercise('set1startTime','set1endTime')">set end</td><td> <input  id=set1endTime size="7" type="text" name="set1endTime" value="00:00"> </td>
       <td>time in minutes</td><td> <input id=set1endTimeMinusStart size="7" type="text" name="set1time" value="Z17-Z12"> </td>
@@ -55,8 +59,12 @@
       <td>time in minutes</td><td> <input id=set2endTimeMinusStart size="7" type="text" name="set2time" value="Z17-Z12"> </td>
     </tr>
     <tr>
-      <td><h3 style="color:blue">lean</h3></td><td><h3 style="color:blue">back</h3></td><td><h3 style="color:blue">timer&nbsp;</h3></td><td><h3 id="clock2">clock2</h3></td>
-      <td><img id="PT" width="50%" height="auto" src=""/></td><td colspan="2" onclick="fillComment('bw23Checkin')"> How are you feeling?:</td><td> <input id=bw23Checkin size="20" type="text" name="set3Checkin" value="ready to start"> </td><td colspan="3">Put foot a stride back during kick back.  Use ballet move for momentum and add a march after the kick.</td>
+      <td colspan="3"><h3>seated march:</h3><ul><li>lean back</li><li>relax upper body</li></ul></td><td><h3 id="clock2">clock2</h3></td>
+      <td><img id="PT" width="50%" height="auto" src=""/></td><td colspan="2" onclick="fillComment('bw23Checkin')"> How are you feeling?:<br><em>set 3</em></td>
+      <td> <input id=bw23Checkin size="20" type="text" name="set3Checkin" value="ready to start"> </td>
+      <td colspan="3">Use ballet move for momentum and add a march after the kick.</td>
+      <td colspan="3" onclick="fillComment('bw3sCheckin')"> How are you feeling?:<br><em>special set</em></td>
+      <td> <input id=bw3sCheckin size="20" type="text" name="set3Checkin" value="ready to start"> </td>
     </tr>
     <tr>
       <td><h2>set 3&nbsp;&nbsp;</h2></td>

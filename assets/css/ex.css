@@ -2,6 +2,9 @@ th,td {
   border:3px solid green;
   outline: 3px dotted purple;
 }
+ul,h3 {
+  margin: 0px;
+}
 .suggestedComment {
   background-color: aquamarine;
 }
