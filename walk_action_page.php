@@ -97,7 +97,7 @@
   $lastWord = "";
   $index = 0;
   $show=print_r($meInfoArr,true);
-  echo "<br> $show <br>";
+  //echo "<br> $show <br>";
   foreach($meInfoArr as $word)
   {
     if(($lastWord = "I") && (($word == "was")||($word == "am")))
