@@ -188,14 +188,18 @@ function fillEndComment(selectedInput,startTime,endTime)
 function fillComment(selectedInput)
 {
   //check start time was filled in and set if still default
-  var setNumber = selectedInput.slice(0, 4);
-  var IdName = setNumber+'startTime';
-  var startTimeElement = document.getElementById(IdName);
-  if(typeof startTimeElement.value !== 'undefined' && startTimeElement.value !== null)
+  var setTag = selectedInput.slice(0, 3);
+  var setNumber = selectedInput.slice(3, 4);
+  if(setTag = "set")
   {
-    if(startTimeElement.value == "00:00")
+    var IdName = 'set'+setNumber+'startTime';
+    var startTimeElement = document.getElementById(IdName);
+    if(typeof startTimeElement.value !== 'undefined' && startTimeElement.value !== null)
     {
-      setTimeExercise(IdName);
+      if(startTimeElement.value == "00:00")
+      {
+        setTimeExercise(IdName);
+      }
     }
   }
   var comment = document.getElementById('comment');
