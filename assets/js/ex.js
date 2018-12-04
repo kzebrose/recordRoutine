@@ -190,7 +190,7 @@ function fillComment(selectedInput)
   //check start time was filled in and set if still default
   var setTag = selectedInput.slice(0, 3);
   var setNumber = selectedInput.slice(3, 4);
-  if(setTag = "set")
+  if(setTag == "set")
   {
     var IdName = 'set'+setNumber+'startTime';
     var startTimeElement = document.getElementById(IdName);
