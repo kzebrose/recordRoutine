@@ -1,3 +1,18 @@
+function sillyPopup()  //javascript
+{
+   alert("Go Girl!! You Got This!");
+}
+<!-- prevent submit on enter as I keep doing that by mistake -->
+function enterKeyFunction(evt) 
+{
+   var evt = (evt) ? evt : ((event) ? event : null);
+   var node = (evt.target) ? evt.target : ((evt.srcElement) ? evt.srcElement : null);
+   if ((evt.keyCode == 13) && (node.type=="text"))  
+   {
+      sillyPopup();
+      return false;
+   }
+}
 
 function myFunction() {
   /* Get the text field */
@@ -40,6 +55,7 @@ function onceOnLoad()
   }
    setTimeExercise("set1startTime");
    startTime();
+   document.onkeypress = enterKeyFunction;
 }
 
 //called by first_action.php
