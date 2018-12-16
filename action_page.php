@@ -14,13 +14,10 @@
 
   function writeForm($data)
   {
+    $saveSet4Comment = "KZDEBUG";
     $logh = getLogHandle('exercise','0.1');
     foreach($data as $key => $line)
     {
-      $fred = strpos($key,'set1');
-      $wilma = strpos($key,'set2');
-      $barney = strpos($key,'set3');
-      //echo $fred."F".$wilma."W".$barney."B"."(".$key.")".$line."<br>";
       if(strcmp($key,"totalTime") === 0)
       {
         fwrite($logh,"<td>".$line."</td>\n");
@@ -38,6 +35,22 @@
       {
         fwrite($logh,"<td class='setThree'>".$line."</td>\n");
       }
+      elseif(strpos($key,"set4") === 0)
+      {
+        if(strpos($key,"set4Checkin") === 0)
+        {
+          $saveSet4Comment = $line;
+        }
+        elseif(strpos($key,"set4startTime") === 0)
+        {
+          fwrite($logh,"<td class='setFour'>".$saveSet4Comment."</td>\n");
+          fwrite($logh,"<td class='setFour'>".$line."</td>\n");
+        }
+        else
+        {
+          fwrite($logh,"<td class='setFour'>".$line."</td>\n");
+        }
+      }//end elseif set4
       elseif(strpos($key,"clock1") === 0)
       {
 //        fwrite($logh,"<tr><td colspan='3'>".$line."</td>\n");
