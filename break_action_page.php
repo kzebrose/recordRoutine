@@ -4,8 +4,7 @@
   function getLogHandle($name,$ver)
   {
     $applicationPath = dirname(__FILE__);
-    $dateString = date("D_F_j_Y_ha_");
-    $currentLogName = $applicationPath."/".$dateString.$name.".html";
+    $currentLogName = $applicationPath."/".$name.".html";
     $logh = fopen($currentLogName, "a+") or die("Unable to open $currentLogName");
     $txt=" === v$ver === $name ".date("Y/m/d H:i:s")."\n";
     //fwrite($logh, $txt);
@@ -14,7 +13,9 @@
 
   function writeForm($data)
   {
-    $logh = getLogHandle('exercise','0.1');
+    $date = preg_replace(array('/ /','/,/'),array("_","_"),$data['clock1']);
+    $time = preg_replace(array('/:/','/,/'),array("_","_"),$data['clock2']);
+    $logh = getLogHandle($date.$time.'exercise','0.1');
     foreach($data as $key => $line)
     {
       if(strpos($key,"clock1") === 0)
@@ -68,6 +69,29 @@
   $weather =  $exData['weather'];
   $breakInfo =  $exData['breakInfo'];
   $meInfo =  $exData['meInfo'];
+  $meInfoArr = explode(" ",$meInfo);
+  $info = "";
+  $lastWord = "";
+  $index = 0;
+  $show=print_r($meInfoArr,true);
+  //echo "<br> $show <br>";
+  foreach($meInfoArr as $word)
+  {
+    if(($lastWord = "I") && (($word == "was")||($word == "am")))
+    {
+      $info = $info."were ";
+    }
+    elseif($word == "I")
+    {
+      $info = $info."you ";
+    }
+    else
+    {
+      $info = $info.$word." ";
+    }
+    $lastWord = $word;
+  }//end foreach
+
   echo "<h2>I hope you had a nice break when you $breakInfo.<br>";
   echo "It looks like $meInfo and the weather was $weather<br> ";
   echo "at $clock2 on $todayArr[0] $todayArr[1] $todayArr[2] $todayArr[3]</h2>\n";
