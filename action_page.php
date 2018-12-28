@@ -1,6 +1,14 @@
 <?php
   global $logh;
 
+  function getMinuteString($sec)
+  {
+    $minutes = intval($sec/60);
+    $seconds = $sec % 60;
+    $ret = sprintf("%d minute and %d seconds",$minutes,$seconds);
+    return $ret;
+  }
+
   function getLogHandle($name,$ver)
   {
     $applicationPath = dirname(__FILE__);
@@ -14,7 +22,7 @@
 
   function writeForm($data)
   {
-    $saveSet4Comment = "KZDEBUG";
+    $saveSet4Comment = "KZDEBUG";//define variable to set scope
     $logh = getLogHandle('exercise','0.1');
     foreach($data as $key => $line)
     {
@@ -99,7 +107,11 @@
         //echo "<li> $key  = $value</li>\n ";
   }
   echo "</ol>\n";
-
+  $unixStart = strtotime($startTime);
+  $unixEnd = strtotime($exData['set4endTime']);
+  $calcTotalTime = $unixEnd - $unixStart;
+  echo getMinuteString($calcTotalTime);
+  echo "\n$unixStart $unixEnd\n";
 ?>
 <a href="/worksheet.html">Back to worksheet</a>
 </body>
