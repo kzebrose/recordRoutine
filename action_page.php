@@ -107,11 +107,12 @@
         //echo "<li> $key  = $value</li>\n ";
   }
   echo "</ol>\n";
+  $endTime = $exData['set4endTime']; 
   $unixStart = strtotime($startTime);
   $unixEnd = strtotime($exData['set4endTime']);
   $calcTotalTime = $unixEnd - $unixStart;
   echo getMinuteString($calcTotalTime);
-  echo "\n$unixStart $unixEnd\n";
+  echo "\n$unixStart $unixEnd\n $startTime $endTime";
 ?>
 <a href="/worksheet.html">Back to worksheet</a>
 </body>
