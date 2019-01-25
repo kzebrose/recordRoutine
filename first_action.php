@@ -73,7 +73,7 @@
   global $logh,$currentLogName;
   $name = "exercise";
   $applicationPath = dirname(__FILE__);
-  $dateString = date("D_F_j_Y_ha_");
+  $dateString = date("wH_D_F_j_Y_ha_");
   $currentLogName = $applicationPath."/".$dateString.$name.".html";
   
 //  if (!copy($applicationPath."/header.html", $currentLogName)) {

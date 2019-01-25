@@ -89,7 +89,8 @@
   {
      $worksheetURL = "http://exercise.org/worksheet.html";
   }
-  $dateString = date("D_F_j_Y_ha_");
+  //wH adds day of week and hour of day to make sure files line up in cronological sequence
+  $dateString = date("wH_D_F_j_Y_ha_");
   $currentLogName = $applicationPath."/".$dateString."_stretch_".$name.".html";
   
   $exData = $_POST;
