@@ -5,42 +5,21 @@
   {
     $applicationPath = dirname(__FILE__);
     $dateString = date("wH_D_F_j_Y_ha_");
-    $currentLogName = $applicationPath."/".$dateString.$name.".html";
+    $currentLogName = $applicationPath."/weekending/".$dateString.$name.".html";
     $logh = fopen($currentLogName, "a+") or die("Unable to open $currentLogName");
     $txt=" === v$ver === $name ".date("Y/m/d H:i:s")."\n";
-    //fwrite($logh, $txt);
     return $logh;
   }
 
   function writeForm($data)
   {
-    $logh = getLogHandle('exercise','0.1');
+    $logh = getLogHandle('exercise','0.2');
     foreach($data as $key => $line)
     {
-      $fred = strpos($key,'set1');
-      $wilma = strpos($key,'set2');
-      $barney = strpos($key,'set3');
-      //echo $fred."F".$wilma."W".$barney."B"."(".$key.")".$line."<br>";
       if(strcmp($key,"totalTime") === 0)
       {
         fwrite($logh,"<td>".$line."</td>\n");
         fwrite($logh,"</tr>");
-      }
-      elseif(strpos($key,"set1") === 0)
-      {
-        fwrite($logh,"<td class='setOne'>".$line."</td>\n");
-      }
-      elseif(strpos($key,"set2") === 0)
-      {
-        fwrite($logh,"<td class='setTwo'>".$line."</td>\n");
-      }
-      elseif(strpos($key,"set3") === 0)
-      {
-        fwrite($logh,"<td class='setThree'>".$line."</td>\n");
-      }
-      elseif(strpos($key,"clock1") === 0)
-      {
-//        fwrite($logh,"<tr><td colspan='3'>".$line."</td>\n");
       }
       else fwrite($logh,"<td>".$line."</td>\n");
     }
