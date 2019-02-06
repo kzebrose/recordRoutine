@@ -1,10 +1,12 @@
 <?php
+// ONLY called from break.html
   global $logh;
 
   function getLogHandle($name,$ver)
   {
     $applicationPath = dirname(__FILE__);
-    $currentLogName = $applicationPath."/".$name.".html";
+    $dateString = date("wH_D_F_j_Y_ha_");
+    $currentLogName = $applicationPath."/".$dateString.$name.".html";
     $logh = fopen($currentLogName, "a+") or die("Unable to open $currentLogName");
     $txt=" === v$ver === $name ".date("Y/m/d H:i:s")."\n";
     //fwrite($logh, $txt);
