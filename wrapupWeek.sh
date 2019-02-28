@@ -10,6 +10,7 @@ read newName;
 #a new weekending directory needs to be created
 mv ~/exercise/weekending ~/exercise/save/$newName
 mkdir ~/exercise/weekending
-cp ~/exercise/mweek.sh ~/exercise/weekending
+cp ~/exercise/sun-satweek.sh ~/exercise/weekending
+mv ~/exercise/*exercise.html ~/exercise/weekending
 
 echo "You are ready for a new week.  Happy exercising.";
