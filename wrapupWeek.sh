@@ -4,8 +4,9 @@ echo "Welcome, from wrapupWeek.sh, the script to move the weekending directory u
 echo "I need some help with naming the directory in the new location.";
 echo "The most recently added name is ...";
 ls -lrt ~/exercise/save|tail -n 1;
+default=$(ls -rt ~/exercise/save|tail -n 1);
 echo "Please enter the name you want for the current weekending directory.";
-read newName;
+read -e -p "Enter: " -i "$default" newName;
 
 #a new weekending directory needs to be created
 mv ~/exercise/weekending ~/exercise/save/$newName
