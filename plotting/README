@@ -1,0 +1,15 @@
+gnuplot is a good way to plot data
+input data format is columns of data with whitespace separating the data
+gnuplot "file.plt"
+<example below>
+  set terminal png size 800,800 enhanced font "Helvetica,20";
+  set output "exHis.png";
+  set title 'Kate Zebrose Average Dist Miles in 5 minutes';
+  set ytics font "Helvetica,10";
+  set xtics font "Helvetica,10";
+  plot 'exHis.dat' notitle with linespoints;
+
+HOW TO UPDATE
+1) add new data to *.dat files
+2) edit *.plt files to extend x range
+3) plot files
