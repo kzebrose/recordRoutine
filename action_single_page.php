@@ -17,28 +17,34 @@
    //print_r($data);
    $logh = getLogHandle('exercise','0.1');
    $classLabel = $data[SetName];
+   $record = "";
     foreach($data as $key => $line)
     {
+      switch($classLabel)
+      {
+      case "set1":
+          $record = "<td class='setOne'>".$line."</td>\n";
+        break;
+      case "set2":
+          $record = "<td class='setTwo'>".$line."</td>\n";
+        break;
+      case "set3":
+          $record = "<td class='setThree'>".$line."</td>\n";
+        break;
+      case "setSpecial":
+          $record = "<td class='setSpecial'>".$line."</td>\n";
+        break;
+      default:
+        break;
+      }
       if(strcmp($key,"totalTime") === 0)
       {
         fwrite($logh,"<td>".$line."</td>\n");
         fwrite($logh,"</tr>");
       }
-      elseif(strpos($classLabel,"set1") === 0)
+      elseif(strpos($key,"set") === 0)
       {
-        fwrite($logh,"<td class='setOne'>".$line."</td>\n");
-      }
-      elseif(strpos($classLabel,"set2") === 0)
-      {
-        fwrite($logh,"<td class='setTwo'>".$line."</td>\n");
-      }
-      elseif(strpos($classLabel,"set3") === 0)
-      {
-        fwrite($logh,"<td class='setThree'>".$line."</td>\n");
-      }
-      elseif(strpos($classLabel,"setSpecial") === 0)
-      {
-        fwrite($logh,"<td class='setSp'>".$line."</td>\n");
+        fwrite($logh,"$record");
       }
     }
     fclose($logh);
@@ -105,7 +111,7 @@
     break;
   case "set3":
     echo "<h2> time for ";
-    echo "<a class='btn btn-primary' role='button' href='../singleSet.php/?name=setSpecial'>special set</a></h2>";
+    echo "<a class='btn btn-primary' role='button' href='../specialSet.php/?name=setSpecial'>special set</a></h2>";
     break;
   case "setSpecial":
     echo "Done!";

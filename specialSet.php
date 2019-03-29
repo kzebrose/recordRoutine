@@ -40,11 +40,10 @@
       </div><!-- end col -->
     </div><!-- end row -->
     <div class="row">
-      <div class="col" onclick="fillComment('set1eversion')">eversion note<input id=set1eversion  type="text" name="set1eversion" value="'"> </div><!-- end col -->
-      <div class="col" onclick="fillComment('set1toeRaise')">toe raise note<input id=set1toeRaise  type="text" name="set1toeRaise" value="'"> </div><!-- end col -->
-      <div class="col" onclick="fillComment('set1balletRaise')">ballet raise<input id=set1balletRaise  type="text" name="set1balletRaise" value="'"> </div><!-- end col -->
-      <div class="col" onclick="fillComment('set1leanBack')">lean back note<input id=set1leanBack  type="text" name="set1leanBack" value="'"> </div><!-- end col -->
-      <div class="col" onclick="fillComment('set1kickBack')">kick back note<input id=set1kickBack  type="text" name="set1kickBack" value="'"> </div><!-- end col -->
+      <td onclick="fillComment('set4bandLift')">band lift note</td><td> <input id=set4bandLift size="10" type="text" name="set4bandLift" value="'"> </td>
+      <td onclick="fillComment('set4halfBand')">half band (5/5) lift note</td><td> <input id=set4halfBand size="10" type="text" name="set4halfBand" value="'"> </td>
+      <td onclick="fillComment('set4march')">march (10) note</td><td> <input id=set4march size="10" type="text" name="set4march" value="'"> </td>
+      <td onclick="fillEndComment('set4slowWalk','set4startTime','set4endTime')">2 minute slow walk note</td><td> <input id=set4slowWalk size="10" type="text" name="set4slowWalk" value="'"> </td>
     </div><!-- end row -->
     <div class="row">&nbsp</div>
     <div class="row">
@@ -63,7 +62,7 @@
     </div><!-- end row -->
     <div class="row">
       <div class="col-xs-12 col-md-3">
-         <h2>1 minute <span id="goal1min" onclick="setGoal('1min',1,0)">click for goal</span></h2>
+         <h2>2 minute <span id="goal2min" onclick="setGoal('1min',2,0)">click for goal</span></h2>
       </div><!-- end col -->
       <div class="col-xs-12 col-md-3">
          <h1 id="clock3">clock3</h1>
@@ -83,7 +82,7 @@
     </div><!-- end row -->
 </div><!-- close container -->
 <input type="hidden" id="SetName" name="SetName" value=<?php echo $name; ?>   >
-<input type="hidden" id="goal2min" name="goal2min" value=0  >
+<input type="hidden" id="goal1min" name="goal1min" value=0  >
 <input type="hidden" id="goal30sec" name="goal30sec" value=0   >
 <input type="submit" value="Submit" style="height:50px">
 </form> 
