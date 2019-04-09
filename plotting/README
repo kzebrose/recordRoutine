@@ -1,3 +1,20 @@
+
+HOW TO UPDATE
+1) add new data to *.dat files
+2) run pltAll.sh to create new graphs
+3) use eog to view graphs
+
+TODO
+currently multiple data points from the same day can be graphed
+the average is not plotted
+
+NOTE
+In this directory *.plt are temporary files.
+The source files are *.template files.
+Look at pltAll.sh  to understand.
+
+SEE ~/myExamples/gnuplot for training info
+
 gnuplot is a good way to plot data
 input data format is columns of data with whitespace separating the data
 gnuplot "file.plt"
@@ -9,11 +26,3 @@ gnuplot "file.plt"
   set xtics font "Helvetica,10";
   plot 'exHis.dat' notitle with linespoints;
 
-HOW TO UPDATE
-1) add new data to *.dat files
-2) run pltAll.sh to create new graphs
-3) use eog to view graphs
-
-TODO
-currently multiple data points from the same day can be graphed
-the average is not plotted

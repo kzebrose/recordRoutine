@@ -13,19 +13,41 @@ read -e -p "Enter: " -i "$default" newName;
 mv $weekDir ~/exercise/save/$newName;
 mkdir $weekDir;
 cp ~/exercise/makeThisWeek.sh $weekDir;
+# nextWeek.php returns the date $newName + ? days 
 sunStr=$(php -f nextWeek.php $newName 1);
-mv $sunStr $weekDir;
+if [ -f ${sunstr} ];
+then
+  mv $sunStr $weekDir;
+fi
 monStr=$(php -f nextWeek.php $newName 2);
-mv $monStr $weekDir;
+if [ -f ${monstr} ];
+then
+  mv $monStr $weekDir;
+fi
 tueStr=$(php -f nextWeek.php $newName 3);
-mv $tueStr $weekDir;
+if [ -f ${tuestr} ];
+then
+  mv $tueStr $weekDir;
+fi
 wedStr=$(php -f nextWeek.php $newName 4);
-mv $wedStr $weekDir;
+if [ -f ${wedstr} ];
+then
+  mv $wedStr $weekDir;
+fi
 thuStr=$(php -f nextWeek.php $newName 5);
-mv $thuStr $weekDir;
+if [ -f ${thustr} ];
+then
+  mv $thuStr $weekDir;
+fi
 friStr=$(php -f nextWeek.php $newName 6);
-mv $friStr $weekDir;
+if [ -f ${fristr} ];
+then
+  mv $friStr $weekDir;
+fi
 satStr=$(php -f nextWeek.php $newName 7);
-mv $satStr $weekDir;
+if [ -f ${satstr} ];
+then
+  mv $satStr $weekDir;
+fi
 
 echo "You are ready for a new week.  Happy exercising.";

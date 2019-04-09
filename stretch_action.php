@@ -30,7 +30,7 @@
   function writeForm($data)
   {
     $logh = getLogHandle('exercise','0.1');
-    $exh = getExerciseTimesHandle();
+//    $exh = getExerciseTimesHandle();
     foreach($data as $key => $line)
     {
       if(strcmp($key,"totalTime") === 0)
