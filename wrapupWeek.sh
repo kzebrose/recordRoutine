@@ -13,6 +13,7 @@ read -e -p "Enter: " -i "$default" newName;
 mv $weekDir ~/exercise/save/$newName;
 mkdir $weekDir;
 cp ~/exercise/makeThisWeek.sh $weekDir;
+echo "I will now copy files from the following week into the new weekending directory";
 # nextWeek.php returns the date $newName + ? days 
 sunStr=$(php -f nextWeek.php $newName 1);
 if [ -f ${sunstr} ];
