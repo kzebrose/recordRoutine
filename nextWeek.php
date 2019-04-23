@@ -20,6 +20,6 @@ $lastDateObj = date_create_from_format('YFj',$lastDate);
 //echo $lastDateObj->format('m-d-Y')."\n";
 $dateFormat = "P".$offset."D";
 $nextDateObj = $lastDateObj->add(new DateInterval($dateFormat));
-echo "*".$nextDateObj->format('D_F_j_Y')."*\n";
+echo $nextDateObj->format('D_F_j_Y');
 
 ?>
