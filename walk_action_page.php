@@ -1,7 +1,10 @@
 <?php
 
-// ONLY called from walk.html
+// called from walk.html and walkMobile.html
   global $logh;
+  global $distance = 1;
+  global $time = 1;
+  global $feetPerMile = 5280;
 
   function getLogHandle($name,$ver)
   {
@@ -32,14 +35,17 @@
       }
       elseif(strpos($key,"distance") === 0)
       {
-        fwrite($logh,"<td colspan='2'  class='setOne'>distance ".$line." miles</td>\n");
+        fwrite($logh,"<td colspan='2'  class='setOne'>distance ".$line." feet</td>\n");
+        $distance = $line;
       }
       elseif(strpos($key,"time") === 0)
       {
         fwrite($logh,"<td colspan='2'  class='setOne'>time ".$line." minute</td>\n");
+        $time = $line;
       }
       elseif(strpos($key,"pace") === 0)
       {
+        $pace = (int)$time*$feetPerMile/(int)$distance;
         fwrite($logh,"<td colspan='5'  class='setOne'>pace ".$line." min/miles</td>\n");
       }
       elseif(strpos($key,"footraises") === 0)
