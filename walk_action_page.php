@@ -2,9 +2,13 @@
 
 // called from walk.html and walkMobile.html
   global $logh;
-  global $distance = 1;
-  global $time = 1;
-  global $feetPerMile = 5280;
+  global $distance;
+  global $time;
+  global $feetPerMile;
+
+  $feetPerMile = 5280;
+  $distance = 1;
+  $time = 1;
 
   function getLogHandle($name,$ver)
   {
