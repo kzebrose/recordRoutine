@@ -112,6 +112,6 @@
   //echo "</ol>\n";
 
 ?>
-           <a class="btn btn-primary" href="http://exercise.org/start.php">back</a>
+           <a class="btn btn-primary" href="http://exercise.org">back</a>
 </body>
 </html>
