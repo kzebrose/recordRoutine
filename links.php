@@ -5,7 +5,7 @@ echo "</head>";
 $server=$_SERVER['SERVER_NAME'];
 if($server == "zebrose.com")
 {
-  $website = $server/exercise;
+  $website = $server."/exercise";
 }
 else
 {
@@ -28,7 +28,7 @@ echo "<h2>server = $server website  = $website</h2>";
            <a class="btn btn-primary" href="http://<?php echo $website; ?>/break.html">record break</a>
          </div><!-- end col -->
          <div class="col-xs-12 col-md-2">
-           <a class="btn btn-primary" href="http://<?php echo $server; ?>/start.php">StartPerSet</a>
+           <a class="btn btn-primary" href="http://<?php echo $website; ?>/start.php">StartPerSet</a>
          </div><!-- end col -->
          <div class="col-xs-12 col-md-2">
          </div><!-- end col -->
