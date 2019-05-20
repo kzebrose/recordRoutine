@@ -1,9 +1,24 @@
 <?php
+  //translates position from stripos to boolean true/false
+  //search is case insensitive
+  public function contains($substring, $string) 
+  {
+    $pos = stripos($string, $substring);
+    if($pos === false) {
+      // echo "string NOT found";
+      return false;
+    }
+    else {
+      // echo "string found ";
+      return true;
+    } 
+  }//end contains()
+
 include 'header.php';
 echo "<title>Kates Exercise Routine</title>";
 echo "</head>";
 $server=$_SERVER['SERVER_NAME'];
-if($server == "zebrose.com")
+if(contains("zebrose",$server))
 {
   $website = $server."/exercise";
 }
