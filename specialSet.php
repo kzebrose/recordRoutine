@@ -40,10 +40,10 @@
       </div><!-- end col -->
     </div><!-- end row -->
     <div class="row">
-      <td onclick="fillComment('set4bandLift')">band lift note</td><td> <input id=set4bandLift size="10" type="text" name="set4bandLift" value="'"> </td>
-      <td onclick="fillComment('set4halfBand')">half band (5/5) lift note</td><td> <input id=set4halfBand size="10" type="text" name="set4halfBand" value="'"> </td>
-      <td onclick="fillComment('set4march')">march (10) note</td><td> <input id=set4march size="10" type="text" name="set4march" value="'"> </td>
-      <td onclick="fillEndComment('set4slowWalk','set4startTime','set4endTime')">2 minute slow walk note</td><td> <input id=set4slowWalk size="10" type="text" name="set4slowWalk" value="'"> </td>
+      <div class="col" onclick="fillComment('set4bandLift')">band lift note<input id=set4bandLift size="10" type="text" name="set4bandLift" value="'"> </div><!-- end col -->
+      <div class="col" onclick="fillComment('set4halfBand')">half band (5/5) lift note<input id=set4halfBand size="10" type="text" name="set4halfBand" value="'"> </div><!-- end col -->
+      <div class="col" onclick="fillComment('set4march')">march (10) note <input id=set4march size="10" type="text" name="set4march" value="'"> </div><!-- end col -->
+      <div class="col" onclick="fillComment('set4slowWalk','set4startTime','set4endTime')">2 minute slow walk note<input id=set4slowWalk size="10" type="text" name="set4slowWalk" value="'"> </div><!-- end col -->
     </div><!-- end row -->
     <div class="row">&nbsp</div>
     <div class="row">
