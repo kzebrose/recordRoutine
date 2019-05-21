@@ -1,4 +1,6 @@
-<?php include 'header.php'; 
+<?php 
+include ("./functions.php");
+include ("./mobile_header.html");
 $server=$_SERVER['SERVER_NAME'];
 ?>
 <title>Kates Exercise Routine</title>

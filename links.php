@@ -1,22 +1,6 @@
 <?php
-  //translates position from stripos to boolean true/false
-  //search is case insensitive
-  public function contains($substring, $string) 
-  {
-    $pos = stripos($string, $substring);
-    if($pos === false) {
-      // echo "string NOT found";
-      return false;
-    }
-    else {
-      // echo "string found ";
-      return true;
-    } 
-  }//end contains()
-
-include 'header.php';
-echo "<title>Kates Exercise Routine</title>";
-echo "</head>";
+include ("./functions.php");
+include ("./mobile_header.html");
 $server=$_SERVER['SERVER_NAME'];
 if(contains("zebrose",$server))
 {
@@ -34,7 +18,6 @@ echo "<h2>server = $server website  = $website</h2>";
          <a class='btn btn-primary' href="http://<?php echo $website; ?>/weekending/thisWeek_exercise.html">thisWeek</a>
          </div><!-- end col -->
          <div class="col-xs-12 col-md-2">
-           <a class="btn btn-primary" href="http://<?php echo $website; ?>/walk.html">record walk</a>
          </div><!-- end col -->
          <div class="col-xs-12 col-md-2">
            <a class="btn btn-primary" href="http://<?php echo $website; ?>/walkMobile.html">record walk on mobile</a>
@@ -48,4 +31,3 @@ echo "<h2>server = $server website  = $website</h2>";
          <div class="col-xs-12 col-md-2">
          </div><!-- end col -->
     </div><!-- end row -->
-

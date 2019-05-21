@@ -1,8 +1,6 @@
-<?php include 'header.php'; ?>
-<title>Kates Exercise Routine</title>
-  <script type="text/javascript" src="assets/js/script.js"></script>
-  <script  type="text/javascript" src="assets/js/alt.js"></script>
-</head>
+<?php 
+include ("./mobile_header.html");
+?>
 <body onload="onceOnLoad()">
 <form action="action_page.php" method="post">
 <div class="container-fluid">
@@ -49,5 +47,4 @@
       <div class="col" class="addOnComment" onclick="addComment('plus chat')">plus chat</div><!-- end col -->
     </div><!-- end row -->
 </div><!-- close container -->
-</form> 
-<?php include 'footer.php'; ?>
+</form>
