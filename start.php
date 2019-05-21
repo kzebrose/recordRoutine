@@ -2,6 +2,14 @@
 include ("./functions.php");
 include ("./mobile_header.html");
 $server=$_SERVER['SERVER_NAME'];
+if(contains("zebrose",$server))
+{
+  $website = $server."/exercise";
+}
+else
+{
+  $website = $server;
+}
 ?>
 <title>Kates Exercise Routine</title>
   <script type="text/javascript" src="assets/js/script.js"></script>
@@ -10,19 +18,19 @@ $server=$_SERVER['SERVER_NAME'];
 <div class="container-fluid" style="margin:10px">
       <div class="row">
          <div class="col-xs-12 col-md-2">
-         <a class='btn btn-primary' href="http://<?php echo $server; ?>/stretch.php">stretch</a>
+         <a class='btn btn-primary' href="http://<?php echo $website; ?>/stretch.php">stretch</a>
          </div><!-- end col -->
          <div class="col-xs-12 col-md-2">
-           <a class="btn btn-primary" href="http://<?php echo $server; ?>/singleSet.php?name=set1">setOne</a>
+           <a class="btn btn-primary" href="http://<?php echo $website; ?>/singleSet.php?name=set1">setOne</a>
          </div><!-- end col -->
          <div class="col-xs-12 col-md-2">
-           <a class="btn btn-primary" href="http://<?php echo $server; ?>/singleSet.php?name=set2">setTwo</a>
+           <a class="btn btn-primary" href="http://<?php echo $website; ?>/singleSet.php?name=set2">setTwo</a>
          </div><!-- end col -->
          <div class="col-xs-12 col-md-2">
-           <a class="btn btn-primary" href="http://<?php echo $server; ?>/singleSet.php?name=set3">setThree</a>
+           <a class="btn btn-primary" href="http://<?php echo $website; ?>/singleSet.php?name=set3">setThree</a>
          </div><!-- end col -->
          <div class="col-xs-12 col-md-2">
-           <a class="btn btn-primary" href="http://<?php echo $server; ?>/singleSet.php?name=setSpecial">setSpecial</a>
+           <a class="btn btn-primary" href="http://<?php echo $website; ?>/singleSet.php?name=setSpecial">setSpecial</a>
          </div><!-- end col -->
          <div class="col-xs-12 col-md-2">
          </div><!-- end col -->
