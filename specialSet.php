@@ -1,18 +1,8 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-  <meta charset="UTF-8"/>
-  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
-  <link rel='stylesheet' href='https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' integrity='sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB' crossorigin='anonymous'>
-  <!-- script type="text/javascript" src="assets/js/script.js"></script-->
-  <!--script type="text/javascript" src="http://zebrose.com/exercise/assets/js/script.js"></script-->
-  <script  type="text/javascript" src="../assets/js/ex.js"></script>
-  <!--script  type="text/javascript" src="http://zebrose.com/exercise/assets/js/ex.js"></script-->
-  <script  type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
- <link href="../assets/css/ex.css" rel="stylesheet" type="text/css" />
- <link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
-<title>mainPage Kates Exercise Routine</title>
-</head>
+<?php 
+include ("./functions.php");
+include ("./mobile_header.html");
+$website = getWebsite();
+?>
 <body onload="onceOnLoad()">
 <?php $name =  $_GET["name"]; ?></h3>
 <form action="../action_single_page.php" method="post">
@@ -48,17 +38,17 @@
     <div class="row">&nbsp</div>
     <div class="row">
       <div class="col" id=comment >select a comment</div><!-- end col -->
-      <div class="col" class="suggestedComment" onclick="setComment('OK')">OK</div><!-- end col -->
-      <div class="col" class="suggestedComment" onclick="setComment('having trouble')">having trouble</div><!-- end col -->
-      <div class="col" class="suggestedComment" onclick="setComment('doing well')" >doing well</div><!-- end col -->
-      <div class="col" class="suggestedComment" onclick="setComment('ready for a break')">ready for a break</div><!-- end col -->
-      <div class="col" class="suggestedComment" onclick="setComment('tired')" >tired</div><!-- end col -->
-      <div class="col" class="suggestedComment" onclick="setComment('really great')">really great</div><!-- end col -->
-      <div class="col" class="suggestedComment" onclick="setComment('Rock Star')" >Rock Star</div><!-- end col -->
-      <div class="col" class="suggestedComment" onclick="setComment('Reduced')">Reduced</div><!-- end col -->
-      <div class="col" class="addOnComment" onclick="addComment('3lb added')" >3lb added</div><!-- end col -->
-      <div class="col" class="addOnComment" onclick="addComment('8lb added')">8lb added</div><!-- end col -->
-      <div class="col" class="addOnComment" onclick="addComment('plus chat')">plus chat</div><!-- end col -->
+      <div class="col suggestedComment" onclick="setComment('OK')">OK</div><!-- end col -->
+      <div class="col suggestedComment" onclick="setComment('having trouble')">having trouble</div><!-- end col -->
+      <div class="col suggestedComment" onclick="setComment('doing well')" >doing well</div><!-- end col -->
+      <div class="col suggestedComment" onclick="setComment('ready for a break')">ready for a break</div><!-- end col -->
+      <div class="col suggestedComment" onclick="setComment('tired')" >tired</div><!-- end col -->
+      <div class="col suggestedComment" onclick="setComment('really great')">really great</div><!-- end col -->
+      <div class="col suggestedComment" onclick="setComment('Rock Star')" >Rock Star</div><!-- end col -->
+      <div class="col suggestedComment" onclick="setComment('Reduced')">Reduced</div><!-- end col -->
+      <div class="col addOnComment" onclick="addComment('3lb added')" >3lb added</div><!-- end col -->
+      <div class="col addOnComment" onclick="addComment('8lb added')">8lb added</div><!-- end col -->
+      <div class="col addOnComment" onclick="addComment('plus chat')">plus chat</div><!-- end col -->
     </div><!-- end row -->
     <div class="row">
       <div class="col-xs-12 col-md-3">

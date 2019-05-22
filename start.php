@@ -1,22 +1,11 @@
 <?php 
 include ("./functions.php");
 include ("./mobile_header.html");
-$server=$_SERVER['SERVER_NAME'];
-if(contains("zebrose",$server))
-{
-  $website = $server."/exercise";
-}
-else
-{
-  $website = $server;
-}
+$website = getWebsite();
 ?>
-<title>Kates Exercise Routine</title>
-  <script type="text/javascript" src="assets/js/script.js"></script>
-  <script  type="text/javascript" src="assets/js/alt.js"></script>
-</head>
+<body>
 <div class="container-fluid" style="margin:10px">
-      <div class="row">
+      <div class="row center">
          <div class="col-xs-12 col-md-2">
          <a class='btn btn-primary' href="http://<?php echo $website; ?>/stretch.php">stretch</a>
          </div><!-- end col -->
@@ -36,5 +25,4 @@ else
          </div><!-- end col -->
     </div><!-- end row -->
 </div><!-- close container -->
-
 <?php include 'footer.php'; ?>

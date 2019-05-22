@@ -1,16 +1,8 @@
 <?php
 include ("./functions.php");
 include ("./mobile_header.html");
-$server=$_SERVER['SERVER_NAME'];
-if(contains("zebrose",$server))
-{
-  $website = $server."/exercise";
-}
-else
-{
-  $website = $server;
-}
-echo "<h2>server = $server website  = $website</h2>";
+$website = getWebsite();
+echo "<h2>website  = $website</h2>";
 ?>
 <div class="container-fluid" style="margin:10px">
       <div class="row">

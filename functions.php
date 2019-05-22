@@ -14,4 +14,17 @@
     } 
   }//end contains()
 
+  function getWebsite()
+  {
+    $server=$_SERVER['SERVER_NAME'];
+    if(contains("zebrose",$server))
+    {
+      $website = $server."/exercise";
+    }
+    else
+    {
+      $website = $server;
+    }
+    return $website;
+  }
 ?>

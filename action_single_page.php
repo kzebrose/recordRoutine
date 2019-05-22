@@ -103,15 +103,15 @@
     break;
   case "set1":
     echo "<h2> time for ";
-    echo "<a class='btn btn-primary' role='button' href='../singleSet.php/?name=set2'>set2</a></h2>";
+    echo "<a class='btn btn-primary' role='button' href='../singleSet.php?name=set2'>set2</a></h2>";
     break;
   case "set2":
     echo "<h2> time for ";
-    echo "<a class='btn btn-primary' role='button' href='../singleSet.php/?name=set3'>set3</a></h2>";
+    echo "<a class='btn btn-primary' role='button' href='../singleSet.php?name=set3'>set3</a></h2>";
     break;
   case "set3":
     echo "<h2> time for ";
-    echo "<a class='btn btn-primary' role='button' href='../specialSet.php/?name=setSpecial'>special set</a></h2>";
+    echo "<a class='btn btn-primary' role='button' href='../specialSet.php?name=setSpecial'>special set</a></h2>";
     break;
   case "setSpecial":
     echo "Done!";
