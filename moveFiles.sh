@@ -26,7 +26,7 @@ sunStr=$(php -f nextWeek.php $newName 1 file);
 if [[ $sunStr == *"ERROR"* ]]; 
   then 
     echo $sunStr;
-    exit; 
+    exit 99;
 fi
 #expand glob to a list of files in array list
 list=(*$sunStr*);
@@ -43,7 +43,7 @@ monStr=$(php -f nextWeek.php $newName 2 file);
 if [[ $monStr == *"ERROR"* ]]; 
   then 
     echo $monStr;
-    exit; 
+    exit 99;
 fi
 #expand glob to a list of files in array list
 list=(*$monStr*);
@@ -60,7 +60,7 @@ tueStr=$(php -f nextWeek.php $newName 3 file);
 if [[ $tueStr == *"ERROR"* ]]; 
   then 
     echo $tueStr;
-    exit; 
+    exit 99;
 fi
 #expand glob to a list of files in array list
 list=(*$tueStr*);
@@ -77,7 +77,7 @@ wedStr=$(php -f nextWeek.php $newName 4 file);
 if [[ $wedStr == *"ERROR"* ]]; 
   then 
     echo $wedStr;
-    exit; 
+    exit 99;
 fi
 #expand glob to a list of files in array list
 list=(*$wedStr*);
@@ -94,7 +94,7 @@ thuStr=$(php -f nextWeek.php $newName 5 file);
 if [[ $thuStr == *"ERROR"* ]]; 
   then 
     echo $thuStr;
-    exit; 
+    exit 99;
 fi
 #expand glob to a list of files in array list
 list=(*$thuStr*);
@@ -111,7 +111,7 @@ friStr=$(php -f nextWeek.php $newName 6 file);
 if [[ $friStr == *"ERROR"* ]]; 
   then 
     echo $friStr;
-    exit; 
+    exit 99;
 fi
 #expand glob to a list of files in array list
 list=(*$friStr*);
@@ -129,7 +129,7 @@ satStr=$(php -f nextWeek.php $newName 7 file);
 if [[ $satStr == *"ERROR"* ]]; 
   then 
     echo $satStr;
-    exit; 
+    exit 99;
 fi
 #expand glob to a list of files in array list
 list=(*$satStr*);
@@ -139,4 +139,4 @@ for file in "${list[@]}"; do
   echo "move $file to $weekDir"; 
   mv $file $weekDir;
 done
-
+exit 1;
