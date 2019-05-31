@@ -111,9 +111,7 @@
   $unixStart = strtotime($startTime);
   $unixEnd = strtotime($exData['set4endTime']);
   $calcTotalTime = $unixEnd - $unixStart;
-  echo getMinuteString($calcTotalTime);
-  echo "\n$unixStart $unixEnd\n $startTime $endTime";
 ?>
-<a href="/worksheet.html">Back to worksheet</a>
+<h2><a href='index.html'>Ready to Start Again</a></h2>
 </body>
 </html>
