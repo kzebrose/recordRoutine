@@ -32,6 +32,7 @@ $len = strlen($lastName);
 if($len != 19)
 {
   echo "ERROR:name MUST have 19 characters - NOT $len nextWeek.php\n";
+  echo "name of the form <weekendingYYYYMMMDD>\n";
   exit;
 }
 //parse directory name from last week into a unix timestamp
