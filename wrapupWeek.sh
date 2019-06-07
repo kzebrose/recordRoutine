@@ -21,7 +21,7 @@ if [[ $nextSat == *"ERROR"* ]];
     exit 99;
 fi
 #expand glob to a list of files in array list
-echo "Check there is a Sat file as quick sanity check";
+echo "Check there is a Sat file as a quick sanity check.";
 satGlob=(/home/kate/exercise/weekending/*$nextSat*);
 num=${#satGlob[@]};
 if [[ "/home/kate/exercise/weekending/*$nextSat*" = ${satGlob[@]} ]]; then
@@ -55,7 +55,6 @@ mv $weekDir ~/exercise/save/$newName;
 mkdir $weekDir;
 cp ~/exercise/makeThisWeek.sh $weekDir;
 
-#after my rocky start I will wait for the following automation
 echo "I will now copy files from the following week into the new weekending directory";
 ./moveFiles.sh anything
 retn_code=$?
