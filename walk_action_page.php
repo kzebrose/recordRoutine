@@ -49,7 +49,7 @@
       }
       elseif(strpos($key,"pace") === 0)
       {
-        $pace = (int)$time*$feetPerMile/(int)$distance;
+        $pace = $time*$feetPerMile/$distance;
         fwrite($logh,"<td colspan='5'  class='setOne'>pace ".$line." min/miles</td>\n");
       }
       elseif(strpos($key,"footraises") === 0)
