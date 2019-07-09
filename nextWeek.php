@@ -38,7 +38,7 @@ if($len != 19)
 //parse directory name from last week into a unix timestamp
 $lastDate = substr($lastName,10);
 //echo $lastDate."\n";
-$lastDateObj = date_create_from_format('YFj',$lastDate);
+$lastDateObj = date_create_from_format('YMd',$lastDate);
 //echo $lastDateObj->format('m-d-Y')."\n";
 $dateFormat = "P".$offset."D";
 $nextDateObj = $lastDateObj->add(new DateInterval($dateFormat));
@@ -48,7 +48,7 @@ if ($format == 'file')
 }
 elseif ($format == 'dir')
 {
-  $newDate = $nextDateObj->format('YFj');
+  $newDate = $nextDateObj->format('YMd');
   echo "weekending$newDate";
 }
 else
