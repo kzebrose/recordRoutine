@@ -3,8 +3,12 @@ include ("./functions.php");
 include ("./mobile_header.html");
 $website = getWebsite();
 ?>
-<body onload="onceOnLoad()">
-<?php $name =  $_GET["name"]; ?></h3>
+  <link href="http://<?php echo $website; ?>/assets/css/ex.css" rel='stylesheet' type='text/css' />
+  <script type='text/javascript' src="http://<?php echo $website; ?>/assets/js/script.js"></script>
+  <script  type='text/javascript' src="http://<?php echo $website; ?>/assets/js/alt.js"></script>
+  <title>Kates Exercise Routine</title>
+</head><body onload="onceOnLoad()">
+<?php $name =  $_GET["name"]; ?>
 <form action="http://<?php echo $website; ?>/action_single_page.php" method="post">
 <div class="container-fluid">
       <div class="row">
