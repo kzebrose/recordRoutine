@@ -5,7 +5,7 @@ $website = getWebsite();
 ?>
 <body onload="onceOnLoad()">
 <?php $name =  $_GET["name"]; ?></h3>
-<form action="../action_single_page.php" method="post">
+<form action="http://<?php echo $website; ?>/action_single_page.php" method="post">
 <div class="container-fluid">
       <div class="row">
          <div class="col-xs-12 col-md-6">

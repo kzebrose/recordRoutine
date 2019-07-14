@@ -1,4 +1,7 @@
 <?php
+  include ("./functions.php");
+  include ("./mobile_header.html");
+  $website = getWebsite();
   global $logh, $exData;
 
   function getLogHandle($name,$ver)
@@ -99,22 +102,22 @@
   switch($exData[SetName])
   {
   case "stretch":
-    include "../singleSet.php/?name=set1";
+    include "http://<?php echo $website; ?>/singleSet.php/?name=set1";
     break;
   case "set1":
-    echo "<h2> time for ";
-    echo "<a class='btn btn-primary' role='button' href='../singleSet.php?name=set2'>set2</a></h2>";
+    echo "<h2> time for <a class='btn btn-primary' role='button' href=http://";
+    echo $website."/singleSet.php/?name=set2>set2</a></h2>";
     break;
   case "set2":
-    echo "<h2> time for ";
-    echo "<a class='btn btn-primary' role='button' href='../singleSet.php?name=set3'>set3</a></h2>";
+    echo "<h2> time for <a class='btn btn-primary' role='button' href=http://";
+    echo $website."/singleSet.php/?name=set3>set3</a></h2>";
     break;
   case "set3":
-    echo "<h2> time for ";
-    echo "<a class='btn btn-primary' role='button' href='../specialSet.php?name=setSpecial'>special set</a></h2>";
+    echo "<h2> time for <a class='btn btn-primary' role='button' href=http://";
+    echo $website."/specialSet.php?name=setSpecial'>special set</a></h2>";
     break;
   case "setSpecial":
-    echo "Done!";
+    echo "<h1>Done!</h1>";
     break;
   default:
     break;
