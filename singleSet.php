@@ -1,3 +1,13 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <script  src="assets/js/ex.js"></script>
+  <script  src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+  <link href="assets/css/ex.css" rel="stylesheet" type="text/css" />
+  <title> singleSet Kate's Exercise Routine</title>
+</head>
+
 <?php 
 include ("./functions.php");
 include ("./mobile_header.html");
