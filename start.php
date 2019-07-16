@@ -1,7 +1,5 @@
 <?php 
-include ("./functions.php");
-include ("./mobile_header.html");
-$website = getWebsite();
+include ("./mobile_header.php");
 ?>
 <body>
 <div class="container-fluid" style="margin:10px">
