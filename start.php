@@ -19,7 +19,7 @@ $website = getWebsite();
            <a class="btn btn-primary" href="http://<?php echo $website; ?>/singleSet.php?name=set3">setThree</a>
          </div><!-- end col -->
          <div class="col-xs-12 col-md-2">
-           <a class="btn btn-primary" href="http://<?php echo $website; ?>/singleSet.php?name=setSpecial">setSpecial</a>
+           <a class="btn btn-primary" href="http://<?php echo $website; ?>/specialSet.php">setSpecial</a>
          </div><!-- end col -->
          <div class="col-xs-12 col-md-2">
          </div><!-- end col -->
