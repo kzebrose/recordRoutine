@@ -5,11 +5,23 @@ th,td {
 ul,h3 {
   margin: 0px;
 }
+.singleButtons button{
+  margin: 5px;
+}
+.singleButtons input{
+  margin: 8px;
+}
 .suggestedComment {
   background-color: aquamarine;
+  border-style:groove;
+  border-width:3px;
+  border-color:lightblue;
 }
 .addOnComment {
   background-color: lightblue;
+  border-style:groove;
+  border-width:3px;
+  border-color:aquamarine;
 }
 .setOne {
   background-color: red;
