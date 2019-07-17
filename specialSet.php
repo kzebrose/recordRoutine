@@ -1,13 +1,6 @@
 <?php 
-include ("./functions.php");
-include ("./mobile_header.html");
-$website = getWebsite();
+include ("./mobile_header.php");
 ?>
-  <link href="http://<?php echo $website; ?>/assets/css/ex.css" rel='stylesheet' type='text/css' />
-  <script type='text/javascript' src="http://<?php echo $website; ?>/assets/js/script.js"></script>
-  <script  type='text/javascript' src="http://<?php echo $website; ?>/assets/js/alt.js"></script>
-  <title>Kates Exercise Routine</title>
-</head><body onload="onceOnLoad()">
 <body onload="onceOnLoad()">
 <?php $name =  $_GET["name"]; ?></h3>
 <form action="http://<?php echo $website; ?>/action_single_page.php" method="post">
@@ -57,7 +50,7 @@ $website = getWebsite();
     </div><!-- end row -->
     <div class="row">
       <div class="col-xs-12 col-md-3">
-         <h2>2 minute <span id="goal2min" onclick="setGoal('1min',2,0)">click for goal</span></h2>
+         <h2>2 minute <span id="goal2min" onclick="setGoal('2min',2,0)">click for goal</span></h2>
       </div><!-- end col -->
       <div class="col-xs-12 col-md-3">
          <h1 id="clock3">clock3</h1>
