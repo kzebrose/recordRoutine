@@ -4,68 +4,83 @@
   <meta charset="utf-8"/>
   <script  src="assets/js/ex.js"></script>
   <script  src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
-  <script> function poppy()  //javascript
-                    {
-                    alert("Go Girl!! You Got This!");
-                    }
-  </script>
- <link href="assets/css/ex.css" rel="stylesheet" type="text/css" />
- <title> firstPage Kate's Exercise Routine</title>
+  <link href="assets/css/ex.css" rel="stylesheet" type="text/css" />
+  <title> singleSet Kate's Exercise Routine</title>
 </head>
 
+<?php 
+include ("./mobile_header.php");
+?>
 <body onload="onceOnLoad()">
-  <!-- button onclick="onceOnLoad()">Click ME</button --!>
-<form action="stretch_action.php" method="post">
-
-  <table>
-    <tr>
-      <td colspan="1">
-        <h1><input size=50 id="clock1" type="text" name="clock1" value="clock1"></h1>
-      </td>
-      <td>
-        <img id="PT" src="/assets/images/Gretchen-Photo-302x336.jpg" alt="PT Gretchen" />
-      </td>
-      <td><a href="https://www.pandora.com" target="_blank"><h1>Start with some Cardio</h1></a></td>
-      <td colspan="5"><h1>lower AC temp to 71F </h1></td>
-    </tr>
-    <tr>
-      <td><h3>PT appt Tuesday August 28, 2018 2:00PM</h3></td>
-      <td onclick="fillComment('startingCheckin')"> How are you feeling?</td><td><input id=startingCheckin size="20" type="text" name="startingCheckin" value="ready to start"></td>
-      <td><a id=metricLink href="./metrics.html" target="_blank" >metrics</a></td>
-      <td><span>L2UVHWD</span><a  href="http://www.my-exercise-code.com" target="_blank">exercise form described with video</a>
-      </td>
-      <td><button onclick="poppy()">HELP</button></td>
-      <td></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td id=comment >select a comment</td>
-      <td class="suggestedComment" onclick="setComment('OK')">OK</td>
-      <td class="suggestedComment" onclick="setComment('having trouble')">having trouble</td>
-      <td class="suggestedComment" onclick="setComment('doing well')" >doing well</td>
-      <td class="suggestedComment" onclick="setComment('tired')" >tired</td>
-      <td class="suggestedComment" onclick="setComment('really great')">really great</td>
-      <td class="suggestedComment" onclick="setComment('Rock Star')" >Rock Star</td>
-      <td class="addOnComment" onclick="addComment('plus chat')">plus chat</td>
-    </tr>
-    <tr>
-      <td><h2>stretch&nbsp;&nbsp;</h2></td>
-      <td onclick="setTimeExercise('stretchStartTime')">set start</td><td><input  id=set1startTime size="7" type="text" name="stretchStartTime" value="09:00"></td>
-      <td onclick="fillComment('set1stretchthigh')">set thigh note</td><td> <input id=set1stretchthigh size="10" type="text" name="stretchthigh" value=""> </td>
-      <td onclick="fillComment('set1stretchcalf')">set calf note</td><td> <input id=set1stretchcalf size="10" type="text" name="stretchcalf" value=""> </td>
-      <td></td>
-    <tr>
-      <td>2 minute<br><span id=goal2min onclick="setGoal('2min',2,0)">click4_g</span></td>
-      <td>1 minute<br><span id=goal1min onclick="setGoal('1min',1,0)">click4_g</span></td>
-      <td>30 seconds<br><span id=goal30sec onclick="setGoal('30sec',0,30)">click4_g</span></td>
-      <td><h1 id="clock2">clock2</h1></td>
-      <td><h1 id="clock3">clock3</h1></td>
-      <td><input type="submit" value="Submit" style="height:50px"></td>
-      <td></td>
-      <td></td>
-    </tr>
-  </table>
+<?php $name =  $_GET["name"]; ?>
+<form action="http://<?php echo $website; ?>/stretch_action.php" method="post">
+<div class="container-fluid">
+      <div class="row">
+         <div class="col-xs-12 col-md-6">
+           <input size=50 id="clock1" type="text" name="clock1" value="clock1">
+         </div><!-- end col -->
+         <div class="col-3" onclick="fillComment('startingCheckin')">
+            <p>How are you feeling?</p>
+         </div><!-- end col -->
+         <div class="col-3">
+           <input id=startingCheckin size="20" type="text" name="startingCheckin" value="ready to start">
+         </div><!-- end col -->
+      </div><!-- end row -->
+    <div class="row">
+      <div class="col-xs-12 col-md-5"><h2><?php echo $name; ?>&nbsp;&nbsp;</h2><h3 id="clock2">clock2</h3></div><!-- end col -->
+      <div class="col-xs-12 col-md-2"><img id="PT" width="100%" height="auto" src=""/></div><!-- end col -->
+      <div class="col-xs-12 col-md-5">
+         <div class="row"><div class="col-xs-12 col-md-6"><!-- inner row 1 -->
+           <button type="button" class="btn btn-success" onclick="setTimeExercise('stretchStartTime')">Start </button>
+         </div><!-- end first col of inner row 1 --><div class="col-xs-12 col-md-6"><!-- second col of inner row 1 -->
+           <input  id=set1startTime size="7" type="text" name="stretchStartTime" value="09:00">
+         </div><!-- end second col of inner row 1 --></div><!-- end inner row 1 -->
+      </div><!-- end col -->
+    </div><!-- end row -->
+    <div class="row">
+      <div class="col" onclick="fillComment('set1stretchthigh')">thigh note<input id=set1stretchthigh size="10" type="text" name="stretchthigh" value="">  </div><!-- end col -->
+      <div class="col" onclick="fillComment('set1stretchcalf')">calf note<input id=set1stretchcalf size="10" type="text" name="stretchcalf" value=""> </div><!-- end col -->
+    </div><!-- end row -->
+    <div class="row">&nbsp</div>
+    <div class="row">
+      <div class="col" id=comment >select a comment</div><!-- end col -->
+      <div class="col suggestedComment" onclick="setComment('OK')">OK</div><!-- end col -->
+      <div class="col suggestedComment" onclick="setComment('having trouble')">having trouble</div><!-- end col -->
+      <div class="col suggestedComment" onclick="setComment('doing well')" >doing well</div><!-- end col -->
+      <div class="col suggestedComment" onclick="setComment('ready for a break')">ready for a break</div><!-- end col -->
+      <div class="col suggestedComment" onclick="setComment('tired')" >tired</div><!-- end col -->
+      <div class="col suggestedComment" onclick="setComment('really great')">really great</div><!-- end col -->
+      <div class="col suggestedComment" onclick="setComment('Rock Star')" >Rock Star</div><!-- end col -->
+      <div class="col suggestedComment" onclick="setComment('Reduced')">Reduced</div><!-- end col -->
+      <div class="col addOnComment" onclick="addComment('3lb added')" >3lb added</div><!-- end col -->
+      <div class="col addOnComment" onclick="addComment('8lb added')">8lb added</div><!-- end col -->
+      <div class="col addOnComment" onclick="addComment('plus chat')">plus chat</div><!-- end col -->
+    </div><!-- end row -->
+    <div class="row">
+      <div class="col-xs-12 col-md-3">
+         <h2>1 minute <span id="goal1min" onclick="setGoal('1min',1,0)">click for goal</span></h2>
+      </div><!-- end col -->
+      <div class="col-xs-12 col-md-3">
+         <h1 id="clock3">clock3</h1>
+      </div><!-- end col -->
+      <div class="col-xs-12 col-md-6">
+         <div class="row"><div class="col-xs-12 col-md-6"><!-- inner row 2 -->
+           <button type="button" class="btn btn-success" onclick="setEndTimeExercise('set1startTime','set1endTime')">End</button>
+         </div><!-- end first col of inner row 2 --><div class="col-xs-12 col-md-6"><!-- second col of inner row 2 -->
+           <input  id=set1endTime    type="text" name="set1endTime" value="09:00">
+         </div><!-- end second col of inner row 2 --></div><!-- end inner row 2 -->
+         <div class="row"><div class="col-xs-12 col-md-6"><!-- inner row 3 -->
+           <h3>time in minutes </h3>
+         </div><!-- end first col of inner row 3 --><div class="col-xs-12 col-md-6"><!-- second col of inner row 3 -->
+           <input id=set1endTimeMinusStart  type="text" name="set1time" value="Z17-Z12">
+         </div><!-- end second col of inner row 3 --></div><!-- end inner row 3 -->
+      </div><!-- end col -->
+    </div><!-- end row -->
+</div><!-- close container -->
+<input type="hidden" id="SetName" name="SetName" value=<?php echo $name; ?>   >
+<input type="hidden" id="goal2min" name="goal2min" value=0  >
+<input type="hidden" id="goal30sec" name="goal30sec" value=0   >
+<input type="hidden" id="platform" name="platform" value="mobile" >
+<input type="submit" value="Submit" style="height:50px">
 </form>
-</body>
-</html>
-
+<?php include 'footer.php'; ?>

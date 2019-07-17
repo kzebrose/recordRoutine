@@ -1,4 +1,5 @@
 <?php
+  include ("./mobile_header.php");
   global $logh,$currentLogName;
 
   function getExerciseTimesHandle()
@@ -82,9 +83,19 @@
 <img id="PT" src="">
 <?php 
   global $logh,$currentLogName;
+
+  $worksheetURL = "http://$website/worksheet.html";
+  if($platform == 'mobile')
+  {
+    $back = $website.'/start.php';
+  }
+  else
+  {
+    $back = $website;
+  }
+
   $name = "exercise";
   $applicationPath = dirname(__FILE__);
-  $worksheetURL = "http://zebrose.com/exercise/worksheet.html";
   if(strcmp($applicationPath,"/home/kate/exercise") === 0)
   {
      $worksheetURL = "http://exercise.org/worksheet.html";
@@ -95,6 +106,7 @@
   
   $exData = $_POST;
   writeForm($exData);
+  $platform = $exData['platform'];
   $todayArr = explode(" ",$exData['clock1']);
   //print_r($todayArr);
   $startThought =  $exData['startingCheckin'];
@@ -102,16 +114,8 @@
 
   echo "<h2>I recorded you were $startThought  at $startTime $todayArr[0] $todayArr[1] $todayArr[2] $todayArr[3]</h2>\n";
   echo "<h2>Now that you have done some cardio and stretched it is time for the main event.</h2>";
-  echo "<a id=worksheetLink href=$worksheetURL target='_blank' ><h1>Click When Ready to Focus On Form</h1></a></td>" 
-
-  //echo "<ol>";
-  //foreach ($exData as $key => $value)
-  //{
-   //     echo "<li> $key  = $value</li>\n ";
-  //}
-  //echo "</ol>\n";
-
+  echo "<a id=worksheetLink href=$worksheetURL target='_blank' ><h1>Click When Ready to Focus On Form</h1></a></td>";
 ?>
-           <a class="btn btn-primary" href="http://exercise.org">back</a>
+  <a class="btn btn-primary" href="<?php echo "http://".$back ?>" >back</a>
 </body>
 </html>
