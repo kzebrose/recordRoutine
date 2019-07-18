@@ -1,6 +1,6 @@
 <?php
   include ("./functions.php");
-  include ("./mobile_header.html");
+  include ("./mobile_header.php");
   $website = getWebsite();
   global $logh, $exData;
 

@@ -1,8 +1,5 @@
 <?php
-include ("./functions.php");
-include ("./mobile_header.html");
-$website = getWebsite();
-echo "<h2>website  = $website</h2>";
+include ("./mobile_header.php");
 ?>
 <div class="container-fluid" style="margin:10px">
       <div class="row">
@@ -19,6 +16,11 @@ echo "<h2>website  = $website</h2>";
          </div><!-- end col -->
          <div class="col-xs-12 col-md-2">
            <a class="btn btn-primary" href="http://<?php echo $website; ?>/start.php">StartPerSet</a>
+         </div><!-- end col -->
+         <div class="col-xs-12 col-md-2">
+         </div><!-- end col -->
+         <div class="col-xs-12 col-md-2">
+           <br><a class="btn btn-primary" href="http://exercise.org/links.php">LocalLinks ONLY click if you have access to kates-debian</a>
          </div><!-- end col -->
          <div class="col-xs-12 col-md-2">
          </div><!-- end col -->
