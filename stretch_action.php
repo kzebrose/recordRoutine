@@ -49,6 +49,10 @@
         fwrite($logh,"<tr><td colspan='3'>".$line."</td>\n");
         //echo "<h1>This is begining $beginTime</h1>";
       }
+      elseif(strpos($key,"platform") === 0)
+      {
+        //ignore
+      }
       else fwrite($logh,"<td>".$line."</td>\n");
     }
     //calculate total stretch time
