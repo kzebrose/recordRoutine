@@ -89,7 +89,7 @@
   global $logh,$currentLogName;
   $exData = $_POST;
   $platform = $exData['platform'];
-echo "<h1>website = $website platform = $platform</h1>";
+  //echo "<h1>website = $website platform = $platform</h1>";
   if($platform == 'mobile')
   {
     $back = $website.'/start.php';
