@@ -1,7 +1,5 @@
 <?php
-  include ("./functions.php");
   include ("./mobile_header.php");
-  $website = getWebsite();
   global $logh, $exData;
 
   function getLogHandle($name,$ver)

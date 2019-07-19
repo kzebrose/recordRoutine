@@ -83,30 +83,27 @@
 <img id="PT" src="">
 <?php 
   global $logh,$currentLogName;
-
-  $worksheetURL = "http://$website/worksheet.html";
+  $exData = $_POST;
+  $platform = $exData['platform'];
+echo "<h1>website = $website platform = $platform</h1>";
   if($platform == 'mobile')
   {
     $back = $website.'/start.php';
+    $worksheetURL = "http://".$website."/singleSet.php?name=set1";
   }
   else
   {
     $back = $website;
+    $worksheetURL = "http://".$website."/worksheet.html";
   }
 
   $name = "exercise";
   $applicationPath = dirname(__FILE__);
-  if(strcmp($applicationPath,"/home/kate/exercise") === 0)
-  {
-     $worksheetURL = "http://exercise.org/worksheet.html";
-  }
   //wH adds day of week and hour of day to make sure files line up in cronological sequence
   $dateString = date("wH_D_F_j_Y_ha_");
   $currentLogName = $applicationPath."/".$dateString."_stretch_".$name.".html";
   
-  $exData = $_POST;
   writeForm($exData);
-  $platform = $exData['platform'];
   $todayArr = explode(" ",$exData['clock1']);
   //print_r($todayArr);
   $startThought =  $exData['startingCheckin'];

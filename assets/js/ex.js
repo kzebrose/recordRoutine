@@ -49,13 +49,13 @@ function onceOnLoad()
     setLinkPath("/metrics.html","metricLink");
     setPTimage("Gretchen-Photo-302x336.jpg");
   }
-  if(arrTitle[0] == "mainPage")
+  if((arrTitle[0] == "mainPage")||(arrTitle[0] == "Kates"))
   {
     setPTimage("Gretchen-Photo-302x336.jpg");
   }
-   setTimeExercise("set1startTime");
-   startTime();
-   document.onkeypress = enterKeyFunction;
+  setTimeExercise("set1startTime");
+  startTime();
+  document.onkeypress = enterKeyFunction;
 }
 
 //called by first_action.php

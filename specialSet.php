@@ -69,9 +69,9 @@ include ("./mobile_header.php");
       </div><!-- end col -->
     </div><!-- end row -->
 </div><!-- close container -->
-<input type="hidden" id="SetName" name="SetName" value=<?php echo $name; ?>   >
-<input type="hidden" id="goal1min" name="goal1min" value=0  >
-<input type="hidden" id="goal30sec" name="goal30sec" value=0   >
+<input type="hidden" id="SetName" name="SetName" value="setSpecial" >
+<input type="hidden" id="goal1min" name="goal1min" value=0 >
+<input type="hidden" id="goal30sec" name="goal30sec" value=0 >
 <input type="submit" value="Submit" style="height:50px">
 </form> 
 <?php include 'footer.php'; ?>
