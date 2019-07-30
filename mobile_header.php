@@ -22,5 +22,6 @@ $website = getWebsite();
   <script type='text/javascript' src="http://<?php echo $website; ?>/assets/js/ex.js"></script>
   <script type='text/javascript' src="http://<?php echo $website; ?>/assets/js/script.js"></script>
   <script type='text/javascript' src="http://<?php echo $website; ?>/assets/js/alt.js"></script>
+  <link href="assets/css/ex.css" rel="stylesheet" type="text/css" />
   <title>Kates Exercise Routine</title>
 </head>

@@ -30,7 +30,7 @@
 
   function writeForm($data)
   {
-    $logh = getLogHandle('exercise','0.1');
+    $logh = getLogHandle('exercise','1.0');
 //    $exh = getExerciseTimesHandle();
     foreach($data as $key => $line)
     {
@@ -49,11 +49,6 @@
         fwrite($logh,"<tr><td colspan='3'>".$line."</td>\n");
         //echo "<h1>This is begining $beginTime</h1>";
       }
-      elseif(strpos($key,"platform") === 0)
-      {
-        //ignore
-      }
-      else fwrite($logh,"<td>".$line."</td>\n");
     }
     //calculate total stretch time
     $nowObj = new DateTime("now");
@@ -61,7 +56,7 @@
     //echo "now = ".$nowObj->format('Y-m-d/TH:i:s:u');
     //echo "then = ".$thenObj->format('Y-m-d/TH:i:s:u');
     $stretchObj = $thenObj->diff($nowObj);
-    fwrite($logh,"<td>stretch time ".$stretchObj->i.":".$stretchObj->s."</td>\n");
+    fwrite($logh,"<td class='stretch'>stretch time ".$stretchObj->i.":".$stretchObj->s."</td>\n");
     fclose($logh);
     return;
   }
@@ -106,7 +101,7 @@
   //wH adds day of week and hour of day to make sure files line up in cronological sequence
   $dateString = date("wH_D_F_j_Y_ha_");
   $currentLogName = $applicationPath."/".$dateString."_stretch_".$name.".html";
-  
+  //print_r($exData);
   writeForm($exData);
   $todayArr = explode(" ",$exData['clock1']);
   //print_r($todayArr);

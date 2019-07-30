@@ -9,11 +9,11 @@ include ("./mobile_header.php");
          <div class="col-xs-12 col-md-6">
            <input size=50 id="clock1" type="text" name="clock1" value="clock1">
          </div><!-- end col -->
-         <div class="col-3" onclick="fillComment('set1startingCheckin')">
+         <div class="col-3" onclick="fillComment('setSstartingCheckin')">
             <p>How are you feeling?</p>
          </div><!-- end col -->
          <div class="col-3">
-           <input id=set1startingCheckin size="20" type="text" name="set1startingCheckin" value="ready to start">
+           <input id=setSstartingCheckin size="20" type="text" name="setSstartingCheckin" value="ready to start">
          </div><!-- end col -->
       </div><!-- end row -->
     <div class="row">
@@ -21,27 +21,27 @@ include ("./mobile_header.php");
       <div class="col-xs-12 col-md-2"><img id="PT" width="100%" height="auto" src=""/></div><!-- end col -->
       <div class="col-xs-12 col-md-5">
          <div class="row"><div class="col-xs-12 col-md-6"><!-- inner row 1 -->
-           <button type="button" class="btn btn-success" onclick="setTimeExercise('set1startTime')">Start </button>
+           <button type="button" class="btn btn-success" onclick="setTimeExercise('setSstartTime')">Start </button>
          </div><!-- end first col of inner row 1 --><div class="col-xs-12 col-md-6"><!-- second col of inner row 1 -->
-           <input  id=set1startTime  type="text" name="set1startTime" value="09:00">
+           <input  id=setSstartTime  type="text" name="setSstartTime" value="09:00">
          </div><!-- end second col of inner row 1 --></div><!-- end inner row 1 -->
       </div><!-- end col -->
     </div><!-- end row -->
     <div class="row singleButtons">
-      <div class="col-xs-4" ><button  type="button" class="btn btn-success" onclick="fillComment('set4bandLift')">band lift note</div><!-- end col -->
-      <div class="col-xs-4"><input id=set4bandLift  type="text" name="set4bandLift" value="'" size="10"> </div><!-- end col -->
+      <div class="col-xs-4" ><button  type="button" class="btn btn-success" onclick="fillComment('setSbandLift')">band lift note</div><!-- end col -->
+      <div class="col-xs-4"><input id=setSbandLift  type="text" name="setSbandLift" value="'" size="10"> </div><!-- end col -->
     </div><!-- end row -->
     <div class="row singleButtons">
-      <div class="col-xs-4" ><button  type="button" class="btn btn-success" onclick="fillComment('set4halfBand')">half band (5/5) lift note</div><!-- end col -->
-      <div class="col-xs-4"><input id=set4halfBand  type="text" name="set4halfBand" value="'" size="10"> </div><!-- end col -->
+      <div class="col-xs-4" ><button  type="button" class="btn btn-success" onclick="fillComment('setShalfBand')">half band (5/5) lift note</div><!-- end col -->
+      <div class="col-xs-4"><input id=setShalfBand  type="text" name="setShalfBand" value="'" size="10"> </div><!-- end col -->
     </div><!-- end row -->
     <div class="row singleButtons">
-      <div class="col-xs-4" ><button  type="button" class="btn btn-success" onclick="fillComment('set4march')">march (10) note</div><!-- end col -->
-      <div class="col-xs-4"><input id=set4march  type="text" name="set4march" value="'" size="10"> </div><!-- end col -->
+      <div class="col-xs-4" ><button  type="button" class="btn btn-success" onclick="fillComment('setSmarch')">march (10) note</div><!-- end col -->
+      <div class="col-xs-4"><input id=setSmarch  type="text" name="setSmarch" value="'" size="10"> </div><!-- end col -->
     </div><!-- end row -->
     <div class="row singleButtons">
-      <div class="col-xs-4" ><button  type="button" class="btn btn-success" onclick="fillComment('set4slowWalk')">2 minute slow walk note</div><!-- end col -->
-      <div class="col-xs-4"><input id=set4slowWalk  type="text" name="set4slowWalk" value="'" size="10"> </div><!-- end col -->
+      <div class="col-xs-4" ><button  type="button" class="btn btn-success" onclick="fillComment('setSslowWalk')">2 minute slow walk note</div><!-- end col -->
+      <div class="col-xs-4"><input id=setSslowWalk  type="text" name="setSslowWalk" value="'" size="10"> </div><!-- end col -->
     </div><!-- end row -->
     <div class="row">&nbsp</div>
     <div class="row">
@@ -67,14 +67,14 @@ include ("./mobile_header.php");
       </div><!-- end col -->
       <div class="col-xs-12 col-md-6">
          <div class="row"><div class="col-xs-12 col-md-6"><!-- inner row 2 -->
-           <button type="button" class="btn btn-success" onclick="setEndTimeExercise('set1startTime','set1endTime')">End</button>
+           <button type="button" class="btn btn-success" onclick="setEndTimeExercise('setSstartTime','setSendTime')">End</button>
          </div><!-- end first col of inner row 2 --><div class="col-xs-12 col-md-6"><!-- second col of inner row 2 -->
-           <input  id=set1endTime    type="text" name="set1endTime" value="09:00">
+           <input  id=setSendTime    type="text" name="setSendTime" value="09:00">
          </div><!-- end second col of inner row 2 --></div><!-- end inner row 2 -->
          <div class="row"><div class="col-xs-12 col-md-6"><!-- inner row 3 -->
            <h3>time in minutes </h3>
          </div><!-- end first col of inner row 3 --><div class="col-xs-12 col-md-6"><!-- second col of inner row 3 -->
-           <input id=set1endTimeMinusStart  type="text" name="set1time" value="Z17-Z12">
+           <input id=setSendTimeMinusStart  type="text" name="setStime" value="Z17-Z12">
          </div><!-- end second col of inner row 3 --></div><!-- end inner row 3 -->
       </div><!-- end col -->
     </div><!-- end row -->

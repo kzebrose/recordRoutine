@@ -19,11 +19,11 @@ include ("./mobile_header.php");
          <div class="col-xs-12 col-md-6">
            <input size=50 id="clock1" type="text" name="clock1" value="clock1">
          </div><!-- end col -->
-         <div class="col-3" onclick="fillComment('startingCheckin')">
+         <div class="col-3" onclick="fillComment('stretchCheckin')">
             <p>How are you feeling?</p>
          </div><!-- end col -->
          <div class="col-3">
-           <input id=startingCheckin size="20" type="text" name="startingCheckin" value="ready to start">
+           <input id=stretchCheckin size="20" type="text" name="stretchCheckin" value="ready to start">
          </div><!-- end col -->
       </div><!-- end row -->
     <div class="row">
