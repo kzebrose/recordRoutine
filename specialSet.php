@@ -2,7 +2,7 @@
 include ("./mobile_header.php");
 ?>
 <body onload="onceOnLoad()">
-<?php $name =  $_GET["name"]; ?></h3>
+<?php $name =  "setSpecial"; ?>
 <form action="http://<?php echo $website; ?>/action_single_page.php" method="post">
 <div class="container-fluid">
       <div class="row">
@@ -27,11 +27,21 @@ include ("./mobile_header.php");
          </div><!-- end second col of inner row 1 --></div><!-- end inner row 1 -->
       </div><!-- end col -->
     </div><!-- end row -->
-    <div class="row">
-      <div class="col" onclick="fillComment('set4bandLift')">band lift note<input id=set4bandLift size="10" type="text" name="set4bandLift" value="'"> </div><!-- end col -->
-      <div class="col" onclick="fillComment('set4halfBand')">half band (5/5) lift note<input id=set4halfBand size="10" type="text" name="set4halfBand" value="'"> </div><!-- end col -->
-      <div class="col" onclick="fillComment('set4march')">march (10) note <input id=set4march size="10" type="text" name="set4march" value="'"> </div><!-- end col -->
-      <div class="col" onclick="fillComment('set4slowWalk','set4startTime','set4endTime')">2 minute slow walk note<input id=set4slowWalk size="10" type="text" name="set4slowWalk" value="'"> </div><!-- end col -->
+    <div class="row singleButtons">
+      <div class="col-xs-4" ><button  type="button" class="btn btn-success" onclick="fillComment('set4bandLift')">band lift note</div><!-- end col -->
+      <div class="col-xs-4"><input id=set4bandLift  type="text" name="set4bandLift" value="'" size="10"> </div><!-- end col -->
+    </div><!-- end row -->
+    <div class="row singleButtons">
+      <div class="col-xs-4" ><button  type="button" class="btn btn-success" onclick="fillComment('set4halfBand')">half band (5/5) lift note</div><!-- end col -->
+      <div class="col-xs-4"><input id=set4halfBand  type="text" name="set4halfBand" value="'" size="10"> </div><!-- end col -->
+    </div><!-- end row -->
+    <div class="row singleButtons">
+      <div class="col-xs-4" ><button  type="button" class="btn btn-success" onclick="fillComment('set4march')">march (10) note</div><!-- end col -->
+      <div class="col-xs-4"><input id=set4march  type="text" name="set4march" value="'" size="10"> </div><!-- end col -->
+    </div><!-- end row -->
+    <div class="row singleButtons">
+      <div class="col-xs-4" ><button  type="button" class="btn btn-success" onclick="fillComment('set4slowWalk')">2 minute slow walk note</div><!-- end col -->
+      <div class="col-xs-4"><input id=set4slowWalk  type="text" name="set4slowWalk" value="'" size="10"> </div><!-- end col -->
     </div><!-- end row -->
     <div class="row">&nbsp</div>
     <div class="row">
