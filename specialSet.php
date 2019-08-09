@@ -9,11 +9,11 @@ include ("./mobile_header.php");
          <div class="col-xs-12 col-md-6">
            <input size=50 id="clock1" type="text" name="clock1" value="clock1">
          </div><!-- end col -->
-         <div class="col-3" onclick="fillComment('setSstartingCheckin')">
+         <div class="col-3" onclick="fillComment('set1startingCheckin')">
             <p>How are you feeling?</p>
          </div><!-- end col -->
          <div class="col-3">
-           <input id=setSstartingCheckin size="20" type="text" name="setSstartingCheckin" value="ready to start">
+           <input id=set1startingCheckin size="20" type="text" name="set1startingCheckin" value="ready to start">
          </div><!-- end col -->
       </div><!-- end row -->
     <div class="row">
@@ -69,12 +69,12 @@ include ("./mobile_header.php");
          <div class="row"><div class="col-xs-12 col-md-6"><!-- inner row 2 -->
            <button type="button" class="btn btn-success" onclick="setEndTimeExercise('set1startTime','setSendTime')">End</button>
          </div><!-- end first col of inner row 2 --><div class="col-xs-12 col-md-6"><!-- second col of inner row 2 -->
-           <input  id=setSendTime    type="text" name="setSendTime" value="09:00">
+           <input  id=set1endTime    type="text" name="set1endTime" value="09:00">
          </div><!-- end second col of inner row 2 --></div><!-- end inner row 2 -->
          <div class="row"><div class="col-xs-12 col-md-6"><!-- inner row 3 -->
            <h3>time in minutes </h3>
          </div><!-- end first col of inner row 3 --><div class="col-xs-12 col-md-6"><!-- second col of inner row 3 -->
-           <input id=setSendTimeMinusStart  type="text" name="setStime" value="Z17-Z12">
+           <input id=set1endTimeMinusStart  type="text" name="set1time" value="Z17-Z12">
          </div><!-- end second col of inner row 3 --></div><!-- end inner row 3 -->
       </div><!-- end col -->
     </div><!-- end row -->
