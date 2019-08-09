@@ -46,6 +46,7 @@ include ("./mobile_header.php");
     <div class="row singleButtons">
       <div class="col-xs-4" ><button  type="button" class="btn btn-success" onclick="fillComment('set1kickBack')">kick back note</div><!-- end col -->
       <div class="col-xs-4"><input id=set1kickBack  type="text" name="set1kickBack" value="'" size="10"> </div><!-- end col -->
+      <p><h3>kickback pointers:</h3>Don't bring knees forward!  Knee should be coming directly behind you with every single movement.  Keep good posture with butt in.</p>
     </div><!-- end row -->
     <div class="row">&nbsp</div>
     <div class="row">

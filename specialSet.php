@@ -21,9 +21,9 @@ include ("./mobile_header.php");
       <div class="col-xs-12 col-md-2"><img id="PT" width="100%" height="auto" src=""/></div><!-- end col -->
       <div class="col-xs-12 col-md-5">
          <div class="row"><div class="col-xs-12 col-md-6"><!-- inner row 1 -->
-           <button type="button" class="btn btn-success" onclick="setTimeExercise('setSstartTime')">Start </button>
+           <button type="button" class="btn btn-success" onclick="setTimeExercise('set1startTime')">Start </button>
          </div><!-- end first col of inner row 1 --><div class="col-xs-12 col-md-6"><!-- second col of inner row 1 -->
-           <input  id=setSstartTime  type="text" name="setSstartTime" value="09:00">
+           <input  id=set1startTime  type="text" name="set1startTime" value="09:00">
          </div><!-- end second col of inner row 1 --></div><!-- end inner row 1 -->
       </div><!-- end col -->
     </div><!-- end row -->
@@ -67,7 +67,7 @@ include ("./mobile_header.php");
       </div><!-- end col -->
       <div class="col-xs-12 col-md-6">
          <div class="row"><div class="col-xs-12 col-md-6"><!-- inner row 2 -->
-           <button type="button" class="btn btn-success" onclick="setEndTimeExercise('setSstartTime','setSendTime')">End</button>
+           <button type="button" class="btn btn-success" onclick="setEndTimeExercise('set1startTime','setSendTime')">End</button>
          </div><!-- end first col of inner row 2 --><div class="col-xs-12 col-md-6"><!-- second col of inner row 2 -->
            <input  id=setSendTime    type="text" name="setSendTime" value="09:00">
          </div><!-- end second col of inner row 2 --></div><!-- end inner row 2 -->
