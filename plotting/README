@@ -1,6 +1,8 @@
 
 HOW TO UPDATE
 1) add new data to *.dat files
+   a) if multiple runs, usually 2, add them all to *Detail.dat files
+   b) calculate the average and add this one value to *.dat
 2) run pltAll.sh to create new graphs
 3) use eog to view graphs
 
