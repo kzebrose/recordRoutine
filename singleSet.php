@@ -40,13 +40,19 @@ include ("./mobile_header.php");
       <div class="col-xs-4"><input id=set1balletRaise  type="text" name="set1balletRaise" value="'" size="10"> </div><!-- end col -->
     </div><!-- end row -->
     <div class="row singleButtons">
+      <div class="col-xs-12 col-md-3">
+         <h2>1 minute <span id="goal1min" onclick="setGoal('1min',1,0)">click for goal</span></h2>
+      </div><!-- end col -->
+      <div class="col-xs-12 col-md-3">
+         <h1 id="clock3">clock3</h1>
+      </div><!-- end col -->
       <div class="col-xs-4" ><button  type="button" class="btn btn-success" onclick="fillComment('set1leanBack')">lean back note</div><!-- end col -->
       <div class="col-xs-4"><input id=set1leanBack  type="text" name="set1leanBack" value="'" size="10"> </div><!-- end col -->
     </div><!-- end row -->
     <div class="row singleButtons">
       <div class="col-xs-4" ><button  type="button" class="btn btn-success" onclick="fillComment('set1kickBack')">kick back note</div><!-- end col -->
       <div class="col-xs-4"><input id=set1kickBack  type="text" name="set1kickBack" value="'" size="10"> </div><!-- end col -->
-      <p><h3>kickback pointers:</h3>Don't bring knees forward!  Knee should be coming directly behind you with every single movement.  Keep good posture with butt in.</p>
+      <p><h3>kickback pointers: ==>Don't bring knees forward! ==>Knee should be coming directly behind you with every single movement. ==> Keep good posture with butt in.</h3></p>
     </div><!-- end row -->
     <div class="row">&nbsp</div>
     <div class="row">
@@ -64,12 +70,6 @@ include ("./mobile_header.php");
       <div class="col addOnComment" onclick="addComment('plus chat')">plus chat</div><!-- end col -->
     </div><!-- end row -->
     <div class="row">
-      <div class="col-xs-12 col-md-3">
-         <h2>1 minute <span id="goal1min" onclick="setGoal('1min',1,0)">click for goal</span></h2>
-      </div><!-- end col -->
-      <div class="col-xs-12 col-md-3">
-         <h1 id="clock3">clock3</h1>
-      </div><!-- end col -->
       <div class="col-xs-12 col-md-6">
          <div class="row"><div class="col-xs-12 col-md-6"><!-- inner row 2 -->
            <button type="button" class="btn btn-success" onclick="setEndTimeExercise('set1startTime','set1endTime')">End</button>
