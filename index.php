@@ -30,8 +30,8 @@
       <td></td>
     </tr>
     <tr>
-      <td><h3>PT appt Friday May 10, 2019 1:00PM</h3></td>
-      <td onclick="fillComment('startingCheckin')"> How are you feeling?</td><td><input id=startingCheckin size="20" type="text" name="startingCheckin" value="ready to start"></td>
+      <td><h3>look for latest on MSingLink</h3></td>
+      <td onclick="fillComment('startingCheckin')"> How are you feeling?</td><td><input id=stretchStartingCheckin size="20" type="text" name="stretchStartingCheckin" value="ready to start"></td>
       <td><a id=metricLink href="./metrics.html" target="_blank" >metrics</a></td>
       <td><span>L2UVHWD</span><a  href="http://www.my-exercise-code.com" target="_blank">exercise form described with video</a>
       </td>

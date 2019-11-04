@@ -76,7 +76,7 @@ fi;
 #a new weekending directory needs to be created
 mv $weekDir ~/exercise/save/$newName;
 mkdir $weekDir;
-cp ~/exercise/makeThisWeek.sh $weekDir;
+cp ~/exercise/createThisWeek.sh $weekDir;
 
 echo "I will now move files from the following week into the weekending directory";
 ./moveFiles.sh anything
