@@ -52,7 +52,6 @@ include ("./mobile_header.php");
     <div class="row singleButtons">
       <div class="col-xs-4" ><button  type="button" class="btn btn-success" onclick="fillComment('set1kickBack')">kick back note</div><!-- end col -->
       <div class="col-xs-4"><input id=set1kickBack  type="text" name="set1kickBack" value="'" size="10"> </div><!-- end col -->
-      <p><h3>kickback pointers: ==>Don't bring knees forward! ==>Knee should be coming directly behind you with every single movement. ==> Keep good posture with butt in.</h3></p>
     </div><!-- end row -->
     <div class="row">&nbsp</div>
     <div class="row">
@@ -61,12 +60,9 @@ include ("./mobile_header.php");
       <div class="col suggestedComment" onclick="setComment('having trouble')">having trouble</div><!-- end col -->
       <div class="col suggestedComment" onclick="setComment('doing well')" >doing well</div><!-- end col -->
       <div class="col suggestedComment" onclick="setComment('ready for a break')">ready for a break</div><!-- end col -->
-      <div class="col suggestedComment" onclick="setComment('tired')" >tired</div><!-- end col -->
       <div class="col suggestedComment" onclick="setComment('really great')">really great</div><!-- end col -->
       <div class="col suggestedComment" onclick="setComment('Rock Star')" >Rock Star</div><!-- end col -->
       <div class="col suggestedComment" onclick="setComment('Reduced')">Reduced</div><!-- end col -->
-      <div class="col addOnComment" onclick="addComment('3lb added')" >3lb added</div><!-- end col -->
-      <div class="col addOnComment" onclick="addComment('8lb added')">8lb added</div><!-- end col -->
       <div class="col addOnComment" onclick="addComment('plus chat')">plus chat</div><!-- end col -->
     </div><!-- end row -->
     <div class="row">
