@@ -1,13 +1,3 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-  <meta charset="utf-8"/>
-  <script  src="assets/js/ex.js"></script>
-  <script  src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
-  <link href="assets/css/ex.css" rel="stylesheet" type="text/css" />
-  <title> singleSet Kate's Exercise Routine</title>
-</head>
-
 <?php 
 include ("./mobile_header.php");
 ?>
@@ -38,12 +28,12 @@ include ("./mobile_header.php");
       </div><!-- end col -->
     </div><!-- end row -->
     <div class="row">
-      <div class="col" onclick="fillComment('set1stretchthigh')">thigh note<input id=set1stretchthigh size="10" type="text" name="stretchthigh" value="">  </div><!-- end col -->
+      <div class="col" onclick="fillComment('set1stretchthigh')">inner and upper thigh note<input id=set1stretchthigh size="10" type="text" name="stretchthigh" value="">  </div><!-- end col -->
       <div class="col" onclick="fillComment('set1stretchcalf')">calf note<input id=set1stretchcalf size="10" type="text" name="stretchcalf" value=""> </div><!-- end col -->
     </div><!-- end row -->
     <div class="row">&nbsp</div>
     <div class="row">
-      <div class="col" id=comment >select a comment</div><!-- end col -->
+      <div class="col" id=comment >doing well</div><!-- end col -->
       <div class="col suggestedComment" onclick="setComment('OK')">OK</div><!-- end col -->
       <div class="col suggestedComment" onclick="setComment('having trouble')">having trouble</div><!-- end col -->
       <div class="col suggestedComment" onclick="setComment('doing well')" >doing well</div><!-- end col -->
@@ -58,7 +48,7 @@ include ("./mobile_header.php");
     </div><!-- end row -->
     <div class="row">
       <div class="col-xs-12 col-md-3">
-         <h2>1 minute <span id="goal1min" onclick="setGoal('1min',1,0)">click for goal</span></h2>
+         <h2>2 min&nbsp;&nbsp;<span id="goal2min" onclick="setGoal('2min',2,0)">click for goal</span></h2>
       </div><!-- end col -->
       <div class="col-xs-12 col-md-3">
          <h1 id="clock3">clock3</h1>

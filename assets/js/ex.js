@@ -238,10 +238,8 @@ function clearGoal(tag)
 }
 function setGoal(tag,minGoal,secGoal)
 {
-/* first clear all goals */
-  clearGoal('2min');
-  clearGoal('1min');
-  clearGoal('30sec');
+/* first  goals */
+  clearGoal(tag);
 
   var myDate = document.getElementById('clock1').value;
   var myTime = document.getElementById('clock3').innerHTML;
