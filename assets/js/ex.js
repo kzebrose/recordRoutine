@@ -178,7 +178,7 @@ function setTotalExerciseTime()
 function setComment(selectedComment)
 {
   var comment = document.getElementById('comment');
-  comment.dataset.currentComment = selectedComment;
+  comment.dataset.current = selectedComment;
   comment.innerHTML = selectedComment;
   comment.style.backgroundColor = "lightgreen";
   comment.style.fontSize = "20px";
@@ -188,8 +188,8 @@ function setComment(selectedComment)
 function addComment(selectedComment)
 {
   var comment = document.getElementById('comment');
-  var currComment = comment.dataset.currentComment;
-  comment.dataset.currentComment = currComment + ' ' + selectedComment;
+  var currComment = comment.dataset.current;
+  comment.dataset.current = currComment + ' ' + selectedComment;
   comment.innerHTML =  currComment + '&nbsp;' + selectedComment;
   comment.style.backgroundColor = "lightgreen";
   comment.style.fontSize = "20px";
@@ -220,7 +220,7 @@ function fillComment(selectedInput)
   }
   var comment = document.getElementById('comment');
   var myInput = document.getElementById(selectedInput);
-  myInput.value = comment.dataset.currentComment;
+  myInput.value = comment.dataset.current;
 }
 
 function twoChar(number)

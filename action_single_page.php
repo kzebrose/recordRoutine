@@ -17,7 +17,7 @@
   {
    //print_r($data);
    $logh = getLogHandle('exercise','0.1');
-   $classLabel = $data[SetName];
+   $classLabel = $data['SetName'];
    $record = "";
     foreach($data as $key => $line)
     {
@@ -97,7 +97,7 @@
     {
       //echo "<li> $key  = $value</li>\n ";
     }
-  switch($exData[SetName])
+  switch($exData['SetName'])
   {
   case "stretch":
     include "http://<?php echo $website; ?>/singleSet.php/?name=set1";

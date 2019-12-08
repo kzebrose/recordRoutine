@@ -55,7 +55,7 @@ include ("./mobile_header.php");
     </div><!-- end row -->
     <div class="row">&nbsp</div>
     <div class="row">
-      <div class="col" id=comment >select a comment</div><!-- end col -->
+      <div class="col" id=comment data-current="doing well" >select a comment</div><!-- end col -->
       <div class="col suggestedComment" onclick="setComment('OK')">OK</div><!-- end col -->
       <div class="col suggestedComment" onclick="setComment('having trouble')">having trouble</div><!-- end col -->
       <div class="col suggestedComment" onclick="setComment('doing well')" >doing well</div><!-- end col -->
