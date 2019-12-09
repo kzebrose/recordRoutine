@@ -1,7 +1,7 @@
 <?php 
 include ("./mobile_header.php");
 ?>
-<body onload="onceOnLoad()">
+<body onload="onceOnLoad('set1startTime')">
 <?php $name =  $_GET["name"]; ?>
 <form action="http://<?php echo $website; ?>/stretch_action.php" method="post">
 <div class="container-fluid">

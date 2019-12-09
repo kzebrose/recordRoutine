@@ -39,7 +39,7 @@ function startOneClockTime()
 }
 
 //called by firstPage and mainPage to start clocks
-function onceOnLoad()
+function onceOnLoad(name)
 {
 
   var myTitle = document.title;
@@ -53,7 +53,8 @@ function onceOnLoad()
   {
     setPTimage("Gretchen-Photo-302x336.jpg");
   }
-  setTimeExercise("set1startTime");
+  //setTimeExercise("set1startTime");
+  setTimeExercise(name);
   startTime();
   document.onkeypress = enterKeyFunction;
 }

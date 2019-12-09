@@ -8,7 +8,7 @@
   <title> firstPage Kate's Exercise Routine</title>
 </head>
 
-<body onload="onceOnLoad()">
+<body onload="onceOnLoad('set1startTime')">
 
 <form action="stretch_action.php" method="post">
 

@@ -1,7 +1,7 @@
 <?php 
 include ("./mobile_header.html");
 ?>
-<body onload="onceOnLoad()">
+<body onload="onceOnLoad('set1startTime')">
 <form action="action_page.php" method="post">
 <div class="container-fluid">
       <div class="row">
