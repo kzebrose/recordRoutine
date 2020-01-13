@@ -28,7 +28,7 @@ include ("./mobile_header.php");
       </div><!-- end col -->
     </div><!-- end row -->
     <div class="row">
-      <div class="col" onclick="fillComment('set1stretchthigh')">inner and upper thigh note<input id=set1stretchthigh size="10" type="text" name="stretchthigh" value="">  </div><!-- end col -->
+      <div class="col" onclick="fillComment('set1stretchthigh')">upper thigh note<input id=set1stretchthigh size="10" type="text" name="stretchthigh" value="">  </div><!-- end col -->
       <div class="col" onclick="fillComment('set1stretchcalf')">calf note<input id=set1stretchcalf size="10" type="text" name="stretchcalf" value=""> </div><!-- end col -->
     </div><!-- end row -->
     <div class="row">&nbsp</div>
