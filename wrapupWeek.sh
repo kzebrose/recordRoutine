@@ -7,7 +7,7 @@ echo "Process Summary"
 echo "++ create and review thisWeek_exercise.html";
 echo "++ print thisWeek_exercise.html as PDF";
 echo "++ store PDF in donShare/exercise";
-echo "++ run this program to ...";
+echo "++ run this program to from /home/kate/exercise to ...";
 echo "            archive the weekending files under the save directory";
 echo "            move the following weeks files into the weekending directory";
 echo "-------------------------------------------------------------------------------------------";
