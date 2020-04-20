@@ -1,41 +1,41 @@
 <?php
-// ONLY called from break.html
-  global $logh;
+// process break.html and mothlyTimedTest.html
+  global $formh;
 
-  function getLogHandle($name,$ver)
+  function getFormHandle($name,$ver)
   {
     $applicationPath = dirname(__FILE__);
     $currentLogName = $applicationPath."/".$name.".html";
-    $logh = fopen($currentLogName, "a+") or die("Unable to open $currentLogName");
-    return $logh;
+    $formh = fopen($currentLogName, "a+") or die("Unable to open $currentLogName");
+    return $formh;
   }
 
   function writeForm($data)
   {
     $timestamp4break = strtotime($data['clock1']);
     $dateString = date("w_D_F_j_Y",$timestamp4break);
-    $logh = getLogHandle($dateString.'_exercise','1.0');
+    $formh = getFormHandle($dateString.'_exercise','1.0');
     foreach($data as $key => $line)
     {
       if(strpos($key,"clock1") === 0)
       {
-        fwrite($logh,"<tr><td colspan='3'>".$line."</td><td>break day</td>\n");
+        fwrite($formh,"<tr><td colspan='3'>".$line."</td><td>break day</td>\n");
       }
       elseif(strpos($key,"breakInfo") === 0)
       {
-        fwrite($logh,"<td colspan='3' >".$line."</td>\n");
+        fwrite($formh,"<td colspan='3' >".$line."</td>\n");
       }
       elseif(strpos($key,"meInfo") === 0)
       {
-        fwrite($logh,"<td colspan = '7' class='setThree'>".$line."</td>\n");
+        fwrite($formh,"<td colspan = '7' class='setThree'>".$line."</td>\n");
       }
       elseif(strpos($key,"weather") === 0)
       {
-        fwrite($logh,"<td colspan = '2' class='setThree'>".$line."</td>\n");
+        fwrite($formh,"<td colspan = '2' class='setThree'>".$line."</td>\n");
       }
-      else fwrite($logh,"<td>".$line."</td>\n");
+      else fwrite($formh,"<td>".$line."</td>\n");
     }
-    fclose($logh);
+    fclose($formh);
     return;
   }
 

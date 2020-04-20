@@ -20,50 +20,22 @@
         <br><a href="http://exercise.org/walk.html">record walk</a>
         <br><a href="http://zebrose.com/exercise/walkMobile.html">record walk on mobile</a>
         <br><a href="http://exercise.org/break.html">record break</a>
-        <br><a href="http://exercise.org/start.php">StartPerSet</a>
       </td>
       <td>
         <img id="PT" src="/assets/images/Gretchen-Photo-302x336.jpg" alt="PT Gretchen" />
       </td>
-      <td><a href="https://www.pandora.com" target="_blank"><h1>Start with some Cardio</h1></a></td>
-      <td colspan="5"><h1>lean back and rest upper body for seated march<br/><br>have a natural stride and good posture for kickback</h1></td>
-      <td></td>
-    </tr>
-    <tr>
-      <td><h3>look for latest on MSingLink</h3></td>
-      <td onclick="fillComment('startingCheckin')"> How are you feeling?</td><td><input id=stretchStartingCheckin size="20" type="text" name="stretchStartingCheckin" value="ready to start"></td>
-      <td><a id=metricLink href="./metrics.html" target="_blank" >metrics</a></td>
-      <td><span>L2UVHWD</span><a  href="http://www.my-exercise-code.com" target="_blank">exercise form described with video</a>
+      <td>
+        <a href="https://www.pandora.com/station/play/713387823522761838" target="_blank"><h1>Pandora meditation music</h1></a>
+        <br><a href="http://exercise.org/start.php"><h1>Start&nbspSet</h1></a>
       </td>
-      <td><button onclick="poppy()">HELP</button></td>
-      <td></td>
-      <td></td>
+      <td colspan="1"><h1>lean back and rest upper body for seated march<br/><br>have a natural stride and good posture for kickback</h1></td>
     </tr>
     <tr>
-      <td id=comment >select a comment</td>
-      <td class="suggestedComment" onclick="setComment('OK')">OK</td>
-      <td class="suggestedComment" onclick="setComment('having trouble')">having trouble</td>
-      <td class="suggestedComment" onclick="setComment('doing well')" >doing well</td>
-      <td class="suggestedComment" onclick="setComment('tired')" >tired</td>
-      <td class="suggestedComment" onclick="setComment('really great')">really great</td>
-      <td class="suggestedComment" onclick="setComment('Rock Star')" >Rock Star</td>
-      <td class="addOnComment" onclick="addComment('plus chat')">plus chat</td>
-    </tr>
-    <tr>
-      <td><h2>stretch&nbsp;&nbsp;</h2></td>
-      <td onclick="setTimeExercise('stretchStartTime')">set start</td><td><input  id=set1startTime size="7" type="text" name="stretchStartTime" value="09:00"></td>
-      <td onclick="fillComment('set1stretchthigh')">set thigh note</td><td> <input id=set1stretchthigh size="10" type="text" name="stretchthigh" value=""> </td>
-      <td onclick="fillComment('set1stretchcalf')">set calf note</td><td> <input id=set1stretchcalf size="10" type="text" name="stretchcalf" value=""> </td>
-      <td></td>
-    <tr>
-      <td>2 minute<br><span id=goal2min onclick="setGoal('2min',2,0)">click4_g</span></td>
-      <td>1 minute<br><span id=goal1min onclick="setGoal('1min',1,0)">click4_g</span></td>
-      <td>30 seconds<br><span id=goal30sec onclick="setGoal('30sec',0,30)">click4_g</span></td>
-      <td><h1 id="clock2">clock2</h1></td>
-      <td><h1 id="clock3">clock3</h1></td>
-      <td><input type="submit" value="Submit" style="height:50px"></td>
-      <td></td>
-      <td></td>
+      <td><a id=MSingLink href="https://www.doctorgretchenhawley.com/library" target="_blank" ><h3>look for latest on MSingLink</h3></a></td>
+      <td><a id=metricLink href="./metrics.html" target="_blank" >metrics</a></td>
+      <td><span>(1) copy code L2UVHWD</span></td>
+      <td><a  href="http://www.my-exercise-code.com" target="_blank">(2) click for video reminder of exercise form</a>
+      </td>
     </tr>
   </table>
 </form>

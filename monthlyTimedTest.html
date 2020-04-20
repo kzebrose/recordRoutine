@@ -1,0 +1,43 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <script type="text/javascript" src="assets/js/script.js"></script>
+  <script  type="text/javascript" src="assets/js/ex.js"></script>
+  <script  type="text/javascript" src="http://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
+ <link href="assets/css/ex.css" rel="stylesheet" type="text/css" />
+ <title> Mothly Timed Test</title>
+</head>
+
+<body onload="prettyClock()"><!-- no timers -->
+
+<form action="break_action_page.php" method="post">
+
+  <table>
+    <tr>
+      <td><input size=40 id="clock1" type="text" name="clock1" value="clock1"></td>
+      <td><input size=20 id="clock2" type="text" name="clock2" value="clock2"></td>
+      <td colspan="2"><h1> Monthly Timed Test Form</h1></td>
+      <td>
+        <img id="PT" src="/assets/images/timerMan.jpg" alt="timer man picture" />
+      </td>
+    </tr>
+    <tr>
+    </tr>
+    <tr>
+      <td colspan="4"><h3>Make sure you record you times.</h2></td>
+    </tr>
+    <tr>
+    </tr>
+      <td><h3>comments</h2></td>
+      <td colspan="2"> <input  id=meInfo size="40" type="text" name="meInfo" value="went well"> </td>
+    </tr>
+  </table>
+  <br>
+  <input type="submit" value="Submit" style="height:50px">
+</form> 
+
+<p>If you click the "Submit" button, the form-data will be sent to a page called "break_action_page.php".</p>
+</body>
+</html>
+
