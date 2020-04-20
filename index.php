@@ -20,6 +20,7 @@
         <br><a href="http://exercise.org/walk.html">record walk</a>
         <br><a href="http://zebrose.com/exercise/walkMobile.html">record walk on mobile</a>
         <br><a href="http://exercise.org/break.html">record break</a>
+        <br><a href="http://exercise.org/monthlyTimedTest.html">record monthly timed test</a>
       </td>
       <td>
         <img id="PT" src="/assets/images/Gretchen-Photo-302x336.jpg" alt="PT Gretchen" />

@@ -15,11 +15,12 @@
     $timestamp4break = strtotime($data['clock1']);
     $dateString = date("w_D_F_j_Y",$timestamp4break);
     $formh = getFormHandle($dateString.'_exercise','1.0');
+    $setName = $data['SetName'];
     foreach($data as $key => $line)
     {
       if(strpos($key,"clock1") === 0)
       {
-        fwrite($formh,"<tr><td colspan='3'>".$line."</td><td>break day</td>\n");
+        fwrite($formh,"<tr><td colspan='3'>".$line."</td><td>".$setName." day</td>\n");
       }
       elseif(strpos($key,"breakInfo") === 0)
       {
