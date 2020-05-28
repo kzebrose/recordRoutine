@@ -38,6 +38,10 @@
       <td><a  href="http://www.my-exercise-code.com" target="_blank">(2) click for video reminder of exercise form</a>
       </td>
     </tr>
+    <tr>
+      <td><a id=MSingLink href="https://themsinglink.as.me/FollowUp45" target="_blank" ><h3>make a 45 minute appt</h3></a></td>
+      <td><a id=MSingLink href="https://themsinglink.as.me/TeleHealthFollowUp" target="_blank" ><h3>make a 30 minute appt</h3></a></td>
+    </tr>
   </table>
 </form>
 </body>
