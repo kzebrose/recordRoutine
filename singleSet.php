@@ -40,18 +40,12 @@ include ("./mobile_header.php");
       <div class="col-xs-4"><input id=set1balletRaise  type="text" name="set1balletRaise" value="'" size="10"> </div><!-- end col -->
     </div><!-- end row -->
     <div class="row singleButtons">
-      <div class="col-xs-12 col-md-3">
-         <h2>1 minute <span id="goal1min" onclick="setGoal('1min',1,0)">click for goal</span></h2>
-      </div><!-- end col -->
-      <div class="col-xs-12 col-md-3">
-         <h1 id="clock3">clock3</h1>
-      </div><!-- end col -->
-      <div class="col-xs-4" ><button  type="button" class="btn btn-success" onclick="fillComment('set1leanBack')">lean back note</div><!-- end col -->
-      <div class="col-xs-4"><input id=set1leanBack  type="text" name="set1leanBack" value="'" size="10"> </div><!-- end col -->
+      <div class="col-xs-4" ><button  type="button" class="btn btn-success" onclick="fillComment('set1legKick')">leg kick note</div><!-- end col -->
+      <div class="col-xs-4"><input id=set1legKick  type="text" name="set1legKick" value="'" size="10"> </div><!-- end col -->
     </div><!-- end row -->
     <div class="row singleButtons">
-      <div class="col-xs-4" ><button  type="button" class="btn btn-success" onclick="fillComment('set1kickBack')">kick back note</div><!-- end col -->
-      <div class="col-xs-4"><input id=set1kickBack  type="text" name="set1kickBack" value="'" size="10"> </div><!-- end col -->
+      <div class="col-xs-4" ><button  type="button" class="btn btn-success" onclick="fillComment('set1seatedMarch')">seated march note</div><!-- end col -->
+      <div class="col-xs-4"><input id=set1seatedMarch  type="text" name="set1seatedMarch" value="'" size="10"> </div><!-- end col -->
     </div><!-- end row -->
     <div class="row">&nbsp</div>
     <div class="row">
@@ -64,6 +58,14 @@ include ("./mobile_header.php");
       <div class="col suggestedComment" onclick="setComment('Rock Star')" >Rock Star</div><!-- end col -->
       <div class="col suggestedComment" onclick="setComment('Reduced')">Reduced</div><!-- end col -->
       <div class="col addOnComment" onclick="addComment('plus chat')">plus chat</div><!-- end col -->
+    </div><!-- end row -->
+    <div class="row singleButtons">
+      <div class="col-xs-4" ><button  type="button" class="btn btn-success" onclick="fillComment('set1kickBack')">kick back note</div><!-- end col -->
+      <div class="col-xs-4"><input id=set1kickBack  type="text" name="set1kickBack" value="'" size="10"> </div><!-- end col -->
+    </div><!-- end row -->
+    <div class="row singleButtons">
+      <div class="col-xs-4" ><button  type="button" class="btn btn-success" onclick="fillComment('set1standingMarch')">standing march note</div><!-- end col -->
+      <div class="col-xs-4"><input id=set1standingMarch  type="text" name="set1standingMarch" value="'" size="10"> </div><!-- end col -->
     </div><!-- end row -->
     <div class="row">
       <div class="col-xs-12 col-md-6">
