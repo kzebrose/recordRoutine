@@ -32,9 +32,6 @@
       case "set3":
           $record = "<td class='setThree'>".$line."</td>\n";
         break;
-      case "setSpecial":
-          $record = "<td class='setSpecial'>".$line."</td>\n";
-        break;
       default:
         break;
       }
