@@ -1,16 +1,7 @@
 <?php 
 include ("./flex_header.php");
-//$ini_file = 'June2020PT.ini';
-echo $ini_file;echo "<br>";
-$file = fopen($ini_file,"r");
-while(!feof($file))
-{
-  $line = fgets($file);
-  echo $line."<br>";
-}
-fclose($file);
 $iniArr = parse_ini_file($ini_file);
-print_r($iniArr);echo "<br>";
+//print_r($iniArr);echo "<br>";
 
 //display top exercises -- above comments
 $topArr = $iniArr[top_exercise];
