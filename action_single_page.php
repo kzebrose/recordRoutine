@@ -108,10 +108,6 @@
     echo $website."/singleSet.php/?name=set3>set3</a></h2>";
     break;
   case "set3":
-    echo "<h2> time for <a class='btn btn-primary' role='button' href=http://";
-    echo $website."/specialSet.php?name=setSpecial'>special set</a></h2>";
-    break;
-  case "setSpecial":
     echo "<h1>Done!</h1>";
     break;
   default:

@@ -25,7 +25,8 @@ $website = getWebsite();
   <title>Kates Exercise Routine</title>
 </head>
 <body onload="onceOnLoad('set1startTime')">
-<?php $name =  $_GET["name"]; ?>
+<?php $set_name =  $_GET["set_name"]; ?>
+<?php $ini_file = $_GET["ini_file"]; ?>
 <form action="http://<?php echo $website; ?>/action_single_page.php" method="post">
 <div class="container-fluid">
       <div class="row">
@@ -40,7 +41,7 @@ $website = getWebsite();
          </div><!-- end col -->
       </div><!-- end row -->
     <div class="row">
-      <div class="col-xs-12 col-md-5"><h2><?php echo $name; ?>&nbsp;&nbsp;</h2><h3 id="clock2">clock2</h3></div><!-- end col -->
+      <div class="col-xs-12 col-md-5"><h2><?php echo $set_name; ?>&nbsp;&nbsp;</h2><h3 id="clock2">clock2</h3></div><!-- end col -->
       <div class="col-xs-12 col-md-2"><img id="PT" width="100%" height="auto" src=""/></div><!-- end col -->
       <div class="col-xs-12 col-md-5">
          <div class="row"><div class="col-xs-12 col-md-6"><!-- inner row 1 -->
