@@ -2,7 +2,14 @@
 include ("./flex_header.php");
 $iniArr = parse_ini_file($ini_file);
 //print_r($iniArr);echo "<br>";
-
+$introArr = $iniArr[intro];
+if(is_array($introArr))
+{
+?>
+  <h1><?php echo $introArr[0] ?></h1>
+  <h1><?php echo $introArr[1] ?></h1>
+<?php
+}
 //display top exercises -- above comments
 $topArr = $iniArr[top_exercise];
 foreach($topArr as $th)

@@ -15,9 +15,13 @@
 
   function writeForm($data)
   {
-   //print_r($data);
-   $logh = getLogHandle('exercise','0.1');
+   $logh = getLogHandle('exercise','1.0');
    $classLabel = $data['SetName'];
+   //cardio sets start new row in end of week summary
+   if(strcmp($classLabel,"setCardio") == 0)
+   {
+     fwrite($logh,"\n<tr>\n");
+   }
    $record = "";
     foreach($data as $key => $line)
     {
@@ -31,6 +35,13 @@
         break;
       case "set3":
           $record = "<td class='setThree'>".$line."</td>\n";
+        break;
+      case "setCardio":
+          $record = "<td class='setCardio'>".$line."</td>\n";
+          if(strpos($key,"clock1") === 0)
+          {
+            fwrite($logh,"<tr><td colspan='3'>".$line."</td>\n");
+          }
         break;
       default:
         break;
@@ -55,7 +66,7 @@
   }
 
   $exData = $_POST;
-//  print_r($exData);
+  //print_r($exData);
   writeForm($exData);
 
 ?>
@@ -94,26 +105,27 @@
     {
       //echo "<li> $key  = $value</li>\n ";
     }
-  switch($exData['SetName'])
-  {
-  case "stretch":
-    include "http://<?php echo $website; ?>/singleSet.php/?name=set1";
-    break;
-  case "set1":
-    echo "<h2> time for <a class='btn btn-primary' role='button' href=http://";
-    echo $website."/singleSet.php/?name=set2>set2</a></h2>";
-    break;
-  case "set2":
-    echo "<h2> time for <a class='btn btn-primary' role='button' href=http://";
-    echo $website."/singleSet.php/?name=set3>set3</a></h2>";
-    break;
-  case "set3":
-    echo "<h1>Done!</h1>";
-    break;
-  default:
-    break;
-  }
-    echo "</ol>\n";
+    //create link for next set
+    switch($exData['SetName'])
+    {
+    case "stretch":
+      include "http://<?php echo $website; ?>/singleSet.php/?name=set1";
+      break;
+    case "set1":
+      echo "<h2> time for <a class='btn btn-primary' role='button' href=http://";
+      echo $website."/singleSet.php/?name=set2>set2</a></h2>";
+      break;
+    case "set2":
+      echo "<h2> time for <a class='btn btn-primary' role='button' href=http://";
+      echo $website."/singleSet.php/?name=set3>set3</a></h2>";
+      break;
+    case "set3":
+      echo "<h1>Done!</h1>";
+      break;
+    default:
+      break;
+    }
+      echo "</ol>\n";
 
 ?>
 

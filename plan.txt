@@ -1,0 +1,14 @@
+
+(1) create xxx.ini file to define an exercise set
+this can be for cardio, stretching, strength, or PT
+sets can be combined for a multi set workout
+
+   xxx.ini is read by flexSet.php creating a webpage to walk you thru the set
+   flexSet.php is structured as a an html form read by action_single_page.php
+   action_single_page.php creates a transition page giving encouragement and a button to progress
+   
+
+(2) you need to start with a header and move to 
+
+The ini files are read by flexSet.php to create a website to walk you thru the workout.
+The workout webpage creates html for a summary website that will document the weeks workout.

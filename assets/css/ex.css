@@ -30,8 +30,13 @@ ul,h3 {
 .setTwo {
   background-color: white;
   color: black;
-}.setThree {
+}
+.setThree {
   background-color: blue;
+  color: white;
+}
+.setCardio {
+  background-color: lightgreen;
   color: white;
 }
 #goal1min {

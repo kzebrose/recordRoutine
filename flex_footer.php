@@ -13,7 +13,7 @@
       </div><!-- end col -->
     </div><!-- end row -->
 </div><!-- close container -->
-<input type="hidden" id="SetName" name="SetName" value=<?php echo $name; ?>   >
+<input type="hidden" id="SetName" name="SetName" value=<?php echo $set_name; ?>   >
 <input type="hidden" id="goal2min" name="goal2min" value=0  >
 <input type="hidden" id="goal30sec" name="goal30sec" value=0   >
 <input type="submit" value="Submit" style="height:50px">

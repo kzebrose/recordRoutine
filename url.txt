@@ -1,0 +1,7 @@
+http://exercise.org/flexSet.php?set_name=set1&ini_file=June2020PT.ini
+http://exercise.org/stretch.php
+http://exercise.org/flexSet.php?set_name=setCardio&ini_file=bike.ini
+http://exercise.org/break.html
+http://exercise.org/walk.html
+http://exercise.org/monthlyTimedTest.html
+
