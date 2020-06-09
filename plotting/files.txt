@@ -1,0 +1,39 @@
+
+Sun_September_9_2018_02pm
+
+Directories
+ assets - contain javascript, images, and css
+ weekending - used to assemble files to combine
+ save - archive of past weeks
+
+Current
+ index.html -> first_action.php
+ worksheet.html -> action_page.php
+ metrics.html  (records tests gretchen does)
+ header.html   (used in weekending to create file, not used in above html)
+ footer.html   (used in weekending to create file, not used in above html)
+ breakDay.html (template for recording when a day is skipped)
+ files.dat     (this file)
+
+Future - responsive and resilient
+ footer.php
+ header.php
+ start.php     (buttons pointing to sections, backup if sections are not linking)
+ stretch.php -> stretch_action.php
+ singleSet.php -> action_single_page.php
+
+To delete
+ test.php
+
+Non functional github support files
+ LICENSE
+ README.md
+
+Experiment to understand image scaling
+ test2Boot.html
+ test3Boot.html
+ testBoot.html
+
+ record_set.php
+ set.php
+ TODO.dat
