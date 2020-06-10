@@ -1,0 +1,8 @@
+November TUG+, 2minWalk+, 25ftWalk+
+December TUG-, 2minWalk-, 25ftWalk-
+January  TUG+, 2minWalk+, 25ftWalk+  uniformly worse than November
+February TUG+, 2minWalk+, 25ftWalk+  uniformly worse than November
+March    TUG-, 2minWalk-, 25ftWalk-
+April    TUG-, 2minWalk-, 25ftWalk-
+May      TUG?, 2minWalk?, 25ftWalk?
+June     TUG+, 2minWalk+, 25ftWalk+ compared to April, mixed comp March, worse Feb
