@@ -27,7 +27,7 @@ $website = getWebsite();
 <body onload="onceOnLoad('set1startTime')">
 <?php $set_name =  $_GET["set_name"]; ?>
 <?php $ini_file = $_GET["ini_file"]; ?>
-<form action="http://<?php echo $website; ?>/action_single_page.php" method="post">
+<form action="http://<?php echo $website; ?>/flex_action.php" method="post">
 <div class="container-fluid">
       <div class="row">
          <div class="col-xs-12 col-md-6">
