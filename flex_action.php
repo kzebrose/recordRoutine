@@ -37,7 +37,7 @@
           {
             fwrite($logh,"<tr><td colspan='3'>".$line."</td>\n");
           }
-          if(strpos($key,"exercise") === 0)
+          if(strpos($key,"setCardio") === 0)
           {
             fwrite($logh,"<td>".$line."</td>\n");
           }

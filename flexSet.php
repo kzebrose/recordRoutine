@@ -29,10 +29,19 @@ foreach($topArr as $th)
 ?>
     <div class="row">&nbsp</div>
     <div class="row">
-    <div class="col" id=comment data-current="doing well" >select a comment</div><!-- end col -->
 <?php
 //display comments
 $commentArr = $iniArr[comment];
+if(is_array($commentArr))
+{
+?>
+    <div class="col" id=comment data-current="doing well" >select a comment</div><!-- end col -->
+<?php
+  else
+{
+?>
+    <div class="col" id=comment data-current="doing well" >doing well</div><!-- end col -->
+<?php
 foreach($commentArr as $comment)
 {
 ?>

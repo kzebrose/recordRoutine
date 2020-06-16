@@ -18,6 +18,7 @@
         <h1><input size=50 id="clock1" type="text" name="clock1" value="clock1"></h1>
         <br><a href="http://exercise.org/weekending/thisWeek_exercise.html">thisWeek</a>
         <br><a href="http://exercise.org/walk.html">record walk</a>
+        <br><a href="http://exercise.org/flexSet.php?set_name=setCardio&ini_file=freedomChair.ini">record Freedom Chair cardio</a>
         <br><a href="http://exercise.org/flexSet.php?set_name=setCardio&ini_file=dance.ini">record dance cardio</a>
         <br><a href="http://exercise.org/flexSet.php?set_name=setCardio&ini_file=bike.ini">record hand bike cardio workout</a>
         <br><a href="http://zebrose.com/exercise/walkMobile.html">record walk on mobile</a>
