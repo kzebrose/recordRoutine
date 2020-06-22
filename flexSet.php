@@ -37,11 +37,13 @@ if(is_array($commentArr))
 ?>
     <div class="col" id=comment data-current="doing well" >select a comment</div><!-- end col -->
 <?php
-  else
+}
+else
 {
 ?>
-    <div class="col" id=comment data-current="doing well" >doing well</div><!-- end col -->
+    <div class="col" id=comment data-current="doing well" ></div><!-- end col -->
 <?php
+}
 foreach($commentArr as $comment)
 {
 ?>
