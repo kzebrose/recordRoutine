@@ -37,14 +37,14 @@
           {
             fwrite($logh,"<tr><td colspan='3'>".$line."</td>\n");
           }
-          if(strpos($key,"setCardio") === 0)
+          if(strpos($key,"exercise_name") === 0)
           {
-            fwrite($logh,"<td>".$line."</td>\n");
+            fwrite($logh,"<td  colspan='3' class='setCardio'>".$line."</td>\n");
           }
-        break;
+          break;
       default:
         break;
-      }
+      }//end switch
       if(strcmp($key,"totalTime") === 0)
       {
         fwrite($logh,"<td>".$line."</td>\n");
@@ -54,7 +54,7 @@
       {
         fwrite($logh,"$record");
       }
-    }
+    }//end foreach
     fclose($logh);
     return;
   }
@@ -65,7 +65,7 @@
   }
 
   $exData = $_POST;
-  //print_r($exData);
+//  print_r($exData);
   writeForm($exData);
 
 ?>

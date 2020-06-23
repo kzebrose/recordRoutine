@@ -7,9 +7,9 @@ if(is_array($introArr))
 {
 ?>
   <h1><?php echo $introArr[0] ?></h1>
-  <input type="hidden" id="exercise_type" name="exercise_type" value=<?php echo $introArr[0]; ?>   >
+  <input type="hidden" id="exercise_type" name="exercise_type" value=<?php echo "'".$introArr[0]."'"; ?>   >
   <h1><?php echo $introArr[1] ?></h1>
-  <input type="hidden" id="exercise_name" name="exercise_name" value=<?php echo $introArr[1]; ?>   >
+  <input type="hidden" id="exercise_name" name="exercise_name" value=<?php echo "'".$introArr[1]."'"; ?>   >
 <?php
 }
 //display top exercises -- above comments
